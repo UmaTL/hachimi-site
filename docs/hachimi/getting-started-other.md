@@ -25,7 +25,8 @@ Only add the **file** extensions (`.exe`, `.dll`) when you rename if you see the
 ## Android
 
 ::: warning
-Hachimi cannot be used with these versions without root.
+Hachimi cannot be used with these versions without root.  
+Reminder that Global on Android is not supported.
 :::
 
 ::: danger
