@@ -2,7 +2,7 @@
 在开始翻译过程之前，我们先来看看 Hachimi 是如何进行翻译的。你不需要完全理解这里说明的所有内容，但最好先简单了解一下它的工作原理，这样你在翻译时就不会感到困惑。
 
 ::: info
-如果你还想了解翻译词典的格式/组织方式，你可以在阅读本文的同时浏览 `localized_data` 目录进行参考。"可以通过浏览本地副本来查看，或者你也可以浏览 GitHub 上的tl-en仓库。如果你已经安装了 Hachimi，可以通过浏览 `[游戏安装文件夹]/hachimi/localized_data` 来查看，或者你也可以浏览 GitHub 上的 [tl-en](https://github.com/Hachimi-Hachimi/tl-en) 仓库。"
+如果你还想了解翻译词典的格式/组织方式，你可以在阅读本文的同时浏览 `localized_data` 目录进行参考。"可以通过浏览本地副本来查看，或者你也可以浏览 GitHub 上的tl-en仓库。如果你已经安装了 Hachimi，可以通过浏览 `[游戏安装文件夹]/hachimi/localized_data` 来查看，或者你也可以浏览 GitHub 上的 [简体中文](https://github.com/Hachimi-Hachimi/zh-cn) 仓库。"
 
 此外，本文中的文件路径仅涵盖官方翻译仓库如何操作；Hachimi 的翻译系统具有高度可配置性，可以配置到任何其他地方。
 :::

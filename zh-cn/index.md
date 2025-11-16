@@ -38,8 +38,8 @@ features:
 ## 截图 {#screenshots}
 
 <div class="gallery">
-  <img class="item grid-4" src="/assets/screen1.jpg" alt="Home screen">
-  <img class="item grid-4" src="/assets/screen2.jpg" alt="Training screen">
-  <img class="item grid-4" src="/assets/screen3.jpg" alt="Training event">
-  <img class="item grid-4" src="/assets/screen4.jpg" alt="Main story">
+  <img class="item grid-4" src="/assets/zh-cn/screen1.jpg" alt="Home screen">
+  <img class="item grid-4" src="/assets/zh-cn/screen2.png" alt="Training screen">
+  <img class="item grid-4" src="/assets/zh-cn/screen3.jpg" alt="Training event">
+  <img class="item grid-4" src="/assets/zh-cn/screen4.jpg" alt="Main story">
 </div>
