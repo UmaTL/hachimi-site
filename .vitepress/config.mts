@@ -108,7 +108,8 @@ const vitePressConfig: UserConfig = {
         nav: [
           { text: '首页', link: '/zh-cn/' },
           { text: '截图', link: '/zh-cn/#screenshots' },
-          { text: '文档', link: '/zh-cn/docs' }
+          { text: '文档', link: '/zh-cn/docs' },
+          { text: '文档', link: '/zh-cn/credits' }
         ]
       }
     },
