@@ -2,23 +2,6 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
-head:
-  - ["link", { rel: "canonical", href: "https://hachimi.noccu.art" }]
-  - [
-      "meta",
-      {
-        name: "og:description",
-        content: "Game translation and enhancement mod for Umamusume. Maintained fork of Hachimi, with updates and improvements.",
-      },
-    ]
-  - [
-      "meta",
-      {
-        name: "keywords",
-        content: "umamusume, hachimi, translation, game mod, patch",
-      },
-    ]
-
 hero:
   name: "Hachimi Edge"
   text: "某赛马拟人化游戏的增强与翻译插件"
