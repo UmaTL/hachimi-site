@@ -55,11 +55,11 @@ const vitePressSidebarConfig = [
 
 // https://vitepress.dev/reference/site-config
 const vitePressConfig: UserConfig = {
-  title: "Hachimi",
+  title: "Hachimi Edge",
   description: "Game translation and enhancement mod for Umamusume. Maintained fork of Hachimi, with updates and improvements.",
   head: [
     ['link', { rel: "shortcut icon", href: "/favicon.ico"}],
-    ["meta", { name: "keywords", content: "umamusume, hachimi, translation, game mod, patch"}]
+    ["meta", { name: "keywords", content: "umamusume, hachimi, umapatcher, translation, game mod, patch, edge"}]
   ],
   themeConfig: {
     logo: "/assets/logo.png",

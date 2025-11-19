@@ -29,7 +29,7 @@ hero:
 features:
   - icon: 🚀
     title: Easy to use
-    details: Comes with an installer and convenient in-game GUI. No patching whatsoever. Translations update automatically.
+    details: Comes with an installer and convenient in-game GUI. Translations update automatically.
   - icon: 🌍
     title: Multilingual translations
     details: Indexes translations from different community projects, allowing easy access and source switching. Check credits for a list.
@@ -44,6 +44,11 @@ features:
 ## About
 
 Hachimi Edge is a fork of the unmaintained [Hachimi](https://hachimi.leadrdrk.com) mod. It was made to quickly serve issues fixed after the game update on 2025/09/24 to users, and has since incorporated additional features and fixes by various community members. If you are still using the original Hachimi, please uninstall it and install Edge to resolve issues. Should Hachimi's developer return, Edge will likely be merged back and discontinued.
+
+## UmaPatcher
+
+UmaPatcher is a helper app to easily patch Hachimi into the game on android. It also has an Edge version, which applies Hachimi Edge.
+The latest Hachimi Edge version is automatically downloaded when patching, so you don't have to worry about anything else on Android.
 
 ## Translations
 
