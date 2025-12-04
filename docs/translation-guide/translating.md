@@ -14,7 +14,7 @@ There are a number of different tools available to create and edit translations.
 
 Developed by the creator of Hachimi, this is currently the easiest to start using and supports most Hachimi formats.
 
-However, it can no longer edit stories after a major update on the Japanese server on September 24, 2025, and it has multiple unsolved bugs and usage issues. It is currently unmaintained, which is mainly an assumption since there has been no further statement from the developer.
+However, it can no longer edit stories after a major update on the Japanese server on September 24, 2025, and has multiple unsolved bugs and usage issues. It is currently unmaintained.
 
 Check out the [ZokuZoku guide](using-zokuzoku.html).
 
