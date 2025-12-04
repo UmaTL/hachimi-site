@@ -12,17 +12,19 @@ There are a number of different tools available to create and edit translations.
 
 ### ZokuZoku
 
-Written by the Hachimi developer for Hachimi, this is currently the easiest to get started with, and supports most of Hachimi's formats.
+Developed by the creator of Hachimi, this is currently the easiest to start using and supports most Hachimi formats.
 
-However, it can no longer edit stories after a certain game update and has multiple unsolved bugs and usage issues. It is currently unmaintained.
+However, it can no longer edit stories after a major update on the Japanese server on September 24, 2025, and has multiple unsolved bugs and usage issues. It is currently unmaintained.
 
 Check out the [ZokuZoku guide](using-zokuzoku.html).
 
-### ZokuZoku Edge
+### ZokuZoku-Edge
 
-There are multiple forks of ZokuZoku attempting to restore story functionality and maybe adjust some features. These might be unstable, unsupported, and currently have no public releases.
+This is an active community fork of the original ZokuZoku extension. The goal is to restore former editing functionalities, add quality-of-life improvements, and resolve issues left by the main ZokuZoku developer.
 
-Forks: [Mario's](https://github.com/Mario0051/ZokuZoku), [Tenshou's](https://github.com/thshafi170/ZokuZoku-Edge)
+Although this fork is functional, some features may be unstable.
+
+Links: [Source Code](https://github.com/Mario0051/ZokuZoku), [Extension Builder (Unofficial Release Repository)](https://github.com/tenshou170/ZokuZoku-Edge)
 
 ### UmaTL Legacy Tools
 
