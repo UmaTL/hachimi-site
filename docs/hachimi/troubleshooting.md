@@ -99,6 +99,9 @@ The Steam overlay can sometimes interfere with Hachimi's overlay. Disable one of
 To disable Hachimi's: open the Hachimi menu and check the "Disable overlay (GUI)" checkbox in the "General" tab, press Save, and restart the game. 
 When you want to re-enable Hachimi's overlay, open Hachimi's config file (config.json) in a text editor and change the `disable_gui` value from `true` back to `false`, then restart the game. This config file is located in the `hachimi` folder inside the game's installation folder.
 
+### Steam Global: Stuck at start screen
+This seems to be a bug in the game itself, which Hachimi causes to trigger much more easily. Use `alt` + `enter` to toggle between fullscreen and windowed. This should let you continue. An official fix is presumably coming.
+
 ### DMM: Input registering at the wrong spot on the screen after the window is resized
 
 This is a known issue with Hachimi on the Japanese DMM version of the game (fix coming soon™). For now, just don't resize the window.
