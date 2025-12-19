@@ -60,7 +60,8 @@ const vitePressConfig: UserConfig = {
   description: "Game translation and enhancement mod for Umamusume. Maintained fork of Hachimi, with updates and improvements.",
   head: [
     ['link', { rel: "shortcut icon", href: "/favicon.ico"}],
-    ["meta", { name: "keywords", content: "umamusume, hachimi, umapatcher, translation, game mod, patch, edge"}]
+    ["meta", { name: "keywords", content: "umamusume, hachimi, umapatcher, translation, game mod, patch, edge"}],
+    ["meta", { name: "robots", content: "noindex, nofollow" }]
   ],
   themeConfig: {
     logo: "/assets/logo.png",
