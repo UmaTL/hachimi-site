@@ -8,10 +8,9 @@ As of 2025/09/24, you will need to use Hachimi Edge v0.14.2 or newer due to a bi
 If you run into issues, check out [Troubleshooting](troubleshooting.md).
 
 ::: warning
-Some anti-cheats (such as Vanguard used in LoL/Valorant) hate seeing DLL redirection enabled on your system. You'll need to disable it every time you want to play affected games. [Here](https://github.com/LeadRDRK/DotLocalToggle/releases) is a program to quickly toggle it. Run it until it says it has disabled DLL redirection and restart your computer.
-:::
-::: info
-DotLocal is currently only used on the DMM version. Play on Steam to bypass it.
+The DMM install process uses DotLocal DLL redirection.  
+This is incompatible with some anti-cheats (such as Vanguard used in LoL/Valorant). You'll need to disable it every time you want to play affected games. [Here](https://github.com/LeadRDRK/DotLocalToggle/releases) is a program to quickly toggle it. Run it until it says it has disabled DLL redirection and restart your computer.  
+Steam is unaffected.
 :::
 
 1. Download the latest [Installer](https://github.com/kairusds/Hachimi-Edge/releases/latest/download/hachimi_installer.exe) and run it. 
