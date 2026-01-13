@@ -18,9 +18,10 @@ Steam is unaffected.
 1. Choose your game version from the lower box.
 1. Check that the install directory is correct and change it if needed.
 1. Click Install.
+    - The first time, you might be asked to enable DotLocal DLL redirection. Press OK and it will be enabled for you. **You must RESTART (not shutdown) your computer afterwards.**
 <!-- Todo: show how to find the install dir -->
 
-When installing for the first time, the installer might ask to you enable DotLocal DLL redirection. Press OK and it will be enabled for you. **You must RESTART (not shutdown) your computer after enabling it.**
+⚠️ You'll need to repeat this after *some* game updates (the game will stop launching) due to modified files being replaced.
 
 <details>
 <summary class="collapsible-header-sub">Manual install</summary>

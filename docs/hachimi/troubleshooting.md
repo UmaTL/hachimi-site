@@ -86,6 +86,11 @@ Some kernel-level anti-cheats (such as Vanguard, used in Valorant and League of 
     TODO: add more details about weird edge cases like old unsupported versions of CarrotJuicer?
 -->
 
+### The game stopped launching
+
+If Hachimi worked fine before, this likely means the game updated and replaced some modified files.
+Simply reinstall Hachimi.
+
 ### Installer: "Code execution cannot proceed / VCRUNTIME" error
 Install the latest [VC++ redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) matching your device architecture. If you're unsure, it's 99% likely to be `x64`.
 
