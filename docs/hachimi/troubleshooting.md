@@ -152,7 +152,7 @@ Global uses "Umamusume" while JP uses "umamusume".
     ```powershell
     Move-Item "$env:USERPROFILE\AppData\LocalLow\CygamesTEMP\*" "$env:USERPROFILE\AppData\LocalLow\Cygames"
     Remove-Item "$env:USERPROFILE\AppData\LocalLow\CygamesTEMP"
-    ``
+    ```
 
 ### Global Steam and JP DMM versions constantly ask to redownload data
 See [Error 501](#error-501) above.
