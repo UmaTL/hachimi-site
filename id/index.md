@@ -38,7 +38,7 @@ features:
     details: Menyediakan fitur teks khusus yang membantu terjemahan terasa lebih alami dan meningkatkan dukungan untuk berbagai bahasa.
   - icon: 🖥️
     title: Peningkatan game
-    details: Mencakup sejumlah fitur dan pengaturan lain yang dapat kamu sesuaikan sesuai kebutuhan.
+    details: Mencakup sejumlah fitur dan pengaturan lain yang bisa kamu sesuaikan sesuai kebutuhan.
 ---
 
 ## Tentang

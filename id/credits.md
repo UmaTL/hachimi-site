@@ -11,7 +11,7 @@
 </a>
 
 ## [Website](https://github.com/UmaTL/hachimi-site)
-- Pembuat Asli: LeadRDRK
+- Pembuat Asli: LeadRDRK ([Hachimi](https://github.com/Hachimi-Hachimi/Hachimi))
 - Pengelola Edge: noccu
 - Kontributor:
 <a href="https://github.com/UmaTL/hachimi-site/graphs/contributors">

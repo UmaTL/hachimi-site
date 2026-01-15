@@ -134,7 +134,8 @@ const vitePressConfig: UserConfig = {
         nav: [
           { text: 'Beranda', link: '/id/' },
           { text: 'Tangkapan Layar', link: '/id/#screenshots' },
-          { text: 'Dokumentasi', link: '/id/docs' }
+          { text: 'Dokumentasi', link: '/id/docs' },
+          { text: 'Kredit', link: '/id/credits' }
         ]
       }
     },
