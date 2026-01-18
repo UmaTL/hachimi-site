@@ -66,7 +66,7 @@ const vitePressConfig: UserConfig = {
     logo: "/assets/logo.png",
     socialLinks: [
       { icon: 'github', link: 'https://github.com/kairusds/Hachimi-Edge' },
-      { icon: 'discord', link: 'https://discord.gg/BVEt5FcxEn' }
+      { icon: 'discord', link: 'https://discord.gg/hachimimod' }
     ]
   },
   locales: {

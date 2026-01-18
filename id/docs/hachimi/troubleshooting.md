@@ -51,7 +51,7 @@ Jika masih tidak membantu, coba sesuaikan sampai terlihat baik.
 ### Masalah saya tidak tercantum di halaman ini
 Copot Hachimi menggunakan installer. Cobalah gunakan installer yang sama dengan versi saat ini, tetapi versi terbaru juga seharusnya berfungsi dengan baik.
 Jika kamu memiliki beberapa versi game terpasang, pastikan kamu menghapus dari jalur yang benar. Lalu pasang kembali Hachimi Edge terbaru.
-Jika itu tidak berhasil, kamu bisa bertanya di kanal #help pada [Discord Hachimi](https://discord.gg/BVEt5FcxEn) dan jelaskan dengan jelas masalah kamu serta apa yang sudah kamu coba.
+Jika itu tidak berhasil, kamu bisa bertanya di kanal #help pada [Discord Hachimi](https://discord.gg/hachimimod) dan jelaskan dengan jelas masalah kamu serta apa yang sudah kamu coba.
 
 
 ## Windows

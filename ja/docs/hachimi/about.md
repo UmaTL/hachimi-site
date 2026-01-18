@@ -3,7 +3,7 @@ title: 概要
 ---
 
 # Hachimi
-[![Discord サーバー](https://dcbadge.limes.pink/api/server/https://discord.gg/BVEt5FcxEn)](https://discord.gg/BVEt5FcxEn)
+[![Discord サーバー](https://dcbadge.limes.pink/api/server/https://discord.gg/hachimimod)](https://discord.gg/hachimimod)
 
 UM:PD 用の翻訳＆機能追加MOD
 

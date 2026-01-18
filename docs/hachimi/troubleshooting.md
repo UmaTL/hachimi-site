@@ -54,7 +54,7 @@ If that doen't help, try adjusting it until it looks ok.
 ### My issue isn't listed on this page
 Uninstall Hachmimi using the installer. Try to use the one you installed your current version with, but the latest one should work just fine.
 If you have multiple game versions installed, make sure you uninstall from the right path. Then reinstall latest Hachimi Edge.
-If that doesn't work, you can ask in the `#help` channel on the [Hachimi Discord](https://discord.gg/BVEt5FcxEn) and clearly explain your issue and what you have tried.
+If that doesn't work, you can ask in the `#help` channel on the [Hachimi Discord](https://discord.gg/hachimimod) and clearly explain your issue and what you have tried.
 
 
 ## Windows

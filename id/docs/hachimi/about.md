@@ -3,7 +3,7 @@ title: Tentang
 ---
 
 # Hachimi
-[![Server Discord](https://dcbadge.limes.pink/api/server/https://discord.gg/BVEt5FcxEn)](https://discord.gg/BVEt5FcxEn)
+[![Server Discord](https://dcbadge.limes.pink/api/server/https://discord.gg/hachimimod)](https://discord.gg/hachimimod)
 
 Mod terjemahan dan peningkatan game UM:PD.
 

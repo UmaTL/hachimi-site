@@ -3,7 +3,7 @@ title: 关于 Hachimi
 ---
 
 # Hachimi
-[![Discord 服务器](https://dcbadge.limes.pink/api/server/https://discord.gg/BVEt5FcxEn)](https://discord.gg/BVEt5FcxEn)
+[![Discord 服务器](https://dcbadge.limes.pink/api/server/https://discord.gg/hachimimod)](https://discord.gg/hachimimod)
 
 某赛马拟人化游戏的游戏增强与翻译插件。
 
