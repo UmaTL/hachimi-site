@@ -6,14 +6,17 @@ Since a game update, ZokuZoku no longer supports dialogue content. Check out the
 :::
 
 ## Installation
+
 ### Prerequisites
 Before installing ZokuZoku, make sure to have these installed:
+
 - OS: Windows 10+ or Linux x64. macOS and ARM devices are not officially supported but might work with some special setup.
 - [Visual Studio Code](https://code.visualstudio.com/) v1.90 or later (not Visual Studio, they are two completely different things!)
 
 The following files are required by ZokuZoku:
 - `master.mdb` and `meta`: These files are located within the game's data directory (on Windows this is in AppData, and on Android this is in `/data/data`, root access required). These two files must be in the same folder, with the `meta` file in the root and `master.mdb` in a subfolder named `master`, so that we have `folder/meta` and `folder/master/master.mdb`. **If you have UM:PD installed from DMM on your system, you don't need to worry about these files, ZokuZoku can automatically detect them!**
 - `localize_dump.json`: This file contains the original `localize_dict` data dumped from the game. Hachimi can be used to create this file:
+
 1. Enable "Translator mode" in the config editor.
 ![Config editor](/assets/translation-guide/using-zokuzoku/1.webp)
 2. A new option called "Dump localize dict" will appear under the Translation section in the menu. Click on it to create the file.
@@ -29,13 +32,13 @@ Install from the [VS Code Marketplace](https://marketplace.visualstudio.com/item
 ![Translation section in menu](/assets/translation-guide/using-zokuzoku/3.webp)
 
 ## Initial setup
-After installing ZokuZoku, you can now open the translation repo by going to File -> Open Folder... and select the folder you want to open. *Note that it should be a folder that contains the `localized_data` folder, not the `localized_data` folder itself!*
+After installing ZokuZoku, you can now open the translation repo by going to File -> Open Folder... and select the folder you want to open. _Note that it should be a folder that contains the `localized_data` folder, not the `localized_data` folder itself!_
 
 Upon opening a TL repo for the first time (where ZokuZoku has been configured to automatically activate), the following prompt will be shown:
 
 ![Dependencies install prompt](/assets/translation-guide/using-zokuzoku/4.webp)
 
-Click on OK to start installing the dependencies, this will take a while to download and install (about 200MB). *During this process, a command prompt will show up, do not close it!*
+Click on OK to start installing the dependencies, this will take a while to download and install (about 200MB). _During this process, a command prompt will show up, do not close it!_
 
 If the DMM version has been installed on your device, and you've created the localize dump file as instructed above, the following prompts will show up for confirmation on the auto detected paths:
 
@@ -73,6 +76,7 @@ To do this, open the "Hachimi Controls" view in the panel. Click on the "Set tra
 ![Hachimi Controls view](/assets/translation-guide/using-zokuzoku/26.webp)
 
 ## Editors
+
 ### Annoying quirk
 Before we even go into main interface of the editors, let's quickly cover a huge quirk of it. Try opening any of the assets that haven't been translated yet (with the checkbox next to their name unchecked). Something weird happens when the editor is opened.
 
@@ -209,9 +213,10 @@ The last type of text slots is the color text slots. They're used to mark sectio
 They are placed after all of the other text slots. The first substring in the content that matches the color text chunk will be colored. The preview panel shows how this works, but note that the color is only for referencing purposes only, it might not match the actual color that's used in-game. Make sure to follow the order as they appear in the Original view to correctly match up the colors.
 
 ## Inner workings
-*TODO*
+_TODO_
 
 ## Advanced usage
+
 ### Reopen a file in ZokuZoku
 Sometimes you might need to open a dict file directly instead of opening it through the ZokuZoku panel. This will launch the built-in text editor instead, so you'll need to reopen it in ZokuZoku's custom editor.
 

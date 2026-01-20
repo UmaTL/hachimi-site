@@ -44,7 +44,7 @@ This is a small extra toolset focused mainly on dealing with `textures` and `uia
 
 These are quite technical, so they assume the user has sufficient knowledge and only include basic documentation in their readme.
 
-Like ZokuZoku, these are unmaintaned and stopped working after a game update.
+Like ZokuZoku, these are unmaintained and stopped working after a game update.
 
 Use [this maintained fork](https://github.com/noccu/hachimi-tools) with fixed support and new features.
 
@@ -70,7 +70,7 @@ Pay attention in `text_data`, there are many categories and sometimes these are 
 
 ### Dialogue (Story / Race / Lyrics asset dicts)
 
-These are likely the easiest to deal with. They are straight-forward, all tools support audio preview and choice branching (which isn't complex in the vast majority of cases), and there are no real gotchas. Just don't forget to translate the titles.
+These are likely the easiest to deal with. They are straightforward, all tools support audio preview and choice branching (which isn't complex in the vast majority of cases), and there are no real gotchas. Just don't forget to translate the titles.
 
 The game update on 2025/09/24 encrypted both assets and the `meta` database indexing them. ZokuZoku doesn't support this.
 

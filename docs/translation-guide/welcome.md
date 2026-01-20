@@ -8,4 +8,4 @@ Before reading the guide, be sure to familiarize yourself with a few terminologi
 - **Meta (Metadata):** Supplementary info for something. In the context of Hachimi translation dicts, this usually refers to a special entry within the dict for asset files that specifies their bundle hash.
 - **TL:** Short for "translation".
 - **Dir (Directory):** Fancy way of calling "folder".
-- **ZokuZoku:** It's the name of the main Hachimi translation tool. *Also Transcend's catchphrase*.
+- **ZokuZoku:** It's the name of the main Hachimi translation tool. _Also Transcend's catchphrase_.

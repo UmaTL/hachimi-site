@@ -29,7 +29,6 @@ Existing Hachimi user? You will need to change to Hachimi Edge due to a big game
 | Emulators (any region) | ❌ |
 
 ### Android
-
 | Version | Normal install | Direct install | Zygisk |
 | --- | :---: | :---: | :---: |
 | JP | ✅ | ✅ | ✅ |
@@ -37,7 +36,7 @@ Existing Hachimi user? You will need to change to Hachimi Edge due to a big game
 | TW GP | ⚠️ | ⚠️ | ✅ |
 | TW MC | ⚠️ | ⚠️ | ✅ |
 | CN | ⚠️ | ⚠️ | ✅ |
-| Global | ⚠️ | ⚠️ | ❔ |
+| Global | ❌️ | ❌️ | ❌ |
 
 <small>
 ✅ - Fully supported.<br>
