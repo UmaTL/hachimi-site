@@ -10,7 +10,7 @@ Game translation and enhancement mod for UM:PD.
 ![Screenshot](/assets/screenshot.jpg)
 
 # Features
-- **Advanced text formatting:** Hachimi comes with advanced translation features that help translations feel more natural (plural forms, ordinal numbers, etc.) and prevent introducing jank to the UI.
+- **Advanced text formatting:** Hachimi comes with advanced translation features that help translations feel more natural (plural forms, ordinal numbers, etc.) and prevent introducing jank to the UI. 
 
 - **Translates most in-game components:** No manual asset patching needed!
   Supported components:

@@ -30,7 +30,6 @@ Assuming that you've already set up the models correctly, no additional configur
 If your translation server runs on a different port or a different machine, you might want to make Hachimi connect to a different address.
 
 To do this, set the `sugoi_url` option manually in the config file. For example:
-
 ```json
 "sugoi_url": "http://127.0.0.1:14366"
 ```

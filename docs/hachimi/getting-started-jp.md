@@ -13,16 +13,15 @@ This is incompatible with some anti-cheats (such as Vanguard used in LoL/Valoran
 Steam is unaffected.
 :::
 
-1. Download the latest [Installer](https://github.com/kairusds/Hachimi-Edge/releases/latest/download/hachimi_installer.exe) and run it.
+1. Download the latest [Installer](https://github.com/kairusds/Hachimi-Edge/releases/latest/download/hachimi_installer.exe) and run it. 
 1. If you used non-edge Hachimi before, click Uninstall first.
 1. Choose your game version from the lower box.
 1. Check that the install directory is correct and change it if needed.
 1. Click Install.
     - The first time, you might be asked to enable DotLocal DLL redirection. Press OK and it will be enabled for you. **You must RESTART (not shutdown) your computer afterwards.**
-
 <!-- Todo: show how to find the install dir -->
 
-⚠️ You'll need to repeat this after _some_ game updates (the game will stop launching) due to modified files being replaced.
+⚠️ You'll need to repeat this after *some* game updates (the game will stop launching) due to modified files being replaced.
 
 <details>
 <summary class="collapsible-header-sub">Manual install</summary>
@@ -64,11 +63,11 @@ If you already have save data from playing, make sure you have set up a Data Lin
 :::
 
 ::: danger
-If you have the _unpatched_ game installed, you must uninstall it first. The patched game can later be updated without uninstalling.
+If you have the *unpatched* game installed, you must uninstall it first. The patched game can later be updated without uninstalling.
 :::
 
 ::: tip
-On Xiaomi/POCO devices without HyperOS, try disabling MIUI Optimizations before installing.
+On Xiaomi devices without HyperOS, try disabling MIUI Optimizations before installing.
 You can also try the Shizuku option further down.
 :::
 
@@ -81,28 +80,28 @@ You can also try the Shizuku option further down.
       This is currently only used by the JP version.
     - **Single APK file**: A full, fat APK file.
     - **XAPK file**: A ZIP file that contains the split APK files (with the extension renamed to XAPK).
-      ::: warning
-      Do not get your APK from APKPure, it's known to cause problems.
-      The recommended source is [Qoopy](https://qoopy.leadrdrk.com/), use ID 6172.
-      :::
+    ::: warning
+    Do not get your APK from APKPure, it's known to cause problems.
+    The recommended source is [Qoopy](https://qoopy.leadrdrk.com/), use ID 6172.
+    :::
 1. Open UmaPatcher, import the exported signing key if needed, and choose **Normal install**. Select the file(s) that you have prepared.
 1. Tap on Patch to start the patching and installation process.
     - If install fails, you can try the Shizuku installation method below.
 
 ⚠️ You'll need to repeat this process from step 4 whenever the app updates. You do **not** need to uninstall the game to update.
 
+
 <details>
 <summary class="collapsible-header-sub">Patch with Shizuku (alternative, might enable store)</summary>
 
 UmaPatcher Edge can be installed with [Shizuku](https://github.com/RikkaApps/Shizuku/releases).
-This functions something like a "rootless direct install" and _could_ circumvent _some_ install issues.  
+This functions something like a "rootless direct install" and *could* circumvent *some* install issues.  
 If you don't see this option, update to the latest version.
 
 Unfamiliar? You will need to enable a few things:
-
 1. First of all, install [Shizuku](https://github.com/RikkaApps/Shizuku/releases).
 1. Go to `Settings > About phone` and tap `Build number` 5 times, or until you get the popup.
-1. Go back to the main system settings to open `Developer options` or search for it.
+1. Go back to the main system settings to open `Developer options` or search for it. 
 1. Enable it (`Use developer options`), then find and enable `Wireless debugging`.
     - You might need to turn `USB debugging` on as well if this doesn't work on its own.
 1. Tap the setting name to open detailed wireless debugging settings.
