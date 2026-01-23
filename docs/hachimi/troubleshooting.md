@@ -1,4 +1,7 @@
 # Troubleshooting
+
+Known issues and their solutions are listed here. Check the General section first, followed by that of your platform, and finally [what to do if your issue isn't covered here](#my-issue-isn-t-listed-on-this-page) at the bottom.
+
 [[toc]]
 
 ## General
@@ -49,12 +52,6 @@ This means you are banned.
 ### The in-game background is shrunk / White border
 Open Hachimi Menu -> Config Editor and reset `virtual resolution multiplier` to 1. 
 If that doen't help, try adjusting it until it looks ok.
-
-### My issue isn't listed on this page
-Uninstall Hachmimi using the installer. Try to use the one you installed your current version with, but the latest one should work just fine.
-If you have multiple game versions installed, make sure you uninstall from the right path. Then reinstall latest Hachimi Edge.
-If that doesn't work, you can ask in the `#help` channel on the [Hachimi Discord](https://discord.gg/hachimimod) and clearly explain your issue and what you have tried.
-
 
 ## Windows
 
@@ -290,3 +287,9 @@ If during patching you see a message mentioning `libmain.so` you can try, in ord
 
 ## Emulators (incl. Google Play Games)
 Neither the game nor Hachimi support emulators. You can get them to work, but you're on your own. To play on PC, use the DMM or Steam client.
+
+## My issue isn't listed on this page
+
+Uninstall Hachmimi using the installer. Try to use the one you installed your current version with, but the latest one should work just fine.
+If you have multiple game versions installed, make sure you uninstall from the right path. Then reinstall latest Hachimi Edge.
+If that doesn't work, you can ask in the `help/support` channel on the [Hachimi Project Discord](https://discord.gg/hachimimod). Please state your game server, device platform and model, and clearly explain your issue and what you have tried.
