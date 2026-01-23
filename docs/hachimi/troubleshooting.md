@@ -37,8 +37,7 @@ If no active source for your language exists, you can check `Menu` -> `Config Ed
 Translations are provided by volunteers in the community offering up their time. Many things are not yet done. Check in with your chosen translation source and try to support its translators.
 
 ### Lyrics switch between language randomly
-~~Unfortunately, this is an unsolved bug introduced by a game update. We are working on it.~~
-This bug has been fixed. Update Hachimi to v0.15.1 or later.
+This issue has been fixed in Hachimi Edge v0.15.1. Update to the latest version.
 
 ### Game won't load beyond the splash screen
 If the game **gets stuck** on the splash screen, see [Error 501](#error-501).  
@@ -105,8 +104,7 @@ When you want to re-enable Hachimi's overlay, open Hachimi's config file (config
 This seems to be a bug in the game itself, which Hachimi causes to trigger much more easily. Use `alt` + `enter` to toggle between fullscreen and windowed. This should let you continue. An official fix is presumably coming.
 
 ### DMM: Input registering at the wrong spot on the screen after the window is resized
-~~This is a known issue with Hachimi on the Japanese DMM version of the game (fix coming soon™). For now, just don't resize the window.~~
-This bug has been fixed. Update Hachimi to v0.14.3 or later.
+This issue has been fixed in Hachimi Edge v0.14.3. Update to the latest version.
 
 ### DMM: Can't play certain games after installing Hachimi
 
@@ -264,7 +262,7 @@ See [os error 13](#i-o-error-permission-denied-os-error-13).
 Open Hachimi's menu -> Config Editor and play with the virtual resolution multiplier to find which value works best.
 
 ### Tapping doesn't register, or causes the game to crash or freeze
-This issue has been fixed in Hachimi Edge version 0.15.1. Make sure you have [updated](faqs.md#how-do-i-update-on-android).
+This issue has been fixed in Hachimi Edge v0.15.1. Make sure you have [updated](faqs.md#how-do-i-update-on-android).
 
 <details>
 <summary class="collapsible-header-sub">I'm experiencing this on a version newer than 0.15.1</summary>
