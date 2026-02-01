@@ -33,6 +33,10 @@ const commonSidebarConfig: VitePressSidebarOptions = {
     'faqs.md',
     'auto-translation.md',
 
+    'plugins',
+    'installation.md',
+    'development.md',
+
     'translation-guide',
     'welcome.md',
     'translation-system.md',
