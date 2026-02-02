@@ -18,13 +18,13 @@ However, it can no longer edit stories after a major update on the Japanese serv
 
 Check out the [ZokuZoku guide](using-zokuzoku.html).
 
-### ZokuZoku-Edge
+### ZokuZoku Edge
 
-This is an active community fork of the original ZokuZoku extension. The goal is to restore former editing functionalities, add quality-of-life improvements, and resolve issues left by the main ZokuZoku developer.
+This is an active community fork of the original ZokuZoku extension. The goal is to restore the editing functionalities, add quality-of-life improvements, and resolve issues left by the main ZokuZoku developer.
 
-Although this fork is functional, some features may be unstable.
+Although this fork is functional, some features may remain unstable depending on the usecase.
 
-Links: [Source Code](https://github.com/Mario0051/ZokuZoku), [Extension Builder (Unofficial Release Repository)](https://github.com/tenshou170/ZokuZoku-Edge)
+Links: [Source Code](https://github.com/Mario0051/ZokuZoku), [Extension Builder and Release Repository](https://github.com/THShafi170/ZokuZoku-Edge)
 
 ### UmaTL Legacy Tools
 
