@@ -80,11 +80,11 @@ Updating UmaPatcher is only needed in certain cases, like when you face install 
 
 First of all, you likely did this as a workaround on Android. The issue has been fixed since v0.15.1, so check that you have updated to the latest Hachimi Edge.  
 
-Open Hachimi's config file (config.json) in a text editor and change the `disable_gui` value from `true` to `false`, then restart the game. This config file is located in the `hachimi` folder inside the game's installation folder. On android that is `android/media/jp.co.cygames.umamusume` (might differ with phone brand)  
+Open Hachimi Edge's config file (`config.json`) in a text editor and change the `disable_gui` value from `true` to `false`, then restart the game. This config file is located in the `hachimi` folder inside the [game's installation folder](#how-do-i-find-the-game-install-folder).
 If you're uncomfortable with this or run into issues, it's safe to delete the config file as well. Hachimi will recreate a default one.
 
 ## How do I find the game install folder?
 
 **Steam**: Right-click the game in Steam -> Manage -> Browse local files  
 **DMM**: Click the 3 dots next to the game name in DMM -> 🛈 icon -> 📁 icon  
-**Android**: Not accessible, but some data is stored at `Android/media/jp.co.cygames.umamusume`
+**Android**: Not accessible, but some data is stored at `Android/media/jp.co.cygames.umamusume` (might differ with phone brand)
