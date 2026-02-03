@@ -52,17 +52,29 @@ These are modes defined internally by the game, and not implemented by Hachimi. 
 
 ## How do I update on Android?
 
-### Game / Hachimi
+::: info
+Uninstalling the game is only required for first-time install, not any form of updates.
+:::
 
-Follow the [install steps](getting-started-jp.md#android) from step 4.
-You don't have to import the key again. When updating Hachimi, you can just reinstall the current game version if you still have the file(s).
+### Game
+
+An in-game notification to update from the Play Store means you need to update the game itself by downloading the newest install package. You must then install it through UmaPatcher, which will apply the newest available Hachimi Edge release.
+
+Follow the [install guide](getting-started-jp#android) from step 4.
+
+### Hachimi
+
+When a new version of Hachimi Edge is released, you can choose to install it for new features or fixes. You don't **have** to do this immediately. Doing so requires repatching.
+
+Follow the [install guide](getting-started-jp#android) from step 5 to simply reinstall the current game version, or from step 4 if you no longer have an install package.
 
 ### UmaPatcher
 
+Updating UmaPatcher is only needed in certain cases, like when you face install issues. There are no benefits to this in-game.
+
 1. If you haven't done it before, Settings -> Export signing key.
 1. Uninstall UmaPatcher.
-1. Download & install the latest UmaPatcher.
-1. Settings -> Import signing key.
+1. Follow the [install guide](getting-started-jp#android) from step 3, as required for your case.
 
 ## I turned off Hachimi GUI/Overlay, how do I turn it back on?
 

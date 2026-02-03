@@ -74,7 +74,7 @@ On Xiaomi devices without HyperOS, try disabling MIUI Optimizations before insta
 You can also try the Shizuku option further down.
 :::
 
-1. If you used non-Edge UmaPatcher before, open its settings page and **export the signing key somewhere safe**.
+1. If you used non-Edge UmaPatcher before, open its settings page and **export the signing key**. Keep it safe, you might need it again later.
 1. Uninstall the original game **if you have not patched it before using either UmaPatcher version**.
 1. Download and install the latest version of [UmaPatcher Edge](https://github.com/kairusds/UmaPatcher-Edge/releases/latest/download/app-release.apk).
 1. Download the game installation package. Supported formats are:
@@ -88,7 +88,7 @@ You can also try the Shizuku option further down.
 1. Tap on Patch to start the patching and installation process.
     - If install fails, you can try the Shizuku installation method below.
 
-⚠️ You'll need to repeat this process from step 4 whenever the app updates. You do **not** need to uninstall the game to update.
+⚠️ You'll need to repeat this process from step 4 whenever the game updates. You do **not** need to uninstall the game to update.
 
 <details>
 <summary class="collapsible-header-sub">Patch with Shizuku (alternative, might enable store)</summary>
