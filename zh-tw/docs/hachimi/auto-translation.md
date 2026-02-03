@@ -3,10 +3,12 @@
 Hachimi 能夠透過 Sugoi Offline Translator 或任何相容的翻譯伺服器（例如 [py3translationServer](https://github.com/gdiaz384/py3translationServer)）來自動翻譯遊戲的部分內容。
 
 ### 意味著什麼？
+
 - 對於尚未翻譯的內容，系統會提供機器翻譯。
 - 一旦翻譯資料庫中有對應的人工翻譯，機器翻譯就會被自動取代。
 
 ### 注意事項
+
 - 翻譯過程是同步的，也就是說遊戲會在等待翻譯時短暫卡住。隨著越來越多內容被翻譯，這種情況會減少，因為 Hachimi 能夠載入已翻譯的資料。
 
 ## 如何使用

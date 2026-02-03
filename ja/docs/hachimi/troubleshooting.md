@@ -1,4 +1,5 @@
 # トラブルシューティング
+
 [[toc]]
 
 ## 共通
@@ -11,6 +12,7 @@
 - **グローバル版（Steam）** と **DMM 日本語版** の両方がインストールされている場合、[Error 501（エラー 501）の解決手順](#error-501エラー-501)を試してください。
 
 ### 60 FPS以上で動作させるときに、髪や衣装などの物理演算が固くなる
+
 「Physics update mode」を「Mode60FPS」に変更してください。「Gameplay」タブにある設定エディタから変更が可能です。
 
 ### テクスチャやテキストが破損/乱れている
@@ -24,7 +26,7 @@
 
 1. メニューから翻訳データの更新を試してください。更新が見つかった場合は、完了後にゲームを再起動してください。
     - Android や一部の端末では、正常に更新するために `atlas` フォルダを削除する必要がある場合があります。
-2. 更新が見つからない場合、翻訳配布元のデータが古くなっています。更新を待つか、配布元を確認してください。
+1. 更新が見つからない場合、翻訳配布元のデータが古くなっています。更新を待つか、配布元を確認してください。
     - <small>ゲームのアップデート直後の場合、メンテナーがまだ対応作業をしている可能性があります。問い合わせをする前に、すでに既知の問題となっていないかを確認してください。</small>
 
 翻訳配布元が無効になっている可能性があります。これは、オリジナルの Hachimi の古い翻訳配布元を使用していることが原因である可能性があります。
@@ -32,9 +34,11 @@ Hachimi Edge を使用していることを確認した上で、メニューを�
 もし使用する言語の有効な翻訳配布元がない場合は、必要に応じて `Menu` → `Config Editor` → `Disable translations` にチェックを入れ、翻訳機能を無効にしてください。
 
 ### 一部が翻訳されていない
+
 翻訳はコミュニティのボランティアが時間を割いて提供してくれています。まだ多くの作業が終わっていません。選択した翻訳配布元を確認し、翻訳者をサポートしてください。
 
 ### 歌詞の言語がランダムに切り替わる
+
 このバグは修正されました。Hachimi を v0.15.1 以降のものにアップデートしてください。
 
 ### スプラッシュスクリーンから先に進まない
@@ -43,17 +47,19 @@ Hachimi Edge を使用していることを確認した上で、メニューを�
 スプラッシュスクリーンは表示されるが、その後クラッシュしてしまう場合は、[Hachimi をインストールした後にゲームが起動しなくなる](#hachimi-をインストールした後にゲームが起動しなくなる)の項目をご確認ください。
 
 ### 「お客様のアカウントはご利用を制限されています」というメッセージが表示される
+
 あなたのアカウントはBANされました。
 
 ### ゲーム内の背景が縮んでいる/白い枠が表示されている
+
 Hachimi のメニューを表示し、Config Editor（設定エディタ）を開き、`virtual resolution multiplier` を「1」に設定してください。
 改善しない場合、見た目に問題がなくなるまで調節を続けて見てください。
 
 ### 発生している問題がこのページに載っていない
+
 Hachimi のインストーラーを使って、Hachimi をアンインストールしてください。現在のバージョンをインストールしたものを使用するようにしてください。ただし、最新のバージョンのものでも問題なく動作するはずです。
 複数のゲームのバージョンがインストールされている場合は、正しいパスからアンインストールしてください。その後、最新の Hachimi Edge を再インストールしてください。
 もしそれでも解決しない場合、[Hachimi の Discord サーバー](https://discord.gg/hachimimod)の `#help` チャンネルにて、発生した問題と試したことをはっきりと説明してください。
-
 
 ## Windows
 
@@ -84,6 +90,7 @@ Hachimi のインストーラーを使って、Hachimi をアンインストー�
 - Windowsの `設定`を開き、`システム` → `ディスプレイ` → `グラフィック` から `デスクトップ アプリの追加` を選択し、ゲームの exe ファイルを追加、`ウィンドウ ゲームの最適化` をオフにする
 
 ### インストーラー：「Code execution cannot proceed / VCRUNTIME」というエラーが発生する
+
 お使いのデバイスのアーキテクチャと合致する [Visual C++ 再頒布可能パッケージ](https://learn.microsoft.com/ja-jp/cpp/windows/latest-supported-vc-redist?view=msvc-170) をダウンロードしてください。アーキテクチャがわからない場合、おそらく `x64` です。
 
 ### Steam グローバル版/日本語版：GUI/オーバーレイに問題がある
@@ -98,6 +105,7 @@ Hachimi のオーバーレイを無効にする方法：Hachimi のメニュー�
 これは、DMM 日本語版用の Hachimi の既知の問題（近日中に修正予定™）です。今はウィンドウのサイズを変更しないでください。
 
 ### DMM 版：Hachimi をインストール後、いくつかのゲームがプレイできなくなった
+
 DMM 日本語版用の Hachimi は、ロードのために「.local」を使った DLL リダイレクトを使用しています。そのため、いくつかのアンチチートは、このことをよしとしません。
 Vanguard や 他の、同じようなことを検出するアンチチートを搭載したゲームを遊ぶ際は、DLL リダイレクトを無効にする必要があります。
 [DotLocalToggle](https://github.com/LeadRDRK/DotLocalToggle/releases/)は、「.local」を使った DLL リダイレクトの有効無効を簡単に切り替えられるプログラムです。
@@ -115,53 +123,60 @@ Vanguard や 他の、同じようなことを検出するアンチチートを�
 - 画面のアスペクト比が **16:9** 以外の場合は、 `Full screen mode` を **`Exclusive`** に設定してご使用ください。
 
 ### 音の問題
+
 これはゲームのバグであり、Hachimi の問題ではありません。一部のユーザーは、Windows Sonic を有効にすることで、特に悪影響なくこの問題を解決することができます。
 
 ### スタッターが発生する
+
 Hachimi の設定から、auto-translate が無効になっていることを確認してください。 この機能は、翻訳サーバーが正しく設定されている場合にのみ機能し、その場合でもパフォーマンスの問題は発生します。
 
 ### Error 501（エラー 501）
+
 どちらのバージョンも、大文字と小文字の違いはあるものの、同じデータダウンロードディレクトリ名を使用しています。これらのバージョンを同時に動作させるには、このディレクトリで大文字と小文字の区別を有効にする必要があります。
 ::: tip
 手動で移動する場合：ゲームのディレクトリに直接行くには `Windowsキー + R` を押し、`%localappdata%low\Cygames` と入力し、Enter を押します。グローバル版は「Umamusume」、日本語版は「umamusume」という名前になっています。
 :::
+
 1. ゲームを閉じる
-2. `スタートメニュー`から、`PowerShell` を検索して、「管理者として実行する」を選択
-3. 以下のコマンドを実行：`fsutil.exe file setCaseSensitiveInfo $env:USERPROFILE\AppData\LocalLow\Cygames enable`
+1. `スタートメニュー`から、`PowerShell` を検索して、「管理者として実行する」を選択
+1. 以下のコマンドを実行：`fsutil.exe file setCaseSensitiveInfo $env:USERPROFILE\AppData\LocalLow\Cygames enable`
     - もし、`サポートされていない操作です` 等のエラーが表示された場合は、まず次のコマンドを実行してから、再度試してください：`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
     - もし、`ディレクトリが空ではありません。` というエラーが表示された場合、次のコマンドで一時的にすべてのデータを「Cygames」フォルダから移動してから、再度試してください：
     ```powershell
     New-Item -ItemType Directory "$env:USERPROFILE\AppData\LocalLow\CygamesTEMP"
     Move-Item "$env:USERPROFILE\AppData\LocalLow\Cygames\*" "$env:USERPROFILE\AppData\LocalLow\CygamesTEMP"
     ```
-4. もし「Cygames」フォルダを空にする必要があった場合は、すべてを元に戻します。
+1. もし「Cygames」フォルダを空にする必要があった場合は、すべてを元に戻します。
     ```powershell
     Move-Item "$env:USERPROFILE\AppData\LocalLow\CygamesTEMP\*" "$env:USERPROFILE\AppData\LocalLow\Cygames"
     Remove-Item "$env:USERPROFILE\AppData\LocalLow\CygamesTEMP"
     ```
-
 
 ### Steam グローバル版と DMM 日本語版で、毎回データのダウンロードを要求される
 
 [Error 501（エラー 501）](#error-501エラー-501)の項目をご確認ください。
 
 ### I/O error: Access is denied (os error 5)
+
 編集対象のファイルがすでに別のアプリによってアクセスされています。ゲームを閉じずに Hachimi を（アン）インストールしようとしているときに発生します。
 
 ### Installer I/O error: The system cannot find the file specified (os error 2)
+
 まだ考慮されていないファイル名の違いが原因で、グローバル版で発生する可能性があります。Hachimi に影響はないはずなので、無視しても問題はありません。
 
 ### 初期セットアップ時に、リポジトリの選択画面が読み込み中に停止したり、エラーが表示されたりする
+
 おそらく、VPNを使用しているときに発生します。セットアップが完了し、翻訳がダウンロードされるまで、一時的にVPNをオフにしてください。
 [関連する問題](#翻訳データのアップデートができない)も参照してください。
 
 ### 翻訳データのアップデートができない
+
 まず、アップデートがない場合です。この場合、「No updates found（アップデートが見つかりませんでした）」というメッセージが表示されます。
 このメッセージが表示されない場合は、おそらくVPNが有効になっています。アップデート中はVPNをオフにしてください。
 
 ## Android
 
-### パッチに失敗する　
+### パッチに失敗する
 
 - **ベース APK ファイル**と、**分割構成 APK ファイル**の両方、もしくはこれらをまとめた**XAPK**ファイルを選択していることを確認してください。
   ファイル選択画面でファイルを長押しすると複数選択ができます。
@@ -172,7 +187,7 @@ Hachimi の設定から、auto-translate が無効になっていることを確
     **MIUI の最適化**を無効にすると**すべてのアプリの権限がリセット**され、アプリが許可されたアクセス（ストレージ、通知など）を失う可能性があります。
     :::
 
-- **ウマPatcher Edge **のキャッシュを消去する方法：
+- **ウマPatcher Edge**のキャッシュを消去する方法：
   *アプリアイコンを長押し → アプリ情報 → ストレージとキャッシュ → キャッシュを削除*
   もし上手く行かない場合、**ウマPatcher Edge を再ダウンロード**し、**Imports signing key** を再度行ってください。
 
@@ -183,24 +198,27 @@ Hachimi の設定から、auto-translate が無効になっていることを確
 :::
 
 この問題は、ゲームを*アンインストールした*状態だが、**Secure Folder** 内にまだ残っている場合に発生します。以下の手順で完全にアンインストールできます。
+
 1. 開発者向けオプションから、**USB デバッグを有効**にする
     もし方法がわからない場合、こちらの[YouTube Short のガイド（英語）](https://www.youtube.com/shorts/p7DDuq56suU)をご覧ください。
-2. [Android Platform Tools (ADB)](https://developer.android.com/tools/releases/platform-tools#downloads)をコンピュータにダウンロードし、解凍する
-3. 解凍したフォルダ（`adb.exe` がある場所）の何もない場所を右クリックし、**ターミナルで開く**を選択
+1. [Android Platform Tools (ADB)](https://developer.android.com/tools/releases/platform-tools#downloads)をコンピュータにダウンロードし、解凍する
+1. 解凍したフォルダ（`adb.exe` がある場所）の何もない場所を右クリックし、**ターミナルで開く**を選択
    - Windows 10 の場合、**Shift** を押しながら右クリックを押すと、**PowerShell ウィンドウをここで開く**という項目が表示されます。
-4. USB ケーブル（USB-C などの互換性のあるケーブル）を使って、**コンピュータとスマートフォンを接続**する
-5. ターミナルのウィンドウ内で、`adb.exe` と入力し、**Enter** を押して正しく認識されていることを確認する
-6. `adb devices` と入力し、**Enter** 押す
+1. USB ケーブル（USB-C などの互換性のあるケーブル）を使って、**コンピュータとスマートフォンを接続**する
+1. ターミナルのウィンドウ内で、`adb.exe` と入力し、**Enter** を押して正しく認識されていることを確認する
+1. `adb devices` と入力し、**Enter** 押す
    スマートフォンの画面を見て、USB デバッグの許可を求められたら許可し、その後、もう一度同じコマンドを実行して接続する
    ターミナルに `"ABCD1234EFGH" device` のような文字列が表示されれば成功
    表示されない場合は、下記のトラブルシューティングを参照してください。
-7. 最後に、`adb uninstall jp.co.cygames.umamusume` と入力して **Enter** を押し、ゲームをアンインストールします。
+1. 最後に、`adb uninstall jp.co.cygames.umamusume` と入力して **Enter** を押し、ゲームをアンインストールします。
 
 #### Unauthorized と表示された場合のトラブルシューティング
+
 もし `adb devices` と入力して **Enter** を押した場合に、**「device」**ではなく**「unauthorized」**と表示された場合は
-1. スマートフォンの USB デバッグを**一度無効**にし、**再度有効**にする 
-2. スマートフォンを再接続し、USB デバッグの許可を求められたら再度許可する
-3. 上記の手順（大抵の場合、手順5～7）を繰り返す
+
+1. スマートフォンの USB デバッグを**一度無効**にし、**再度有効**にする
+1. スマートフォンを再接続し、USB デバッグの許可を求められたら再度許可する
+1. 上記の手順（大抵の場合、手順5～7）を繰り返す
 
 ### Google Play のアカウントでログインできない
 
@@ -210,14 +228,15 @@ Hachimi の設定から、auto-translate が無効になっていることを確
 その後、パッチの適用を行い、作成したデータ連携のパスワードでログインできます。
 または、Cygames ID でログインしてアカウントのデータを連携することもできます。
 
-
 ### 「この端末でのプレイは許可されていません (You are not permitted to play on this device)」というエラーが発生する
 
 #### root 化済みの場合
+
 接続が安定していること、およびPlay Integrityサーバー上でデバイスが少なくとも **DEVICE_INTEGRITY** をパスしていることを確認してください（[Play Integrity API Checker](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck) アプリを使って確認できます）。もしパスしている場合、**Magisk 標準の DenyList**（拒否リスト）を使用してゲームから root を検出できなくすれば動作するはずです（うまくいかない場合は *Enforce DenyList* を有効にしてください）。また、**Shamiko** などのツールを使用することでも解決する可能性があります。
 
 #### root 化済みでない場合
- このエラーメッセージが表示され続ける場合、Play Integrity サーバーへの接続が不安定になっているか、ゲーム起動時に **VPN** を使用する必要があるという可能性があります。詳細は [Communication error](#ゲームを開始しようとした際に、-communication-error-が発生する) のセクションを参照してください。
+
+ このエラーメッセージが表示され続ける場合、Play Integrity サーバーへの接続が不安定になっているか、ゲーム起動時に **VPN** を使用する必要があるという可能性があります。詳細は [Communication error](#ゲームを開始しようとした際にcommunication-error-が発生する) のセクションを参照してください。
 
 ### I/O error: Permission denied (os error 13)
 
@@ -234,6 +253,7 @@ Android 10 で導入された対象範囲別ストレージにより、Hachimi �
 そのフォルダ内に「hachimi」という名前でフォルダを作成して、最後に、[この設定ファイル](https://files.leadrdrk.com/hachimi/android-compat/config.json)をダウンロードし、「hachimi」フォルダ内に配置します（ダウンロードしたファイル名が「config.json」になっていることを確認してください）。
 
 ### タップの位置がおかしい
+
 Hachimi のメニューから、Config Editor（設定エディタ）を開き、virtual resolution multiplier の値を調節して、適切に動作する値を探してください。
 
 ### タップ操作を受け付けない、ゲームがクラッシュまたはフリーズする
@@ -246,22 +266,26 @@ Hachimi のメニューから、Config Editor（設定エディタ）を開き�
 ::: tip
 GUI をオフにすると、翻訳の更新が無効になります。更新するには、定期的にオンとオフを切り替える必要があります。
 :::
+
 1. 翻訳が最新の状態であることを確認する。可能であれば Hachimi で更新を実行し、完了するまでは何も触らないでください。
-2. Hachimi のメニューを開き、Config Editor（設定エディタ）で、Disable Overlay (GUI) を有効にする。
+1. Hachimi のメニューを開き、Config Editor（設定エディタ）で、Disable Overlay (GUI) を有効にする。
     - GUIを再度有効にする場合、テキストエディタを使用し、Hachimi の設定ファイル（config.json）内の `disable_gui` の項目を `true` から、 `false` に変更し、ゲームを再起動します。設定ファイルは、ゲームのインストールフォルダ内の `hachimi` フォルダにあります。Android の場合、`android/media/jp.co.cygames.umamusume` にあります。（お使いの端末によって差異がある可能性があります）
-3. 問題を Hachimi Edge の開発者に Discord または GitHub で報告する。
+1. 問題を Hachimi Edge の開発者に Discord または GitHub で報告する。
+
 </details>
 
-
 ### パッチは成功したが、翻訳が表示されない
+
 翻訳データがダウンロード済みであり、アップデート済みであることを確認してください。または、初期セットアップをもう一度実行してください。
 
 パッチ中に `libmain.so` に関係するメッセージが表示された場合、動作するまで上から順番に実行してください。
+
 1. 最新版の Hachimi であることを確認する
-2. ウマPatcher Edge の設定にて、「Force redownload Hachimi」を選択し、再度パッチを適用する
-3. ウマPatcher Edge のキャッシュとストレージを消去する
-4. ウマPatcher Edge を再インストールする
-5. スマートフォンをリカバリーモードにし、キャッシュをワイプする
+1. ウマPatcher Edge の設定にて、「Force redownload Hachimi」を選択し、再度パッチを適用する
+1. ウマPatcher Edge のキャッシュとストレージを消去する
+1. ウマPatcher Edge を再インストールする
+1. スマートフォンをリカバリーモードにし、キャッシュをワイプする
 
 ## エミュレーターについて（Google Play Games も含む）
+
 ゲームも Hachimi もエミュレーターをサポートしていません。エミュレーター上で動作させることは可能かもしれませんが、自己責任となります。PCでプレイするには、DMM または Steam をご利用ください。

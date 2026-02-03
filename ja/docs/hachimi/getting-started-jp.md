@@ -15,10 +15,10 @@ Vanguard などの一部のアンチチートは、保護対象のゲームに�
 :::
 
 1. [最新版のインストーラー](https://github.com/kairusds/Hachimi-Edge/releases/latest/download/hachimi_installer.exe)をダウンロードし、実行します。
-2. もし通常版の Hachimi（Hachimi Edge ではないバージョン）をご使用中の場合は、先に「Uninstall」を選択してください。
-3. ゲームのバージョンを下側の項目から選択してください。
-4. 必要に応じて、インストールディレクトリが正しく設定されているかを確認、修正してください。
-5. 「Install」を選択し、インストールします。
+1. もし通常版の Hachimi（Hachimi Edge ではないバージョン）をご使用中の場合は、先に「Uninstall」を選択してください。
+1. ゲームのバージョンを下側の項目から選択してください。
+1. 必要に応じて、インストールディレクトリが正しく設定されているかを確認、修正してください。
+1. 「Install」を選択し、インストールします。
 
 初めてインストールする際に、インストーラーが「.local」フォルダを使った DLL リダイレクトを有効にするように確認する場合があります。「OK」をクリックすると有効になります。**動作させるためには、有効にした後、コンピューターを再起動（シャットダウンではありません）する必要があります。**
 
@@ -34,10 +34,11 @@ Vanguard などの一部のアンチチートは、保護対象のゲームに�
 :::
 
 1. [こちらの記事](https://learn.microsoft.com/ja-jp/windows/win32/dlls/dynamic-link-library-redirection#optional-configure-the-registry)の「レジストリを構成する」を参考にし、 DLL リダイレクトを有効にしてから、コンピューターを再起動します。
-2. 最新バージョンの `hachimi.dll` を[リリースページ](https://github.com/kairusds/Hachimi-Edge/releases)からダウンロードします。
-3. ゲームがインストールされているフォルダ内に `umamusume.exe.local` という名前の新しいフォルダを作成して、ダウンロードした DLL ファイルをそこに移動し、ファイル名を `UnityPlayer.dll` に変更します。
-4. 最新バージョンの `cellar.dll` を[Cellarのリリースページ](https://github.com/Hachimi-Hachimi/Cellar/releases)からダウンロードします。
-5. ダウンロードしたファイルを `umamusume.exe.local` フォルダに移動し、`apphelp.dll` に名前を変更してください。
+1. 最新バージョンの `hachimi.dll` を[リリースページ](https://github.com/kairusds/Hachimi-Edge/releases)からダウンロードします。
+1. ゲームがインストールされているフォルダ内に `umamusume.exe.local` という名前の新しいフォルダを作成して、ダウンロードした DLL ファイルをそこに移動し、ファイル名を `UnityPlayer.dll` に変更します。
+1. 最新バージョンの `cellar.dll` を[Cellarのリリースページ](https://github.com/Hachimi-Hachimi/Cellar/releases)からダウンロードします。
+1. ダウンロードしたファイルを `umamusume.exe.local` フォルダに移動し、`apphelp.dll` に名前を変更してください。
+
 </details>
 
 <details>
@@ -72,16 +73,16 @@ HyperOS が搭載されていない Xiaomi デバイスでは、インストー�
 :::
 
 1. もしこれまでに ウマPatcher を使用したことがある場合、設定ページを開き、**「Export signing key」を選択し、安全な場所に保存してください。**
-2. **ウマPatcher を使用してパッチをしていないゲームをインストールしている場合は**、ゲームをアンインストールしてください。
-3. 最新バージョンの [ウマPatcher Edge](https://github.com/kairusds/UmaPatcher-Edge/releases/latest/download/app-release.apk) をダウンロードし、インストールします。
-4. ゲームのインストールパッケージを準備します。パッケージの形式は以下のとおりです。
+1. **ウマPatcher を使用してパッチをしていないゲームをインストールしている場合は**、ゲームをアンインストールしてください。
+1. 最新バージョンの [ウマPatcher Edge](https://github.com/kairusds/UmaPatcher-Edge/releases/latest/download/app-release.apk) をダウンロードし、インストールします。
+1. ゲームのインストールパッケージを準備します。パッケージの形式は以下のとおりです。
     - **分割 APK ファイル**: ベース APK ファイルと、いずれか1つの分割構成 APK ファイル（例: config.arm64_v8a、config.armeabi-v7aなど）です。
-	お使いの端末に適した構成 APK ファイルを1つ選択してください。
-	これは現在、日本語版でのみ使用されています。
+ お使いの端末に適した構成 APK ファイルを1つ選択してください。
+ これは現在、日本語版でのみ使用されています。
     - **単一 APK ファイル**: すべての構成を含んだフルサイズの APK ファイルです。
     - **XAPK ファイル**: 分割 APK ファイルを ZIP 形式でまとめ、拡張子を XAPK に変更したファイルです。
-5. ウマPatcher を開き、必要に応じて「Import signing key」を選択し、先に保存したファイルをインポートし、「Normal install」を選び、準備したファイル（単一または複数）を選択します。
-6. 「Patch」をタップすると、パッチ適用とインストールが行われます。
+1. ウマPatcher を開き、必要に応じて「Import signing key」を選択し、先に保存したファイルをインポートし、「Normal install」を選び、準備したファイル（単一または複数）を選択します。
+1. 「Patch」をタップすると、パッチ適用とインストールが行われます。
 
 ⚠️ アップデートをする際は、上記の手順4から行ってください。ゲームをアップデートするたびにアンインストールする必要はありません。
 
@@ -99,13 +100,15 @@ HyperOS が搭載されていない Xiaomi デバイスでは、インストー�
 <summary class="collapsible-header-sub">手動でインストールする方法（非推奨）</summary>
 
 1. ビルドをするか、ビルド済みライブラリを[リリースページ](https://github.com/kairusds/Hachimi-Edge/releases)からダウンロードします。
-2. ゲームの APK ファイルを抽出します。[apktool](https://apktool.org/)を使用することを推奨します。
-3. `lib` フォルダ内の各フォルダにある `libmain.so` ファイルの名前を `libmain_orig.so` に変更します。
-4. プロキシライブラリを対応するフォルダにコピー（例： `libmain-arm64-v8a.so` は `lib/arm64-v8a` にコピー）し、名前を `libmain.so` に変更します。
-5. APK ファイルをビルドし、インストールします。
+1. ゲームの APK ファイルを抽出します。[apktool](https://apktool.org/)を使用することを推奨します。
+1. `lib` フォルダ内の各フォルダにある `libmain.so` ファイルの名前を `libmain_orig.so` に変更します。
+1. プロキシライブラリを対応するフォルダにコピー（例： `libmain-arm64-v8a.so` は `lib/arm64-v8a` にコピー）し、名前を `libmain.so` に変更します。
+1. APK ファイルをビルドし、インストールします。
+
 </details>
 
 ## 初期セットアップ
+
 Hachimi をインストールした後、初めてゲームを起動すると、次のダイアログが表示されます。
 
 ![First Time Setup](/assets/first-time-setup.jpg)

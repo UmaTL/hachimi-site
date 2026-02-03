@@ -1,4 +1,5 @@
 # Penggunaan UmaTL
+
 UmaTL sebenarnya adalah patch terjemahan pertama untuk game tersebut. Patch ini menyertakan alat pengeditan, yang sebagian besar masih bisa digunakan hingga sekarang.
 
 ## Instalasi
@@ -18,7 +19,7 @@ UmaTL sebenarnya adalah patch terjemahan pertama untuk game tersebut. Patch ini 
 
 ## Bahasa Berbeda
 
-Jika kamu membutuhkan font khusus untuk bahasa yang diinginkan, kamu harus mengganti font yang ada di `src\data` dan membuat Unity AssetBundle dengan font tersebut untuk digunakan di dalam game melalui Hachimi. Gunakan sumber terjemahan yang sudah ada sebagai referensi. Langkah ini mengharuskan kamu menginstal Unity Editor versi _full_, atau mencari alat pihak ketiga meskipun alat-alat tersebut biasanya kurang stabil.
+Jika kamu membutuhkan font khusus untuk bahasa yang diinginkan, kamu harus mengganti font yang ada di `src\data` dan membuat Unity AssetBundle dengan font tersebut untuk digunakan di dalam game melalui Hachimi. Gunakan sumber terjemahan yang sudah ada sebagai referensi. Langkah ini mengharuskan kamu menginstal Unity Editor versi *full*, atau mencari alat pihak ketiga meskipun alat-alat tersebut biasanya kurang stabil.
 
 UmaTL yang lama tidak dibuat dengan dukungan terjemahan multibahasa, sehingga beberapa hal mungkin tidak berfungsi dengan benar. Periksa replacer.json dan fungsi pemeriksa ejaan secara khusus saat kamu mengalami masalah.
 
@@ -72,10 +73,9 @@ Lihat [konversi](#konversi-ke-format-hachimi) tentang cara memperoleh file forma
 
 Editor akan menampilkan garis merah bergelombang di bawah kata yang tidak dikenali. Klik kanan pada kata tersebut untuk mendapatkan saran. Nama karakter secara otomatis dimuat sebagai kata khusus melalui file `char-name.json`. Perbarui file tersebut jika diperlukan. Kamus yang sama digunakan untuk keduanya, sehingga fitur `autocomplete` mendukung karakter.
 
-
 ### Warna
 
-Teks berwarna apa pun bisa diklik kanan untuk menyimpan warna tersebut sebagai warna aktif yang digunakan dengan pintasan "_color selection_".
+Teks berwarna apa pun bisa diklik kanan untuk menyimpan warna tersebut sebagai warna aktif yang digunakan dengan pintasan "*color selection*".
 
 ### Judul
 
@@ -88,7 +88,6 @@ Saat bekerja di repositori terjemahan UmaTL, lebih disarankan untuk kontribusi D
 :::
 
 Untuk berkontribusi pada repositori berbasis Hachimi atau menguji terjemahan di dalam game, kamu memerlukan file dalam format yang benar. Kamu juga bisa menggunakan skrip `import.py` jika mau, tetapi hal itu tidak disarankan karena skrip tersebut memodifikasi file game asli (meskipun bisa dibalik)
-
 
 Gunakan skrip `to_hachimi.py` dari [laman rilis ini](https://github.com/UmaTL/hachimi-tl-en/releases/tag/support) untuk mengkonversi ke format Hachimi dan test didalam game.  
 Ingat untuk memuat ulang data lokalisasi di menu Hachimi jika kamu sedang masuk ke game.

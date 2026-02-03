@@ -3,6 +3,7 @@
 Halaman ini berisi daftar opsi konfigurasi dan penjelasan kegunaannya.
 
 File konfigurasi bisa ditemukan di lokasi berikut:
+
 - Windows: `[Folder instalasi game]\hachimi\config.json`
 - Android: `/sdcard/Android/media/jp.co.cygames.umamusume/hachimi/config.json`
 
@@ -32,6 +33,7 @@ File konfigurasi bisa ditemukan di lokasi berikut:
 - `auto_translate_localize`: Memungkinkan penerjemahan teks UI melalui penerjemah otomatis. Umumnya TIDAK disarankan karena kebanyakan penerjemah tidak menjaga line break atau tag format dengan benar.
 
 ### Hanya untuk Windows
+
 - `vsync_count`: Jumlah VSync. Atur ke 1 agar sesuai dengan refresh rate monitor kamu. Lihat [dokumentasi Unity](https://docs.unity3d.com/ScriptReference/QualitySettings-vSyncCount.html) untuk info lebih lanjut.
 - `load_libraries`: Daftar library yang dimuat saat startup. Bisa digunakan untuk memuat mod lain. Contoh: `["applejuicer.dll", "banana.dll"]`
 - `menu_open_key`: Kode VK Windows untuk tombol yang membuka menu. Default: `39` (tombol panah kanan). Cek [halaman ini](https://cherrytree.at/misc/vk.htm) untuk daftar semua keycode.

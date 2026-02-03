@@ -5,6 +5,7 @@
 Bitte prüfe vor der Installation die Kompatibilität.
 
 ### Windows
+
 | Version | Unterstützt |
 | --- | :---: |
 | JP | ✅ |
@@ -44,13 +45,14 @@ Beim ersten Mal wirst du möglicherweise gefragt, ob du die DotLocal DLL-Umleitu
 **Ein Neustart ist erforderlich, damit es funktioniert.**
 
 - **Manuell:**
-1. Befolge den Abschnitt "Konfigurieren der Registrierung" in [diesem Artikel](https://learn.microsoft.com/de-de/windows/win32/dlls/dynamic-link-library-redirection#optional-configure-the-registry), um die Umleitung zu aktivieren. Starte danach den PC neu.
-2. Lade die aktuelle `hachimi.dll` von der [Releases-Seite](https://github.com/Hachimi-Hachimi/Hachimi/releases) herunter.
-3. Erstelle im Installationsordner des Spiels einen neuen Ordner mit dem Namen `umamusume.exe.local` und verschiebe die DLL dorthin. Benenne sie um in `UnityPlayer.dll`.
-4. Lade die aktuelle `cellar.dll` von der [Cellar Releases-Seite](https://github.com/Hachimi-Hachimi/Cellar/releases) herunter.
-5. Verschiebe sie ebenfalls nach `umamusume.exe.local` und benenne sie um in `apphelp.dll`.
 
-> ℹ️ Tipp für LoL/Valorant-Spieler: Du musst die DLL-Umleitung jedes Mal deaktivieren, wenn du diese Games zocken willst. Dieses Tool hilft dabei: https://github.com/LeadRDRK/DotLocalToggle/releases – einfach starten, bis "deaktiviert" angezeigt wird, und neu starten.
+1. Befolge den Abschnitt "Konfigurieren der Registrierung" in [diesem Artikel](https://learn.microsoft.com/de-de/windows/win32/dlls/dynamic-link-library-redirection#optional-configure-the-registry), um die Umleitung zu aktivieren. Starte danach den PC neu.
+1. Lade die aktuelle `hachimi.dll` von der [Releases-Seite](https://github.com/Hachimi-Hachimi/Hachimi/releases) herunter.
+1. Erstelle im Installationsordner des Spiels einen neuen Ordner mit dem Namen `umamusume.exe.local` und verschiebe die DLL dorthin. Benenne sie um in `UnityPlayer.dll`.
+1. Lade die aktuelle `cellar.dll` von der [Cellar Releases-Seite](https://github.com/Hachimi-Hachimi/Cellar/releases) herunter.
+1. Verschiebe sie ebenfalls nach `umamusume.exe.local` und benenne sie um in `apphelp.dll`.
+
+> ℹ️ Tipp für LoL/Valorant-Spieler: Du musst die DLL-Umleitung jedes Mal deaktivieren, wenn du diese Games zocken willst. Dieses Tool hilft dabei: <https://github.com/LeadRDRK/DotLocalToggle/releases> – einfach starten, bis "deaktiviert" angezeigt wird, und neu starten.
 
 #### Methode 2: Plugin-Shimming (cri_mana_vpx.dll)
 
@@ -77,13 +79,13 @@ Es wird empfohlen, das Spiel vorher **nicht** installiert zu haben.
 > ❗ Verwende keine APKs von APKPure – diese verursachen bekannte Probleme.
 
 1. Lade die aktuelle UmaPatcher-Version von der [Releases-Seite](https://github.com/LeadRDRK/UmaPatcher/releases) herunter und installiere sie.
-2. Bereite das Installationspaket vor. Das kann sein:
+1. Bereite das Installationspaket vor. Das kann sein:
     - **Split APK-Dateien:** Eine Basis-APK + eine passende Split-Konfigurationsdatei (z. B. config.arm64_v8a).  
       Nur die JP-Version nutzt derzeit dieses Format.
     - **Single APK-Datei:** Eine komplette APK in einem File.
     - **XAPK-Datei:** ZIP-Datei mit allen Split-Dateien (umbenannt auf .xapk).
-3. Öffne UmaPatcher und wähle "Normale Installation". Lade die vorbereiteten Dateien.
-4. Tippe auf "Patch", um die Installation zu starten.
+1. Öffne UmaPatcher und wähle "Normale Installation". Lade die vorbereiteten Dateien.
+1. Tippe auf "Patch", um die Installation zu starten.
 
 Diesen Vorgang musst du **nach jedem App-Update wiederholen**, beginnend bei Schritt 2.
 
@@ -98,10 +100,10 @@ Auch hier musst du nach App-Updates neu patchen.
 #### Manuell
 
 1. Lade oder baue die Bibliotheken von der [Releases-Seite](https://github.com/Hachimi-Hachimi/Hachimi/releases).
-2. Extrahiere die APK mit Tools wie [apktool](https://apktool.org/).
-3. Benenne jede `libmain.so` in `libmain_orig.so` um.
-4. Kopiere die Proxy-Bibliotheken in die jeweiligen lib-Ordner (z. B. `lib/arm64-v8a`) und benenne sie wieder zu `libmain.so`.
-5. Baue die APK neu und installiere sie.
+1. Extrahiere die APK mit Tools wie [apktool](https://apktool.org/).
+1. Benenne jede `libmain.so` in `libmain_orig.so` um.
+1. Kopiere die Proxy-Bibliotheken in die jeweiligen lib-Ordner (z. B. `lib/arm64-v8a`) und benenne sie wieder zu `libmain.so`.
+1. Baue die APK neu und installiere sie.
 
 ## Erster Start
 

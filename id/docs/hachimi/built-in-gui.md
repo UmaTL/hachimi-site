@@ -1,10 +1,13 @@
 # GUI Bawaan
+
 GUI bawaan bisa digunakan untuk mengaktifkan beberapa fungsi dalam game dan mengubah konfigurasi.
 
 ![Tangkapan layar GUI](/assets/id/built-in-gui.webp)
 
 ## Membuka Menu
+
 Menu bisa dibuka dengan menekan tombol atau kombinasi tombol. Ini berbeda untuk setiap platform:
+
 - **Android:** Tombol Volume Atas + Volume Bawah
 - **Windows:** Tombol panah kanan(\*)
 
@@ -13,20 +16,24 @@ Menu bisa dibuka dengan menekan tombol atau kombinasi tombol. Ini berbeda untuk 
 (\*) Tombol ini bisa diubah. Lihat opsi `menu_open_key` di [halaman Konfigurasi](/id/docs/hachimi/config).
 
 ## Konfigurasi
+
 - **Editor konfig:** Tempat untuk mengedit file konfigurasi di dalam game. Lihat halaman Konfigurasi untuk detail setiap opsi.
 - **Muat ulang konfig:** Memuat ulang file konfigurasi dari penyimpanan. Ini dilakukan secara otomatis oleh editor konfigurasi.
 - **Setup pertama kali:** Menjalankan wizard pengaturan awal. Kamu bisa mengubah repo terjemahan di sini.
 
 ## Grafik
-Di sini kamu bisa mengubah opsi grafis secara _real-time_.
+
+Di sini kamu bisa mengubah opsi grafis secara *real-time*.
 
 Perhatikan bahwa opsi ini tidak permanen dan akan direset saat game dimulai kembali. Untuk menerapkan opsi ini secara permanen, ubah langsung melalui Editor Konfig.
 
 ## Terjemahan
+
 - **Muat ulang data lokalisasi:** Ditujukan untuk penerjemah. Akan memuat ulang file terjemahan dari disk.
 - **Cek pembaruan:** Menjalankan pengecekan pembaruan data translasi.
 
 ## Zona Rawan
+
 Opsi-opsi ini sebenarnya tidak terlalu berbahaya jika digunakan dengan benar; tapi justru karena itu diletakkan di bagian ini. **Jangan utak-atik jika kamu tidak tahu risikonya!.**
 
 Cukup dengan peringatan, jika kamu tetap penasaran, berikut fungsinya dan hal yang harus dihindari:

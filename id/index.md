@@ -43,17 +43,16 @@ features:
 
 ## Tentang
 
-Hachimi Edge merupakan _fork_ aktif dari mod Hachimi yang sudah tidak lagi dipelihara. 
-Mod ini dibuat untuk segera menangani masalah yang muncul setelah pembaruan game pada 24/09/2025 dengan menggabungkan fitur tambahan serta perbaikan dari berbagai anggota komunitas. Hachimi tidak berfungsi? Kesalahan _runtime_? _Patching_ gagal? Kemungkinan besar kamu masih menggunakan Hachimi versi asli. Hapus instalasi Hachimi lama dan pasang versi Edge baru untuk menyelesaikan masalah. Jika pengembang Hachimi kembali, Edge kemungkinan akan digabung kembali dan dihentikan.
-
+Hachimi Edge merupakan *fork* aktif dari mod Hachimi yang sudah tidak lagi dipelihara.
+Mod ini dibuat untuk segera menangani masalah yang muncul setelah pembaruan game pada 24/09/2025 dengan menggabungkan fitur tambahan serta perbaikan dari berbagai anggota komunitas. Hachimi tidak berfungsi? Kesalahan *runtime*? *Patching* gagal? Kemungkinan besar kamu masih menggunakan Hachimi versi asli. Hapus instalasi Hachimi lama dan pasang versi Edge baru untuk menyelesaikan masalah. Jika pengembang Hachimi kembali, Edge kemungkinan akan digabung kembali dan dihentikan.
 
 ## UmaPatcher
 
-UmaPatcher adalah aplikasi bantu untuk mempermudah proses _patch_ Hachimi ke dalam game di Android. Aplikasi ini juga memiliki versi "Edge" yang menerapkan Hachimi Edge. Versi Hachimi Edge terbaru akan otomatis diunduh saat melakukan _patching_, jadi kamu tidak perlu khawatir tentang hal lain di Android.
+UmaPatcher adalah aplikasi bantu untuk mempermudah proses *patch* Hachimi ke dalam game di Android. Aplikasi ini juga memiliki versi "Edge" yang menerapkan Hachimi Edge. Versi Hachimi Edge terbaru akan otomatis diunduh saat melakukan *patching*, jadi kamu tidak perlu khawatir tentang hal lain di Android.
 
 ## Translasi
 
-Sumber terjemahan diindeks dari berbagai proyek komunitas terpisah. Hachimi menyediakan kerangka kerja untuk memodifikasi game, namun tidak melakukan atau mengelola terjemahan itu sendiri, dan tidak ada hubungannya dengan sumber-sumber tersebut. Tidak menemukan terjemahan untuk konten terbaru? Mencari bahasa lain? Hachimi Edge mengindeks lebih banyak repositori yang lebih _up-to-date_ dibandingkan versi asli. Lihat sumber-sumber secara lebih detail di [_laman kredit_](/id/credits.md) untuk informasi umum, progres, bantuan, dan cara menghubungi. Cobalah untuk mendukung para kontributor yang mengerjakannya!
+Sumber terjemahan diindeks dari berbagai proyek komunitas terpisah. Hachimi menyediakan kerangka kerja untuk memodifikasi game, namun tidak melakukan atau mengelola terjemahan itu sendiri, dan tidak ada hubungannya dengan sumber-sumber tersebut. Tidak menemukan terjemahan untuk konten terbaru? Mencari bahasa lain? Hachimi Edge mengindeks lebih banyak repositori yang lebih *up-to-date* dibandingkan versi asli. Lihat sumber-sumber secara lebih detail di [*laman kredit*](/id/credits.md) untuk informasi umum, progres, bantuan, dan cara menghubungi. Cobalah untuk mendukung para kontributor yang mengerjakannya!
 
 ## Tangkapan Layar {#screenshots}
 

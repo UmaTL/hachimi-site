@@ -3,6 +3,7 @@
 此页面列出了所有配置选项并描述了它们的用途。
 
 配置文件可以在下列位置找到：
+
 - Windows：`[游戏安装文件夹]\hachimi\config.json`
 - Android：`/sdcard/Android/media/jp.co.cygames.umamusume/hachimi/config.json`
 
@@ -36,6 +37,7 @@
 如果您设置了游戏的帧率在 60 以上时，推荐设置为`Mofe60FPS`，其他情况不推荐修改。
 
 ### 仅限 Windows
+
 - `vsync_count`: 垂直同步。设置为 1，即可让游戏帧率匹配显示器的刷新率。更多信息请参阅 [Unity 文档](https://docs.unity3d.com/ScriptReference/QualitySettings-vSyncCount.html)。
 - `load_libraries`: 启动时加载的 DLL 列表。可用于加载其他模组。例如：`["applejuicer.dll", "banana.dll"]`
 - `menu_open_key`: 打开菜单的按键的虚拟键码。默认值：`39`（右方向键）。查看[此页面](https://cherrytree.at/misc/vk.htm)以获取所有键码的列表。

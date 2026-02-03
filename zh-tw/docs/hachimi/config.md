@@ -3,6 +3,7 @@
 這個頁面列出了所有設定選項，並說明每個選項的用途。
 
 設定檔會存在以下其中一個位置：
+
 - Windows: `[遊戲安裝資料夾]\hachimi\config.json`
 - Android: `/sdcard/Android/media/jp.co.cygames.umamusume/hachimi/config.json`
 

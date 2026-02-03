@@ -3,13 +3,14 @@
 以下のプラットフォームごとのガイドに従ってから、[初期セットアップ](#初期セットアップ)に進んでください。
 
 ## Windows
+
 ::: danger
 2025/11/11 以降にグローバル版をプレイされる場合は、代わりに[日本語版の場合のインストールガイド](getting-started-jp.md)の手順に従ってください。その際、インストーラーにはグローバル版のインストール先を指定してください（必ず Steam 版を選択してください）。
 このセクションは、ゲームのバージョンがまだ更新されていない場合にのみ参照してください。
 :::
 
 1. 最新バージョンの `hachimi_installer.exe` を[リリースページ](https://github.com/Hachimi-Hachimi/Hachimi-Unity2020/releases)からダウンロードします。
-2. 起動し、インストールボタンをクリックします。各オプションの意味がわからない場合は、何も変更する必要はありません。
+1. 起動し、インストールボタンをクリックします。各オプションの意味がわからない場合は、何も変更する必要はありません。
 
 <details>
 <summary class="collapsible-header-sub">手動でインストールする方法</summary>
@@ -19,10 +20,11 @@
 :::
 
 1. 最新バージョンの `hachimi.dll` を[リリースページ](https://github.com/Hachimi-Hachimi/Hachimi-Unity2020/releases)からダウンロードした後、ファイルをゲームのインストールフォルダに移動します。
-2. ファイル名を `winhttp.dll`、`version.dll`、`opengl32.dll` のいずれかに変更します。
+1. ファイル名を `winhttp.dll`、`version.dll`、`opengl32.dll` のいずれかに変更します。
+
 </details>
 
-## Android 
+## Android
 
 ::: warning
 Hachimi は、これらのバージョンでは root 権限なしでは使用できません。
@@ -34,10 +36,11 @@ Hachimi は、これらのバージョンでは root 権限なしでは使用で
 :::
 
 #### Zygisk
+
 最新の Zygisk の zip ファイルを[リリースページ](https://github.com/Hachimi-Hachimi/Hachimi-Unity2020/releases)からダウンロードし、Magisk または KernelSU（Zygisk Next と併用）でインストールしてください。
 
-
 ## 初期セットアップ
+
 Hachimi をインストールした後、初めてゲームを起動すると、次のダイアログが表示されます。
 
 ![First Time Setup](/assets/first-time-setup.jpg)

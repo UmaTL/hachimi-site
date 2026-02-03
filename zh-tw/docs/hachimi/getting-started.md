@@ -1,4 +1,5 @@
 # 開始使用
+
 <small>
 
 以其他語言來閱讀（View this page in other languages）:
@@ -8,6 +9,7 @@
 </small>
 
 ## ⚠️ 請勿在其他地方提及此網站或 GitHub 倉庫
+
 我們明白你想幫助其他人用 Hachimi 來獲得更好的遊戲體驗。即便如此，這個項目本質上乃是違反遊戲的服務條款的存在，如果遊戲開發者發現了這個插件，他們很可能不會視而不見。
 
 在你自己管理或私密的聊天服務中分享此插件並不會造成問題，但是請避免在公共地方宣傳這個項目與其相關工具。
@@ -15,6 +17,7 @@
 這種宣傳行為可能會毀掉很多 Hachimi 用戶的遊戲體驗。選擇權在你手上。
 
 ### 如果你無論如何都還是想和別人分享
+
 如果你仍想要宣傳這個項目，我們建議你在相關材料中以「UM:PD」或「某賽馬擬人遊戲」來指代遊戲本身，這樣可以幫助避免被搜索引擎剖析。
 
 ## 相容性
@@ -22,6 +25,7 @@
 請在安裝前檢查相容性。
 
 ### Windows
+
 | 遊戲版本        | 是否支援 |
 |-------------|:----:|
 | 日文版（JP）     |  ✅   |
@@ -39,6 +43,7 @@
 | 繁體中文版 MyCard 版（TW MC）      |  ⚠️  |  ⚠️  |   ✅    |
 | 簡體中文版 (CN)                 |  ⚠️  |  ⚠️  |   ✅    |
 | 國際版                        |  ⚠️  |  ⚠️  |   ❔    |
+
 - ✅ - 完全支援。
 - ⚠️ - 可運行，但可能因外部因素無法正常運行（例如：反作弊）
 - ❔ - 有可能可以運行，但對此不做保證。
@@ -71,15 +76,16 @@ Hachimi 自 v0.13.0 開始，支援兩種依靠不同安裝流程的加載方法
 初次安裝時，安裝器可能會詢問你是否要開啟 DotLocal DLL 重定向，點擊 OK 然後他就會開啟了。 **在此之後，你必須重新啟動電腦才會套用**。
 
 - **手動安裝**
+
 1. 請參考[這篇文章](https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-redirection#optional-configure-the-registry)中的「設定登錄檔」部分來啟用 DLL 重導向。完成後請重新啟動電腦。
-2. 前往 [Releases 頁面](https://github.com/Hachimi-Hachimi/Hachimi/releases)下載最新版的 `hachimi.dll`。
-3. 在遊戲的安裝資料夾中，建立一個名為 `umamusume.exe.local` 的新資料夾，並將剛剛下載的 DLL 檔案放進去。然後將它重新命名為 `UnityPlayer.dll`。
-4. 前往 [Cellar Releases 頁面](https://github.com/Hachimi-Hachimi/Cellar/releases)下載最新版的 `cellar.dll`。
-5. 將它移動到 `umamusume.exe.local` 資料夾中，並重新命名為 `apphelp.dll`。
+1. 前往 [Releases 頁面](https://github.com/Hachimi-Hachimi/Hachimi/releases)下載最新版的 `hachimi.dll`。
+1. 在遊戲的安裝資料夾中，建立一個名為 `umamusume.exe.local` 的新資料夾，並將剛剛下載的 DLL 檔案放進去。然後將它重新命名為 `UnityPlayer.dll`。
+1. 前往 [Cellar Releases 頁面](https://github.com/Hachimi-Hachimi/Cellar/releases)下載最新版的 `cellar.dll`。
+1. 將它移動到 `umamusume.exe.local` 資料夾中，並重新命名為 `apphelp.dll`。
 
 ::: info
 想玩 LoL 或 Valorant 的人注意：每次想玩這些遊戲前，都需要關閉 DLL 重導向功能。你可以使用這個程式快速切換開關：  
-https://github.com/LeadRDRK/DotLocalToggle/releases  
+<https://github.com/LeadRDRK/DotLocalToggle/releases>  
 執行這個程式直到它顯示已停用 DLL 重導向，然後重新啟動電腦。
 :::
 
@@ -90,6 +96,7 @@ https://github.com/LeadRDRK/DotLocalToggle/releases
 :::
 
 #### 從方法二遷移到方法一
+
 如果你想從方法二切換到方法一，這個過程比從方法一切換到方法二（只要解除安裝再重新安裝）要複雜一些。
 
 你需要**完全解除安裝 Shinmy**；請確保在刪除它時程式並未運行，因為它會在 DMM 關閉後持續執行最多 30 秒，還可能自行恢復。**最簡單的方法是使用安裝程式**（它同時也是解除安裝工具），這會幫你完整清除所有檔案。
@@ -109,16 +116,17 @@ https://github.com/LeadRDRK/DotLocalToggle/releases
 :::
 
 1. 從 [Releases 頁面](https://github.com/LeadRDRK/UmaPatcher/releases)下載並安裝最新版 UmaPatcher。
-2. 準備好遊戲的安裝檔案，格式可以是：
+1. 準備好遊戲的安裝檔案，格式可以是：
     - **分離 APK 檔**：一個主 APK 檔案 + 一個 split config（例如 config.arm64_v8a、config.armeabi-v7a 等），只需選擇一個符合你裝置的版本。這通常是日本版才會用到的格式。
     - **單一 APK 檔案**：完整的 APK 包。
     - **XAPK 檔案**：將分離 APK 壓縮成 ZIP，再將副檔名改為 .xapk。
-3. 開啟 UmaPatcher，選擇「一般安裝」，然後選取你準備好的檔案。
-4. 點選「開始修改」開始修改與安裝流程。
+1. 開啟 UmaPatcher，選擇「一般安裝」，然後選取你準備好的檔案。
+1. 點選「開始修改」開始修改與安裝流程。
 
 每次遊戲更新後，都需要從第 2 步重新操作一次。
 
 #### Root 裝置使用者
+
 UmaPatcher 提供 root 裝置專用的安裝選項，可以不用解除安裝遊戲，就能直接打補丁，並可照常從任何應用商店更新遊戲。
 
 安裝遊戲後，在 UmaPatcher 主畫面點選上方卡片，選擇要修改的應用程式（如果需要的話）。然後選擇「直接安裝」作為安裝方式，並點選「開始修改」。這個方式不需要額外提供安裝檔案。
@@ -126,17 +134,17 @@ UmaPatcher 提供 root 裝置專用的安裝選項，可以不用解除安裝遊
 遊戲更新後，只需再次執行補丁即可。
 
 #### 手動安裝方式
+
 1. 從 [Releases 頁面](https://github.com/Hachimi-Hachimi/Hachimi/releases)下載預編譯的庫檔案，或自行編譯。
-2. 解開遊戲的 APK 檔案。你可以使用 [apktool](https://apktool.org/)。
-3. 將 `lib` 資料夾中各目錄下的 `libmain.so` 重新命名為 `libmain_orig.so`。
-4. 將對應的代理庫檔案（例如 `libmain-arm64-v8a.so`）複製到相應資料夾中（如 `lib/arm64-v8a`），並改名為 `libmain.so`。
-5. 重新打包 APK 並安裝。
+1. 解開遊戲的 APK 檔案。你可以使用 [apktool](https://apktool.org/)。
+1. 將 `lib` 資料夾中各目錄下的 `libmain.so` 重新命名為 `libmain_orig.so`。
+1. 將對應的代理庫檔案（例如 `libmain-arm64-v8a.so`）複製到相應資料夾中（如 `lib/arm64-v8a`），並改名為 `libmain.so`。
+1. 重新打包 APK 並安裝。
 
 </details>
 
 <details>
 <summary style="font-size: 20px; font-weight: 600;">Global / TW / CN</summary>
-
 
 ### Windows
 
@@ -144,16 +152,19 @@ UmaPatcher 提供 root 裝置專用的安裝選項，可以不用解除安裝遊
 - 手動安裝: 從 [Releases 頁面](https://github.com/Hachimi-Hachimi/Hachimi-Unity2020/releases) 下載最新的 `hachimi.dll`，然後把它放在遊戲的安裝目錄裡。記得把它的名字改成 `winhttp.dll`、`version.dll` 或 `opengl32.dll`。
 
 ### Android
+
 ::: warning
 Hachimi 在沒有 root 的情況下無法在這些版本中運行。
 :::
 
 #### Zygisk
+
 從 [Releases 頁面](https://github.com/Hachimi-Hachimi/Hachimi-Unity2020/releases)下載 Zygisk 壓縮包，然後用 Magisk 或 KernalSU (需要 Zygisk Next) 來安裝。
 
 </details>
 
 ## 初次設定
+
 第一次啟動遊戲（安裝好 Hachimi 之後）時，你應該會看到這個對話框：
 
 ![First Time Setup](/assets/first-time-setup.jpg)

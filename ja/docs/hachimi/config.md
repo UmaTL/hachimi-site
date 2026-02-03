@@ -3,6 +3,7 @@
 このページでは、設定オプションを一覧で示し、その使用目的について説明します。
 
 設定ファイルは以下の場所にあります。
+
 - Windows: `[ゲームのインストールフォルダ]\hachimi\config.json`
 - Android: `/sdcard/Android/media/jp.co.cygames.umamusume/hachimi/config.json`
 
@@ -32,6 +33,7 @@
 - `auto_translate_localize`: 自動翻訳機能を使用してUIテキストを翻訳できます。ただし、ほとんどの自動翻訳エンジンは改行や書式設定タグを適切に維持できないため、通常このオプションの使用は推奨されません。
 
 ### Windows のみ
+
 - `vsync_count`: VSync カウントを設定します。1 に設定すると、ゲームの FPS がモニターのリフレッシュレートに同期されます。詳しくは[こちら（Unity docs）](https://docs.unity3d.com/ScriptReference/QualitySettings-vSyncCount.html)
 - `load_libraries`: 起動時に読み込むライブラリのリストを設定します。他のMODの読み込みにも使用できます。 例： `["applejuicer.dll", "banana.dll"]`
 - `menu_open_key`: メニューを開くキーの Windows VK コードを設定します。デフォルトの値は： `39` （右矢印キー）です。すべてのキーコードの一覧は[こちらページ](https://cherrytree.at/misc/vk.htm)でご確認ください。

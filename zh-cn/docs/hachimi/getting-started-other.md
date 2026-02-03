@@ -5,7 +5,7 @@
 ## Windows
 
 1. 从 [Releases 页面](https://github.com/Hachimi-Hachimi/Hachimi-Unity2020/releases)下载最新的 `hachimi_installer.exe`。
-2. 运行它并点击“安装” (Install)。如果您不明白这些选项的含义，无需进行任何修改。
+1. 运行它并点击“安装” (Install)。如果您不明白这些选项的含义，无需进行任何修改。
 
 <details>
 <summary class="collapsible-header-sub">手动安装</summary>
@@ -15,7 +15,8 @@
 :::
 
 1. 从 [Releases 页面](https://github.com/Hachimi-Hachimi/Hachimi-Unity2020/releases)下载最新的 `hachimi.dll` 并将其放入游戏安装目录中。
-2. 将其重命名为 `winhttp.dll`、`version.dll` 或 `opengl32.dll`。
+1. 将其重命名为 `winhttp.dll`、`version.dll` 或 `opengl32.dll`。
+
 </details>
 
 ## Android
@@ -25,10 +26,11 @@
 :::
 
 #### Zygisk
+
 从 [Releases 页面](https://github.com/Hachimi-Hachimi/Hachimi-Unity2020/releases)下载最新的 Zygisk zip 压缩包，并通过 Magisk 或 KernelSU（需搭配 Zygisk Next）进行安装。
 
-
 ## 初始化设置
+
 安装 Hachimi 后首次启动游戏时，您应该会看到这个对话框：
 
 ![初始化设置](/assets/zh-cn/first-time-setup.jpg)

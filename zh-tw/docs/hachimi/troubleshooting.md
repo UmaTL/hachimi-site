@@ -1,4 +1,5 @@
 # 疑難排解  
+
 - I/O error: Permission denied (os error 13)
 
 這個錯誤可能是因為 Android 10 引入的「範圍儲存機制（scoped storage）」所導致，會讓 Hachimi 無法建立自己的資料資料夾。  

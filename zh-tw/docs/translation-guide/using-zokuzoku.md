@@ -1,18 +1,23 @@
 # 使用 ZokuZoku
+
 ZokuZoku 是一個 Visual Studio Code 擴充功能，作為 Hachimi 的主要翻譯工具。它讓您在翻譯時，無需直接編輯 JSON 字典檔案。
 
 ## 安裝
+
 ### 先決條件
+
 在安裝 ZokuZoku 之前，請確保已安裝以下軟體：
+
 - 作業系統：Windows 10 或以上版本，或 Linux x64。macOS 和 ARM 裝置並未正式支援，但經過特殊設置後可能可行。
 - [Visual Studio Code](https://code.visualstudio.com/) v1.90 或以上版本（請注意，這與 Visual Studio 完全不同！）
 
 ZokuZoku 需要以下檔案：
+
 - `master.mdb` 和 `meta`：這些檔案位於遊戲的資料夾中（在 Windows 系統中，通常位於 AppData，Android 則位於 `/data/data`，需要 root 權限）。這兩個檔案必須放在同一資料夾中，其中 `meta` 檔案放在根目錄，`master.mdb` 則放在名為 `master` 的子資料夾中，即 `資料夾/meta` 和 `資料夾/master/master.mdb`。**如果您從 DMM 安裝了 UM:PD 版本，您無需擔心這些檔案，ZokuZoku 可以自動偵測它們！**
 - `localize_dump.json`：此檔案包含從遊戲匯出的原始 localize_dict 資料。可以使用 Hachimi 來創建此檔案：
   1. 在設定編輯器中啟用「翻譯者模式」。
   ![Config editor](/assets/translation-guide/using-zokuzoku/1.webp)
-  2. 在「翻譯」區段中會出現一個新選項「Dump localize dict」，點擊它來創建檔案。
+  1. 在「翻譯」區段中會出現一個新選項「Dump localize dict」，點擊它來創建檔案。
   ![Translation section in menu](/assets/translation-guide/using-zokuzoku/2.webp)
 
 ZokuZoku 如果是從 DMM 版本的遊戲創建的，它會自動偵測這個檔案，因此請至少在安裝前匯出一次此檔案。如果遊戲客戶端更新後，您希望保持檔案更新，則需要再次匯出。否則如果您不處理 UI 翻譯，可以忽略這部分。
@@ -20,11 +25,13 @@ ZokuZoku 如果是從 DMM 版本的遊戲創建的，它會自動偵測這個檔
 當然，您也需要一個現有的翻譯庫來進行翻譯。您可以從 [Hachimi-Hachimi/tl-en](https://github.com/Hachimi-Hachimi/tl-en) 下載或克隆英文翻譯庫。
 
 ### 安裝
+
 從 [發布頁面](https://github.com/Hachimi-Hachimi/ZokuZoku/releases) 下載最新版本的 `.vsix` 檔案。安裝時，打開 VSCode 的擴充功能面板，點擊右上角的三個點，選擇「從 VSIX 安裝...」，並選擇剛剛下載的檔案。
 
 ![Translation section in menu](/assets/translation-guide/using-zokuzoku/3.webp)
 
 ## 初始設置
+
 安裝 ZokuZoku 後，您可以通過「檔案」->「開啟資料夾...」來開啟翻譯資料庫。*請注意，您應該選擇包含 localized_data 資料夾的資料夾，而不是直接選擇 localized_data 資料夾！*
 
 當您第一次開啟 TL 資料庫（並且 ZokuZoku 已設置為自動啟動）時，會顯示以下提示：
@@ -52,6 +59,7 @@ ZokuZoku 如果是從 DMM 版本的遊戲創建的，它會自動偵測這個檔
 完成設置後，您就可以開始進行翻譯了！
 
 ## 主面板
+
 安裝擴充功能後，您可能會注意到側邊欄多了一個 ZokuZoku 圖示。這就是 ZokuZoku 面板，是用來瀏覽可翻譯的素材並啟動編輯器的主介面。
 
 ![Main panel](/assets/translation-guide/using-zokuzoku/9.webp)
@@ -62,6 +70,7 @@ ZokuZoku 如果是從 DMM 版本的遊戲創建的，它會自動偵測這個檔
 ![Lyrics view with checkboxes](/assets/translation-guide/using-zokuzoku/10.webp)
 
 ## 切換翻譯資料夾
+
 在開始編輯之前，您可能想先將 Hachimi 翻譯資料夾（也就是本地化資料夾）切換為您本地的翻譯副本。這樣可以讓 Hachimi 從您的本地副本載入翻譯，而不是從上游資料庫載入，讓您可以在遊戲中預覽翻譯。
 
 要這麼做，請在面板中開啟「Hachimi 控制」視圖。點擊「設定翻譯資料夾」按鈕來設置它。當您完成翻譯工作後，記得點擊「恢復翻譯資料夾」按鈕來恢復。
@@ -69,7 +78,9 @@ ZokuZoku 如果是從 DMM 版本的遊戲創建的，它會自動偵測這個檔
 ![Hachimi Controls view](/assets/translation-guide/using-zokuzoku/26.webp)
 
 ## 編輯器
+
 ### 煩人的小怪癖
+
 在介紹編輯器的主介面之前，先來簡單說明一下其中一個相當困擾的怪癖。嘗試開啟任何尚未翻譯的素材（旁邊勾選框未勾選的素材）。當編輯器開啟時，會發生一些奇怪的事情。
 
 ![through the magic of buying two of them](/assets/translation-guide/using-zokuzoku/11.webp)
@@ -85,6 +96,7 @@ ZokuZoku 如果是從 DMM 版本的遊戲創建的，它會自動偵測這個檔
 - 如果您打算翻譯它，**先儲存素材**，自訂編輯器會關閉（這是另一個怪癖！），但現在您可以關閉文字編輯器，然後從面板重新開啟該檔案。一切將按照預期運作。
 
 ### 常見介面
+
 大多數編輯器都共享相同的介面，並具有相似的操作行為。
 
 ![MDB editor](/assets/translation-guide/using-zokuzoku/12.webp)
@@ -110,6 +122,7 @@ ZokuZoku 如果是從 DMM 版本的遊戲創建的，它會自動偵測這個檔
 當使用搜尋功能時，會顯示一個虛擬視圖來顯示匹配的條目。在這種情況下，箭頭鍵導航將無效。清空搜尋欄即可回到正常視圖。
 
 在面板標題上有三個按鈕，從左到右：
+
 - **複製按鈕**：允許您選擇條目進行複製。當您選擇一個或多個條目並點擊它時，這些條目會顯示虛線邊框，表示它們已經準備好進行複製。再次點擊（未選擇條目時）會清除複製狀態。
 - **貼上 / 填充按鈕**：會將複製的內容**貼上**或**填充**到目前選中的條目。
 - **清除按鈕**：清除目前選中條目的翻譯內容。
@@ -140,11 +153,13 @@ ZokuZoku 如果是從 DMM 版本的遊戲創建的，它會自動偵測這個檔
 :::
 
 ### 故事編輯器
+
 故事編輯器是常見編輯器的擴展版本，具有更多專門用於故事翻譯的功能。它用於主要故事/角色故事/事件故事、主頁對話和訓練對話。
 
 ![Story editor](/assets/translation-guide/using-zokuzoku/20.webp)
 
 #### 導航
+
 箭頭鍵導航在這裡扮演著重要角色。按下下鍵會將您帶到該故事中的下一個區塊，這不一定是列表中的下一個條目。
 
 例如，請看這個故事，它將男性和女性訓練師的內容分為不同的區塊。
@@ -158,6 +173,7 @@ ZokuZoku 如果是從 DMM 版本的遊戲創建的，它會自動偵測這個檔
 強烈建議您使用箭頭鍵按正確的順序瀏覽故事字典。您應該習慣 Alt + 箭頭鍵的組合，這樣會更加方便。
 
 #### 預覽面板
+
 編輯器中最明顯的新增功能是右側的兩個額外面板和它們父面板上的額外按鈕：
 
 ![Preview panels](/assets/translation-guide/using-zokuzoku/22.webp)
@@ -177,11 +193,14 @@ ZokuZoku 如果是從 DMM 版本的遊戲創建的，它會自動偵測這個檔
 :::
 
 #### 原始面板操作
+
 除了預覽按鈕外，原始面板還有 2 個額外按鈕，從左到右：
+
 - **跳至區塊按鈕**：這個按鈕會向 Hachimi 發送 IPC 命令，跳至遊戲中的特定故事區塊。要使這個功能正常運作，您需要在 Hachimi 配置中啟用「啟用 IPC」，並且必須在遊戲中查看您目前正在翻譯的故事。這對於檢查遊戲內顯示是否正確非常有用。
 - **播放語音剪輯按鈕**：這會播放當前故事區塊的語音剪輯。這只適用於有語音的故事。
 
 #### 文字欄位
+
 除了「標題」條目外，故事中的所有條目至少有 2 個文字欄位：說話者名稱和對話內容。根據條目所代表的故事區塊，可能會有額外的文字欄位，例如對話選項和有顏色的文字。
 
 選項文字欄位會分配一個「連結」。嘗試在原始檢視或預覽面板中將滑鼠移到它們上面；您會發現文字變為底線，表示它是指向其他條目的文字欄位。您可以按住 Ctrl 並左鍵點擊來跟隨這個連結，這會跳轉到這個選項所指向的故事區塊。
@@ -205,15 +224,19 @@ ZokuZoku 如果是從 DMM 版本的遊戲創建的，它會自動偵測這個檔
 它們會放在所有其他文字欄位之後。內容中匹配顏色文字區塊的第一個子字串會被上色。預覽面板會顯示這是如何運作的，但請注意，顏色僅供參考，可能與遊戲中實際使用的顏色不符。請確保按照原始檢視中出現的順序來匹配顏色。
 
 ## 內部運作
+
 *TODO*
 
 ## 高級使用
+
 ### 在 ZokuZoku 中重新開啟檔案
+
 有時候，您可能需要直接開啟一個字典檔案，而不是通過 ZokuZoku 面板來開啟。這會啟動內建的文字編輯器，您需要重新在 ZokuZoku 的自訂編輯器中打開它。
 
 開啟 VSCode 命令欄（Ctrl+Shift+P），並執行「以...重新開啟編輯器」命令。選擇適合當前字典檔案的 ZokuZoku 編輯器。
 
 ### 實時文字編輯器分割視圖
+
 您可以同時開啟文字編輯器和自訂編輯器，實時查看您對檔案的更改。這也是一個展示其內部運作方式的好方法。
 
 按 Ctrl+\ 開啟分割視圖。在第二個視圖上聚焦時，開啟 VSCode 命令欄（Ctrl+Shift+P），並執行「以...重新開啟編輯器」命令。選擇內建的文字編輯器。
