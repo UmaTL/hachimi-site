@@ -6,7 +6,7 @@ Check out all topics on the left sidebar. On mobile, you can find them in the me
 Check out the [Getting Started](/docs/hachimi/getting-started) page.
 
 ## Using Plugins
-Hachimi Edge supports a plugin system that allows extending its functionality. Learn about [installing plugins](/docs/plugins/installation) or [creating your own plugins](/docs/plugins/development).
+Hachimi Edge supports a [plugin system](/docs/plugins/about) that allows extending its functionality.
 
 ## Contributing as a translator
 Hachimi Edge needs translators for its UI, site/docs, and user support. If you would like to help with this, join the [Discord](https://discord.gg/hachimimod) and mention the `Developer` role.
