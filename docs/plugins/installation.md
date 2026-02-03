@@ -10,6 +10,24 @@ Malicious plugins can steal game account credentials, result in bans, execute ar
 🚨 **On Windows, plugins have FULL ADMINISTRATOR ACCESS to your entire system. They can install malware, modify system files, access all your data, etc.**
 :::
 
+## Windows installation
+
+On Windows, plugins must be explicitly configured in the config file.
+
+1. **Locate the plugin file**: You should have a `.dll` file (e.g. `hachimi_myplugin.dll`).
+1. **Place the plugin in the hachimi folder**: Put the plugin file in the [`hachimi` folder](/docs/hachimi/faqs.md#how-do-i-find-the-game-install-folder).
+1. **Edit the config**: Open `config.json` in the `hachimi` folder and add the plugin filename:
+   ```json
+   {
+     "windows": {
+       "load_libraries": [
+         "hachimi\\hachimi_myplugin.dll"
+       ]
+     }
+   }
+   ```
+1. **Save and restart**: Save the config file and restart the game
+
 ## Android installation
 
 On Android, plugins must be added through UmaPatcher Edge before patching the game.
@@ -31,25 +49,11 @@ On Android, plugins must be added through UmaPatcher Edge before patching the ga
 When updating the game, your plugins are preserved in UmaPatcher Edge. Just patch the new version and they will be included automatically.
 :::
 
-## Windows installation
-
-On Windows, plugins must be explicitly configured in the config file.
-
-1. **Locate the plugin file**: You should have a `.dll` file (e.g. `hachimi_myplugin.dll`).
-1. **Place the plugin in the hachimi folder**: Put the plugin file in the [`hachimi` folder](/docs/hachimi/faqs.md#how-do-i-find-the-game-install-folder).
-1. **Edit the config**: Open `config.json` in the `hachimi` folder and add the plugin filename:
-   ```json
-   {
-     "windows": {
-       "load_libraries": [
-         "hachimi\\hachimi_myplugin.dll"
-       ]
-     }
-   }
-   ```
-1. **Save and restart**: Save the config file and restart the game
-
 ## Disabling plugins
+
+### Windows
+
+- Remove the plugin from the `load_libraries` array in `config.json`.
 
 ### Android
 
@@ -57,24 +61,20 @@ On Windows, plugins must be explicitly configured in the config file.
 - Uncheck the plugin in the Plugins section.
 - Re-patch the game.
 
-### Windows
-
-- Remove the plugin from the `load_libraries` array in `config.json`.
-
 ## Plugin troubleshooting
 
 ### Plugin not loading
+
+On Windows:
+
+- Verify the path in `config.json` is correct.
+- Verify the plugin is compatible with your Hachimi version.
 
 On Android:
 
 - Ensure the plugin was added in UmaPatcher Edge before patching.
 - Check if the plugin is compatible with your Hachimi version.
 - Try re-patching the game with the plugin enabled.
-
-On Windows:
-
-- Verify the path in `config.json` is correct.
-- Verify the plugin is compatible with your Hachimi version.
 
 ### Plugin crashes or doesn't work
 
