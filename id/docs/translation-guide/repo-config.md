@@ -2,7 +2,7 @@
 outline: [2,3]
 ---
 
-# Konfigurasi Repositori Terjemahan
+# Konfigurasi repositori terjemahan
 
 Setiap repositori memiliki konfigurasi tersendiri yang berbeda dari konfigurasi pengguna Hachimi guna menyesuaikan perilaku sistem. Konfigurasi ini ditetapkan oleh pengelola repo. Jika kamu adalah pengelola, silakan baca halaman ini untuk memahami opsi yang tersedia.
 
@@ -12,7 +12,7 @@ File konfigurasi untuk sebuah repo menggunakan format JSON dan ditempatkan di fo
 
 Halaman ini tidak mencakup semuanya. Representasi internal lengkap dari semua opsi yang tersedia bisa ditemukan di [Kode sumber](https://github.com/kairusds/Hachimi-Edge/blob/main/src/core/hachimi.rs#L574).
 
-### Lokasi File Lokalisasi
+### Lokasi file lokalisasi
 
 ``` json
 "localize_dict": "path"
@@ -32,7 +32,7 @@ Ini adalah lokasi relatif ke file untuk setiap bagian dari sistem translasi.
 - Empat selanjutnya untuk [Tabel MDB](translation-system#mdb-dicts).
 - Dan yang terakhir adalah folder dimana [Semua file lokalisasi lainnya](translation-system#asset-dicts) berada. Berisi cerita, lirik, gambar, dan sebagainya. Tidak seperti *dict* sebelumnya, file-file di sana diatur berdasarkan jalur internal game.
 
-### Aset Lokalisasi Extra
+### Aset lokalisasi extra
 
 ``` json
 "extra_asset_bundle": {
@@ -53,7 +53,7 @@ Membuat assetbundle ini mengharuskan kamu memiliki versi *full* dari Unity Edito
 
 Jalur internal di dalam `extra_asset_bundle` untuk menemukan font kustom, jika diperlukan.
 
-### Fungsi Teks Yang Dilokalisasi
+### Fungsi teks yang dilokalisasi
 
 ``` json
 "plural_form": "n == 1 ? 0 : 1",
@@ -61,16 +61,18 @@ Jalur internal di dalam `extra_asset_bundle` untuk menemukan font kustom, jika d
 "ordinal_types": ["$st", "$nd", "$rd", "$th", "etc"]
 ```
 
-Dua yang pertama adalah ekspresi kustom yang akan dievaluasi untuk mendeteksi bentuk *plural*/jamak (*tidak digunakan di bahasa Indonesia*) dan *ordinal*/angka berurutan, digunakan bersama ekspresi *template* `$ordinal(n)` dan `$plural(n, t0, t1)`. Dalam ekspresi ini, `n` biasanya berupa variabel teks game seperti `{0}`. Ekspresi tersebut menentukan argumen `tx` mana yang digunakan untuk jamak, dan angka mana yang digunakan untuk ordinal, berdasarkan nilai `n`. Keduanya bersifat opsional. Contoh yang diberikan adalah default untuk bahasa Inggris. Detailnya ada di [Kode sumber](https://github.com/kairusds/Hachimi-Edge/blob/main/src/core/plurals.rs).
+Dua yang pertama adalah ekspresi kustom yang akan dievaluasi untuk mendeteksi bentuk *plural*/jamak (*tidak digunakan di bahasa Indonesia*) dan *ordinal*/angka berurutan, digunakan bersama ekspresi *template* `$ordinal(n)` dan `$plural(n, t0, t1)`.
+
+Dalam ekspresi ini, `n` biasanya berupa variabel teks game seperti `{0}`. Ekspresi tersebut menentukan argumen `tx` mana yang digunakan untuk jamak, dan angka mana yang digunakan untuk ordinal, berdasarkan nilai `n`. Keduanya bersifat opsional. Contoh yang diberikan adalah default untuk bahasa Inggris. Detailnya ada di [Kode sumber](https://github.com/kairusds/Hachimi-Edge/blob/main/src/core/plurals.rs).
 
 ``` json
 "months": ["month 1", "month 2", "etc"],
 "month_text_format": "$(half) $(month)"
 ```
 
-Bagaimana cara memformat bulan? Yang pertama adalah sebuah *array* di mana setiap entri mewakili satu bulan. Yang kedua adalah *string* yang digunakan di beberapa bagian game untuk menampilkan setengah bulan, seperti pada *Career “turns*/giliran”. Tidak yakin apakah ini benar-benar digunakan.
+Bagaimana cara memformat bulan? Yang pertama adalah sebuah *array* di mana setiap entri mewakili satu bulan. Yang kedua adalah *string* yang digunakan di beberapa bagian game untuk menampilkan setengah bulan, seperti “*turns*/giliran” pada karir. Tidak yakin apakah ini benar-benar digunakan.
 
-### Pemformatan Baris/*Text Wrapping*
+### Pemformatan baris/*Text wrapping*
 
 ``` json
 "use_text_wrapper": true
@@ -130,7 +132,7 @@ Panjang baris kustom khusus untuk skill. Digunakan di mana pun skill ditampilkan
 - `Short` Merujuk pada skill yang ditampilkan dalam daftar ganda tanpa deskripsi, seperti pada layar informasi gadis kuda.
 - `SP` Merujuk pada saat poin skill ditampilkan di sebelah nama, seperti pada peningkatan.
 
-### Fungsi Extra
+### Fungsi extra
 
 ``` json
 "auto_adjust_story_clip_length": true

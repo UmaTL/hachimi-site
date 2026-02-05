@@ -4,12 +4,12 @@ UmaTL sebenarnya adalah patch terjemahan pertama untuk game tersebut. Patch ini 
 
 ## Instalasi
 
-1. Install [python 3.13 (64bit)](https://www.python.org/downloads/)
-1. Install [git](https://git-scm.com/)
+1. Instal [python 3.13 (64bit)](https://www.python.org/downloads/)
+1. Instal [git](https://git-scm.com/)
 1. Buat folder di mana kamu ingin menempatkan UmaTL (`D:\uma-tools\umatl` atau apapun)
 1. Ekstrak konten [wheels.zip dari rilis](https://github.com/UmaTL/hachimi-tl-en/releases/tag/support) ke folder umatl\wheels.
 1. Buka cmdline di folder dasar umatl tersebut lalu jalankan:
-   ```
+   ``` bat
    git clone https://github.com/noccu/umamusu-translate.git .
    py -m venv .venv
    .venv\Scripts\activate.bat
@@ -17,13 +17,13 @@ UmaTL sebenarnya adalah patch terjemahan pertama untuk game tersebut. Patch ini 
    py -m pip install -r src\devreq.txt --find-links=wheels/ --prefer-binary
    ```
 
-## Bahasa Berbeda
+## Bahasa berbeda
 
 Jika kamu membutuhkan font khusus untuk bahasa yang diinginkan, kamu harus mengganti font yang ada di `src\data` dan membuat Unity AssetBundle dengan font tersebut untuk digunakan di dalam game melalui Hachimi. Gunakan sumber terjemahan yang sudah ada sebagai referensi. Langkah ini mengharuskan kamu menginstal Unity Editor versi *full*, atau mencari alat pihak ketiga meskipun alat-alat tersebut biasanya kurang stabil.
 
-UmaTL yang lama tidak dibuat dengan dukungan terjemahan multibahasa, sehingga beberapa hal mungkin tidak berfungsi dengan benar. Periksa replacer.json dan fungsi pemeriksa ejaan secara khusus saat kamu mengalami masalah.
+UmaTL yang lama tidak dibuat dengan dukungan terjemahan multibahasa, sehingga beberapa hal mungkin tidak berfungsi dengan benar. Periksa `replacer.json` dan fungsi pemeriksa ejaan secara khusus saat kamu mengalami masalah.
 
-## Penggunaan Alat
+## Penggunaan *tools*/alat
 
 ::: tip
 Selalu aktifkan venv (run `.venv\Scripts\activate.bat` di cmdline) sebelum menggunakan alat-alat UmaTL.  
@@ -34,8 +34,8 @@ Selalu aktifkan venv (run `.venv\Scripts\activate.bat` di cmdline) sebelum mengg
    - Kamu juga bisa menggunakan `-sid xx` untuk mengubah sekaligus.
    - Perhatikan argumen `-t x` untuk types! Nilainya akan menjadi `story` secara default.
 1. Jalankan `src\extract.py -sid xxxxxx` untuk mengekstrak file, jika dibutuhkan.
-   - Be careful with your arguments. The script will extract **everything** that matches and can lead to 100s if not 1000s of files being written if you make a mistake.
-1. Run: `py src\edit_story.py -sid xxxxxx` to open the GUI for your targets.
+   - Berhati-hatilah dengan argumen yang kamu gunakan. Skrip ini akan mengekstrak **"semuanya"** yang cocok, dan jika kamu membuat kesalahan, akan menyebabkan ratusan bahkan ribuan file tertulis ke penyimpanan kamu.
+1. Jalankan: `py src\edit_story.py -sid xxxxxx` untuk membuka GUI untuk targetmu.
 
 Jika kamu mengalami masalah dengan skrip apa pun, kamu bisa menjalankannya dengan `-h` untuk bantuan dasar.
 Lihat [konversi](#konversi-ke-format-hachimi) tentang cara memperoleh file format Hachimi.
@@ -48,30 +48,30 @@ Lihat [konversi](#konversi-ke-format-hachimi) tentang cara memperoleh file forma
 ### Editor pintasan
 
 | Pintasan                   | Keterangan                                                                   |
-| -------------------------- | ----------------------------------------------------------------------------- |
-| Ctrl+enter/Alt+down        | Next block                                                                    |
-| Alt+Up                     | Prev block                                                                    |
-| Ctrl+Alt+down              | Next chapter                                                                  |
-| Ctrl+Alt+Up                | Prev chapter                                                                  |
-| Alt+Right                  | Copy Japanese text to clipboard                                               |
-| Ctrl+s                     | Save file                                                                     |
-| Ctrl+i/b                   | Italicize/bold selection                                                      |
-| Ctrl+Shift+c               | Color selection (uses last color, add Alt to select a new color)              |
-| (shift+)alt+f              | Run block through textprocess.py (shift = remove all line breaks first)       |
-| alt+x                      | Convert code point before cursor to unicode (type code point, hit shortcut)   |
-| (shift+)ctrl+del/backspace | Delete word (shift = delete line)                                             |
-| Alt+c                      | Open/close choices                                                            |
-| Ctrl+Alt+c                 | Open/close colored text list                                                  |
-| Ctrl+f                     | Open search (enter in search box will search)                                 |
-| Tab (in text box)          | Switch between text & name box                                                |
-| Ctrl+d                     | toggle raw<->formatted text                                                   |
-| Ctrl+shift+up/down         | move line up/down                                                             |
-| Ctrl+h                     | listen to current block (game not needed)                                     |
-| Ctrl+space                 | Activate autocomplete (Can click or use keys + enter to navigate and choose) |
+| -------------------------- | ---------------------------------------------------------------------------- |
+| Ctrl+enter/Alt+down        | Blok selanjutnya                                                             |
+| Alt+Up                     | Blok sebelumnya                                                              |
+| Ctrl+Alt+down              | Chapter selanjutnya                                                          |
+| Ctrl+Alt+Up                | Chapter sebelumnya                                                           |
+| Alt+Right                  | Salin teks jepang ke *clipboard*                                             |
+| Ctrl+s                     | Simpan file                                                                  |
+| Ctrl+i/b                   | Miringkan/tebalkan pilihan                                                   |
+| Ctrl+Shift+c               | Warnai pilihan (dengan warna terakhir, tambah Alt untuk memilih warna baru)  |
+| (shift+)alt+f              | Jalankan blok dengan textprocess.py (shift = hapus semua *line breaks* dulu) |
+| alt+x                      | Konversi poin kode sebelum penanda ke unicode (ketik poin kode, hit shortcut)|
+| (shift+)ctrl+del/backspace | Hapus kata (shift = hapus baris)                                             |
+| Alt+c                      | Buka/tutup pilihan                                                           |
+| Ctrl+Alt+c                 | Buka/tutup daftar teks berwarna                                              |
+| Ctrl+f                     | Buka pencarian (enter di kotak untuk mencari)                                |
+| Tab (in text box)          | Beralih antara kotak teks & nama                                             |
+| Ctrl+d                     | Nyalakan *raw*<->teks berformat                                              |
+| Ctrl+shift+up/down         | Pindah baris atas/bawah                                                      |
+| Ctrl+h                     | Dengar blok saat ini (game tidak diperlukan)                                 |
+| Ctrl+space                 | Nyalakan *autocomplete* (bisa klik / kunci + enter untuk arahkan dan pilih)  |
 
 ### Pemeriksaan ejaan & Penyelesaian otomatis
 
-Editor akan menampilkan garis merah bergelombang di bawah kata yang tidak dikenali. Klik kanan pada kata tersebut untuk mendapatkan saran. Nama karakter secara otomatis dimuat sebagai kata khusus melalui file `char-name.json`. Perbarui file tersebut jika diperlukan. Kamus yang sama digunakan untuk keduanya, sehingga fitur `autocomplete` mendukung karakter.
+Editor akan menampilkan garis merah bergelombang di bawah kata yang tidak dikenali. Klik kanan pada kata tersebut untuk mendapatkan saran. Nama karakter secara otomatis dimuat sebagai kata khusus melalui file `char-name.json`. Perbarui file tersebut jika diperlukan. *Dict* yang sama digunakan untuk keduanya, sehingga fitur `autocomplete` mendukung karakter.
 
 ### Warna
 

@@ -1,6 +1,7 @@
 # Menerjemahkan
 
-::: Tips — Jika kamu tiba di sini melalui tautan langsung, disarankan untuk membaca [panduan dari awal](welcome.md).
+::: tip
+ Jika kamu tiba di sini melalui tautan langsung, disarankan untuk membaca [panduan dari awal](welcome.md).
 :::
 
 Setelah kamu memahami dasar-dasar aset game dan bagaimana Hachimi menggunakannya, mari kita lihat bagaimana cara memulai proses penerjemahan.
@@ -23,7 +24,7 @@ Ini adalah *fork* aktif komunitas dari ekstensi ZokuZoku asli. Tujuannya adalah 
 
 Meskipun fork ini berfungsi, beberapa fitur mungkin tidak stabil.
 
-Tautan: [Kode sumber](https://github.com/Mario0051/ZokuZoku), [*Extension Builder* (Repositori belum resmi rilis)](https://github.com/tenshou170/ZokuZoku-Edge)
+Tautan: [Kode sumber](https://github.com/Mario0051/ZokuZoku), [*Extension Builder* dan Repositori rilis)](https://github.com/THShafi170/ZokuZoku-Edge)
 
 ### *Tools* lama UmaTL (*legacy*)
 
@@ -65,9 +66,9 @@ Kamu harus mengekspor file `localize_dict.json` dari game menggunakan menu Hachi
 
 Di beberapa kasus, kamu masih harus menggunakan [ZokuZoku](#zokuzoku). Alat UmaTL bisa digunakan jika kamu tahu cara menggunakannya, dan sesekali memberikan keuntungan.
 
-Perhatikan di dalam `text_data`, terdapat banyak kategori dan kadang-kadang kategori tersebut terduplikasi seluruhnya atau hanya sebagian. Kombinasi juga tersedia
+Perhatikan di dalam `text_data`, terdapat banyak kategori dan terkadang kategori tersebut terduplikasi seluruhnya atau hanya sebagian. Kombinasi juga tersedia
 
-### Dialog (Cerita / Balapan / *Dict* aset lirik)
+### Dialog (*dict* aset Cerita / Balapan / Lirik)
 
 Kemungkinan ini adalah yang paling mudah untuk ditangani. Mereka sederhana, semua alat mendukung pratinjau audio dan percabangan pilihan (yang tidak rumit dalam sebagian besar kasus), dan tidak ada jebakan nyata. Jangan lupa untuk menerjemahkan judul.
 

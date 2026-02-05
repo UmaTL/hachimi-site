@@ -2,7 +2,7 @@
 
 ZokuZoku adalah ekstensi Visual Studio Code yang membantu membuat dan memodifikasi terjemahan untuk Hachimi melalui antarmuka GUI dengan berbagai fitur praktis. Ekstensi ini memungkinkan kamu mengerjakan terjemahan tanpa harus mengedit file JSON *dict* secara langsung.
 
-::: peringatan
+::: warning PERINGATAN
 Sejak pembaruan game, ZokuZoku tidak lagi mendukung konten dialog. Untuk itu lihat [*Tools* lama UmaTL (*legacy*)](https://github.com/noccu/umamusu-translate), yang juga akan segera mendapatkan pembaruan secara keseluruhan.
 :::
 
@@ -17,10 +17,10 @@ Sebelum mneginstal ZokuZoku, Pastikan untuk memasang ini:
 
 File-file berikut diperlukan oleh ZokuZoku:
 
-- `master.mdb` dan `meta`: File-file ini terletak di dalam direktori data game (pada Windows berada di `AppData`, dan pada Android berada di `/data/data`, membutuhkan akses root). Kedua file ini harus berada di folder yang sama, dengan file `meta` di root dan `master.mdb` di subfolder bernama `master`, sehingga strukturnya menjadi `folder/meta` dan `folder/master/master.mdb`. **Jika kamu memiliki UM:PD yang diinstal dari DMM di sistem, kmau tidak perlu khawatir tentang file-file ini, ZokuZoku bisa mendeteksinya secara otomatis!**
+- `master.mdb` dan `meta`: File-file ini terletak di dalam direktori data game (pada Windows berada di `AppData`, dan pada Android berada di `/data/data`, membutuhkan akses root). Kedua file ini harus berada di folder yang sama, dengan file `meta` di root dan `master.mdb` di subfolder bernama `master`, sehingga strukturnya menjadi `folder/meta` dan `folder/master/master.mdb`. **Jika kamu memiliki UM:PD yang diinstal dari DMM di sistem, kamu tidak perlu khawatir tentang file-file ini, ZokuZoku bisa mendeteksinya secara otomatis!**
 - `localize_dump.json`: File ini berisi data asli `localize_dict` yang diekstrak dari game. Untuk membuat file ini bisa menggunakan Hachimi:
 
-1. Nyalakan "Mode Translasi" di editor konfig.
+1. Nyalakan "Mode Translator" di editor konfig.
 ![Editor konfig](/assets/id/translation-guide/using-zokuzoku/1.webp)
 1. Opsi baru bernama "Ekstrak Localize_dump" akan muncul di bawah bagian Translasi pada menu. Klik opsi tersebut untuk membuat filenya.
 ![Pilihan translasi di menu](/assets/id/translation-guide/using-zokuzoku/2.webp)
@@ -31,7 +31,7 @@ Dan tentu saja, kamu juga memerlukan repositori terjemahan yang sudah ada untuk 
 
 ### Pemasangan
 
-Install dari [*Marketplace* VS Code](https://marketplace.visualstudio.com/items?itemName=LeadRDRK.zokuzoku) atau unduh file .vsix versi terbaru di [laman rilis](https://github.com/Hachimi-Hachimi/ZokuZoku/releases), Buka panel *Extensions* di VSCode, klik tombol 3 titik di kanan atas, pilih "*Install from VSIX*..." dan pilih file yang baru saja kamu unduh
+Instal dari [*Marketplace* VS Code](https://marketplace.visualstudio.com/items?itemName=LeadRDRK.zokuzoku) atau unduh file .vsix versi terbaru di [laman rilis](https://github.com/Hachimi-Hachimi/ZokuZoku/releases), Buka panel *Extensions* di VSCode, klik tombol 3 titik di kanan atas, pilih "*Install from VSIX*..." dan pilih file yang baru saja kamu unduh
 
 ![Translation section in menu](/assets/translation-guide/using-zokuzoku/3.webp)
 
@@ -54,14 +54,14 @@ Jika ada lokasi yang salah, kamu bisa memilih *No*.
 
 Jika ZokuZoku gagal mendeteksi lokasi yang benar untuk instalasi game versi DMM atau kamu ingin menggunakan file aset dari versi lain, kamu bisa masuk ke *Settings* untuk mengaturnya secara manual.
 
-::: peringatan
+::: warning PERINGATAN
 Kamu perlu memulai ulang Visual Studio Code setelah mengubah lokasi data.
 :::
 
 ![Extension details](/assets/translation-guide/using-zokuzoku/7.webp)
 ![Extension settings](/assets/translation-guide/using-zokuzoku/8.webp)
 
-Selesai! Sekarang kamu siap untuk membuat beberapa terjemahan!
+Selesai! Sekarang kamu siap untuk membuat terjemahan!
 
 ## Panel utama
 
@@ -97,8 +97,8 @@ Jika kamu menutup editor teks, editor khusus masih akan tetap terbuka, tetapi ti
 
 Untungnya, keanehan ini relatif tidak merepotkan jika kamu sudah terbiasa dengan alur kerja tertentu.
 
-- Ketika kmau membuka sebuah aset tetapi tidak ingin menerjemahkannya, tutup tab editor khusus, ini juga akan menutup tab lainnya.
-- Jika kamu memang ingin menerjemahkannya, simpan file terlebih dahulu, editor khusus akan tertutup (agak laen!), tetapi sekarang kamu bisa menutup editor teks dan membuka kembali aset dari panel. Semuanya akan berfungsi sebagaimana mestinya.
+- Ketika kamu membuka sebuah aset tetapi tidak ingin menerjemahkannya, **tutup tab editor khusus**, ini juga akan menutup tab lainnya.
+- Jika kamu memang ingin menerjemahkannya, **simpan file terlebih dahulu**, editor khusus akan tertutup (agak laen!), tetapi sekarang kamu bisa menutup editor teks dan membuka kembali aset dari panel. Semuanya akan berfungsi sebagaimana mestinya.
 
 ### Antarmuka umum
 
@@ -225,7 +225,7 @@ Jenis *slot* teks terakhir adalah *slot* teks berwarna. *Slot* ini digunakan unt
 
 ![Story block with one color text slot](/assets/translation-guide/using-zokuzoku/25.webp)
 
-*Slot* teks berwarna ditempatkan setelah semua *slot* teks lainnya. *Substring* pertama dalam konten yang cocok dengan potongan teks berwarna akan diberi warna. Panel pratinjau menunjukkan bagaimana hal ini bekerja, tetapi perlu dicatat bahwa warna tersebut hanya untuk tujuan referensi saja, dan mungkin tidak sama dengan warna yang digunakan di dalam game. Pastikan untuk mengikuti urutan sebagaimana ditampilkan pada panel asli agar warna dapat dicocokkan dengan benar.
+*Slot* teks berwarna ditempatkan setelah semua *slot* teks lainnya. *Substring* pertama dalam konten yang cocok dengan potongan teks berwarna akan diberi warna. Panel pratinjau menunjukkan bagaimana hal ini bekerja, tetapi perlu dicatat bahwa warna tersebut hanya untuk tujuan referensi saja, dan mungkin tidak sama dengan warna yang digunakan di dalam game. Pastikan untuk mengikuti urutan sebagaimana ditampilkan pada panel asli agar warna bisa dicocokkan dengan benar.
 
 ## Mekanisme internal
 

@@ -3,7 +3,7 @@
 Sebelum masuk ke proses membuat terjemahan, mari kita lihat terlebih dahulu bagaimana Hachimi menangani terjemahan. Kamu tidak perlu sepenuhnya memahami semua yang dijelaskan disini, tetapi ada baiknya memiliki pemahaman singkat tentang cara kerjanya agar kamu tidak bingung saat membuat terjemahan.
 
 ::: info
-Jika kamu juga ingin mengetahui bagaimana *dict* translasi diformat/diorganisasi, kamu harus menelusuri direktori `localized_data` untuk memeriksanya sambil membaca artikel ini. Kamu bisa melakukannya dengan menelusuri salinan lokal kamu jika Hachimi sudah terpasang di `[Lokasi Game di install]/hachimi/localized_data`, atau kamu bisa menelusuri repositori
+Jika kamu juga ingin mengetahui bagaimana *dict* translasi diformat/diorganisasi, kamu harus menelusuri direktori `localized_data` untuk memeriksanya sambil membaca artikel ini. Kamu bisa melakukannya dengan menelusuri salinan lokal kamu jika Hachimi sudah terpasang di `[Lokasi Game di instal]/hachimi/localized_data`, atau kamu bisa menelusuri repositori
 [UmaTL](https://github.com/UmaTL/hachimi-tl-en) di GitHub.
 :::
 
@@ -55,7 +55,8 @@ Semua tekstur juga bisa diganti menggunakan file `.diff.png` daripada format asl
 
 ## *Movies* (video / cuplikan FMV)
 
-Ini adalah file video berformat USM. Penggantian aset ini cukup dilakukan dengan membuat game memuat file pengganti
+Ini adalah file video berformat USM. Penggantian aset ini cukup dilakukan dengan membuat game memuat file pengganti.
+
 Lokasi: `assets/movies/*`
 
 ## Proses pemuatan terjemahan
