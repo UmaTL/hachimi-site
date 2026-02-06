@@ -1,11 +1,11 @@
 # Installation guide (JP)
 
-Follow the guide for your platform below, then continue with [First Time Setup](#first-time-setup).
+Follow the guide for your platform below, then continue with [First Time Setup](#first-time-setup).  
+If you run into issues, check out [Troubleshooting](troubleshooting.md).
 
 ## Windows
 
 As of 2025/09/24, you will need to use Hachimi Edge v0.14.2 or newer due to a big game update.
-If you run into issues, check out [Troubleshooting](troubleshooting.md).
 
 ::: warning
 The DMM install process uses DotLocal DLL redirection.  
@@ -86,7 +86,6 @@ You can also try disabling `MIUI Optimizations` before installing, but beware th
     :::
 1. Open UmaPatcher, import the exported signing key if needed, and choose **Normal install**. Select the file(s) that you have prepared.
 1. Tap on Patch to start the patching and installation process.
-    - If install fails, you can try the Shizuku installation method below.
 
 ⚠️ You'll need to repeat this process from step 4 whenever the game updates. You do **not** need to uninstall the game to update.
 
