@@ -1,7 +1,7 @@
 # Menerjemahkan
 
 ::: tip
- Jika kamu tiba di sini melalui tautan langsung, disarankan untuk membaca [panduan dari awal](welcome.md).
+ Jika kamu tiba di sini melalui tautan langsung, disarankan untuk membaca [panduan dari awal](welcome).
 :::
 
 Setelah kamu memahami dasar-dasar aset game dan bagaimana Hachimi menggunakannya, mari kita lihat bagaimana cara memulai proses penerjemahan.
@@ -16,7 +16,7 @@ Dikembangkan oleh pencipta Hachimi, ini adalah yang paling mudah untuk mulai dig
 
 Namun, ia tidak lagi bisa mengedit cerita setelah pembaruan besar di server Jepang pada 24/09/2025, serta memiliki banyak bug dan masalah penggunaan yang belum terselesaikan dan saat ini tidak lagi dipelihara.
 
-Lihat [panduan ZokuZoku](/id/docs/translation-guide/using-zokuzoku.md).
+Lihat [panduan ZokuZoku](using-zokuzoku).
 
 ### ZokuZoku-Edge
 
@@ -36,7 +36,7 @@ Ini adalah bagian dari patch terjemahan game paling awal, sehingga tidak secara 
 
 Namun, masih bisa digunakan dengan bantuan beberapa skrip tambahan, dan sangat berguna untuk cerita, menyediakan lebih banyak fitur serta pengalaman yang lebih mulus.
 
-Lihat [Panduan UmaTL](/id/docs/translation-guide/using-umatl.md).
+Lihat [Panduan UmaTL](using-umatl).
 
 ### Hachimi *Tools*
 

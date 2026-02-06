@@ -5,7 +5,7 @@
 ## Windows
 
 由于游戏的某次大版本更新，自 2025/09/24 起，您需要使用 Hachimi v0.14.2 或更新版本。
-如果遇到问题，请查阅[故障排除](troubleshooting.md)。
+如果遇到问题，请查阅[故障排除](troubleshooting)。
 
 1. 下载最新的[安装程序](https://github.com/kairusds/Hachimi-Edge/releases/latest/download/hachimi_installer.exe)并运行它。
 1. 如果您之前使用过 Hachimi v0.14.2 及更早版本的 Hachimi，请先点击“卸载”。
@@ -149,7 +149,7 @@ UmaPatcher 提供了一个 root 安装选项，它不需要您卸载游戏或处
 ![初始化设置](/assets/zh-cn/first-time-setup.jpg)
 
 ::: info
-如果在其他情况下没有看到此对话框，则表示 Hachimi 未正确安装。请仔细阅读安装指南并重试，或查阅 [故障排除](troubleshooting.md)。
+如果在其他情况下没有看到此对话框，则表示 Hachimi 未正确安装。请仔细阅读安装指南并重试，或查阅 [故障排除](troubleshooting)。
 :::
 
 点击“下一步”并选择您偏好的翻译源，然后点击“完成”以保存您的配置并开始检查更新。

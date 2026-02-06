@@ -1,7 +1,7 @@
 # Installation guide (JP)
 
 Follow the guide for your platform below, then continue with [First Time Setup](#first-time-setup).  
-If you run into issues, check out [Troubleshooting](troubleshooting.md).
+If you run into issues, check out [Troubleshooting](troubleshooting).
 
 ## Windows
 
@@ -143,7 +143,7 @@ If you don't see it after upgrading to Edge for the first time, open it from the
 :::
 
 ::: info
-If you don't see it otherwise, Hachimi has not been installed correctly. Please read the install guide carefully and try again, or look at [Troubleshooting](troubleshooting.md).
+If you don't see it otherwise, Hachimi has not been installed correctly. Please read the install guide carefully and try again, or look at [Troubleshooting](troubleshooting).
 :::
 
 Tap on Next and choose your preferred translation source, then tap on Done to save your configuration and start the update check.

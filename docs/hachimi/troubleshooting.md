@@ -64,7 +64,7 @@ If that doen't help, try adjusting it until it looks ok.
 ### Runtime error on launch
 
 This means you're using an old version of Hachimi, which broke after the game update on 2025/09/24 (JP) and 2025/11/11 (Global).
-[Install Hachimi Edge](getting-started.md).
+[Install Hachimi Edge](getting-started).
 
 If you're already using Edge, try reinstalling the latest version.
 
@@ -74,7 +74,7 @@ If you're already using Edge, try reinstalling the latest version.
 Some kernel-level anti-cheats (such as Vanguard, used in Valorant and League of Legends) prevent Hachimi from launching the game correctly. Make sure they are not running on your computer, then try again.
 :::
 
-- Make sure you installed the correct version of Hachimi for your game version (Japanese or Other). You can find the right one on the [getting started](getting-started.md) page.
+- Make sure you installed the correct version of Hachimi for your game version (Japanese or Other). You can find the right one on the [getting started](getting-started) page.
 - Restart your computer after the installer enables DotLocal redirection.  
   **Click "Restart" in the shutdown menu, don't just shut down and turn it back on.**
 - If you're using DMM, try restarting the DMM Launcher or force it to always run as administrator.

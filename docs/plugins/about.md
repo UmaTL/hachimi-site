@@ -47,5 +47,5 @@ The Hachimi Edge developers cannot verify third-party plugins and will not be re
 
 ## Next steps
 
-- **For Users**: [Learn how to install plugins](installation.md).
-- **For Developers**: [Learn how to create plugins](development.md).
+- **For Users**: [Learn how to install plugins](installation).
+- **For Developers**: [Learn how to create plugins](development).

@@ -29,7 +29,7 @@ Legacy UmaTL was not made with multilingual tl in mind, so some things might not
 Always activate the venv (run `.venv\Scripts\activate.bat` in cmdline) before using UmaTL's tools.  
 :::
 
-1. Consult [this doc](https://github.com/noccu/umamusu-translate/blob/master/docs/id-structure.md) or ask/poke around to find the right "targets" that you want to translate.
+1. Consult [this doc](https://github.com/noccu/umamusu-translate/blob/master/docs/id-structure) or ask/poke around to find the right "targets" that you want to translate.
    - Most scripts take the same arguments. `-set x`, `-group x`, etc.
    - You can also use `-sid xx` to provide them all at once.
    - Note the `-t x` arg for types! It defaults to `story`.

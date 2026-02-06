@@ -49,5 +49,5 @@ Tunggu update selanjutnya
 
 ## Langkah selanjutnya
 
-- **Untuk Pengguna**: [Pelajari cara memasang plugin](/id/docs/plugins/installation.md).
-- **Untuk Pengembang**: [Pelajari cara membuat plugin](/id/docs/plugins/development.md).
+- **Untuk Pengguna**: [Pelajari cara memasang plugin](installation).
+- **Untuk Pengembang**: [Pelajari cara membuat plugin](development).

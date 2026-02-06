@@ -8,7 +8,7 @@
 
 ## 为翻译项目做贡献
 
-请参阅[翻译指南](/zh-cn/docs/translation-guide/welcome)或在[鸣谢](/zh-cn/credits.md)列表里联系维护者。
+请参阅[翻译指南](/zh-cn/docs/translation-guide/welcome)或在[鸣谢](/zh-cn/credits)列表里联系维护者。
 
 ## 创建您自己的翻译项目
 

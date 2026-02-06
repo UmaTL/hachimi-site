@@ -29,7 +29,7 @@ UmaTL yang lama tidak dibuat dengan dukungan terjemahan multibahasa, sehingga be
 Selalu aktifkan venv (run `.venv\Scripts\activate.bat` di cmdline) sebelum menggunakan alat-alat UmaTL.  
 :::
 
-1. Lihat [dokumen ini](https://github.com/noccu/umamusu-translate/blob/master/docs/id-structure.md) atau tanyakan sendiri untuk menemukan “target” yang ingin kamu terjemahkan.
+1. Lihat [dokumen ini](https://github.com/noccu/umamusu-translate/blob/master/docs/id-structure) atau tanyakan sendiri untuk menemukan “target” yang ingin kamu terjemahkan.
    - Sebagian besar skrip menggunakan argumen yang sama `-set x`, `-group x`, dsb.
    - Kamu juga bisa menggunakan `-sid xx` untuk mengubah sekaligus.
    - Perhatikan argumen `-t x` untuk types! Nilainya akan menjadi `story` secara default.

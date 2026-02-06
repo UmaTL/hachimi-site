@@ -50,6 +50,6 @@ Existing Hachimi user? You will need to change to Hachimi Edge due to a big game
 </small>
 <!-- markdownlint-enable MD033 -->
 
-## [Installation guide for JP](getting-started-jp.md)
+## [Installation guide for JP](getting-started-jp)
 
-## [Installation guide for Global / TW / CN](getting-started-other.md)
+## [Installation guide for Global / TW / CN](getting-started-other)

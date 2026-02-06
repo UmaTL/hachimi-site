@@ -13,7 +13,7 @@ Menu bisa dibuka dengan menekan tombol atau kombinasi tombol. Ini berbeda untuk 
 
 **Catatan:** Saat menu atau dialog dari Hachimi terbuka, semua input dari sistem akan diblokir agar tidak masuk ke game. Kamu harus menutup semuanya untuk bisa mengendalikan game kembali.
 
-(\*) Tombol ini bisa diubah. Lihat opsi `menu_open_key` di [halaman Konfigurasi](/id/docs/hachimi/config).
+(\*) Tombol ini bisa diubah. Lihat opsi `menu_open_key` di [halaman Konfigurasi](config).
 
 ## Konfigurasi
 

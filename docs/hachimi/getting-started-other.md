@@ -74,7 +74,7 @@ Upon launching the game for the first time after installing Hachimi, you should 
 ![First Time Setup](/assets/first-time-setup.jpg)
 
 ::: info
-If you don't see it, it means that Hachimi has not been installed correctly. Please read the install guide carefully and try again, or look at [Troubleshooting](troubleshooting.md).
+If you don't see it, it means that Hachimi has not been installed correctly. Please read the install guide carefully and try again, or look at [Troubleshooting](troubleshooting).
 :::
 
 Simply follow the guide, then tap Done to save your configuration. If you selected translations, this will also start the update check and prompt you to download any new translations.

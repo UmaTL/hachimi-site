@@ -64,7 +64,7 @@ Jika masih tidak membantu, coba sesuaikan sampai terlihat baik.
 ### Runtime error saat memulai
 
 Artinya kamu menggunakan versi Hachimi lama yang rusak setelah pembaruan game pada 2025/09/24 (JP) dan 2025/11/11 (Global).
-[Pasang Hachimi Edge](getting-started.md).
+[Pasang Hachimi Edge](getting-started).
 
 Jika kamu sudah menggunakan Edge, coba instal ulang ke versi terbaru.
 
@@ -74,7 +74,7 @@ Jika kamu sudah menggunakan Edge, coba instal ulang ke versi terbaru.
 Beberapa kernel-level anti-cheat (seperti Vanguard, yang digunakan di Valorant dan League of Legends) mencegah Hachimi meluncurkan game dengan benar. Pastikan mereka tidak berjalan di komputer kamu, lalu coba lagi.
 :::
 
-- Pastikan kamu menginstal versi Hachimi yang benar untuk versi game kamu (Jepang atau lainnya). Kamu bisa menemukan yang tepat di laman [Memulai](getting-started.md).
+- Pastikan kamu menginstal versi Hachimi yang benar untuk versi game kamu (Jepang atau lainnya). Kamu bisa menemukan yang tepat di laman [Memulai](getting-started).
 - Mulai ulang komputer kamu setelah *installer* mengaktifkan pengalihan DotLocal.  
   **Klik "Restart" Di menu *shutdown*, jangan hanya mematikan lalu menyalakannya lagi..**
 - Jika kamu menggunakan DMM, coba mulai ulang DMM Launcher atau paksa agar selalu *"run as administrator"*.

@@ -2,7 +2,7 @@
 
 ## How do I use another mod with Hachimi?
 
-See the `load_libraries` option on the [Config page](/docs/hachimi/config). Note that some mods will not work with this method; they weren't really designed to be used with each other.
+See the `load_libraries` option on the [Config page](config). Note that some mods will not work with this method; they weren't really designed to be used with each other.
 
 ## The update just finished installing but everything's still not translated. Why?
 

@@ -84,4 +84,4 @@ If a plugin causes crashes or doesn't function correctly:
 
 ## Next steps
 
-- Learn about [creating your own plugins](development.md).
+- Learn about [creating your own plugins](development).

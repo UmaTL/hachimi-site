@@ -2,7 +2,7 @@
 
 ## Bagaimana cara menggunakan mod lain bersama Hachimi?
 
-Lihat opsi `load_libraries` di [halaman Konfigurasi](/id/docs/hachimi/config). Perlu dicatat bahwa beberapa mod tidak akan berfungsi dengan metode ini karena memang tidak dirancang untuk dipakai bersamaan.
+Lihat opsi `load_libraries` di [halaman Konfigurasi](config). Perlu dicatat bahwa beberapa mod tidak akan berfungsi dengan metode ini karena memang tidak dirancang untuk dipakai bersamaan.
 
 ## Update baru saja selesai diinstal tapi kenapa semuanya masih belum diterjemahkan?
 
@@ -34,7 +34,7 @@ Hachimi dan alat serupa melanggar ketentuan layanan/*terms of services* (TOS). K
 
 ## Bisakah saya memainkan JP dan Global secara bersamaan?
 
-Ya, tetapi kamu perlu menggunakan solusi tambahan jika memakai versi DMM. Lihat [langkah-langkah ini](/id/docs/hachimi/troubleshooting.md#error-501).
+Ya, tetapi kamu perlu menggunakan solusi tambahan jika memakai versi DMM. Lihat [langkah-langkah ini](troubleshooting.md#error-501).
 
 ## Apa perbedaan antara Mode *Update* Fisik?
 
@@ -54,13 +54,13 @@ Menghapus game hanya diperlukan untuk instalasi pertama kali, bukan untuk pembar
 
 Jika ada notifikasi di dalam game untuk memperbarui dari Play Store berarti kamu perlu memperbarui game itu sendiri dengan mengunduh paket instalasi terbaru. Kemudian kamu harus menginstalnya melalui UmaPatcher, yang secara otomatis akan menerapkan rilis Hachimi Edge terbaru yang tersedia.
 
-Ikuti [panduan instalasi](/id/docs/hachimi/getting-started.md#android-jp) mulai dari langkah ke-4.
+Ikuti [panduan instalasi](getting-started.md#android-jp) mulai dari langkah ke-4.
 
 ### Hachimi
 
 Ketika versi baru Hachimi Edge dirilis, kamu bisa memilih untuk menginstalnya agar mendapatkan fitur baru atau perbaikan. Kamu **tidak harus** melakukannya segera. Melakukan pembaruan ini memerlukan proses penambalan ulang (*re-patching*).
 
-Ikuti [panduan instalasi](/id/docs/hachimi/getting-started.md#android-jp) mulai dari langkah ke-5 hanya untuk menginstal ulang versi game saat ini, atau mulai dari langkah ke-4 jika kamu sudah tidak memiliki paket instalasi.
+Ikuti [panduan instalasi](getting-started.md#android-jp) mulai dari langkah ke-5 hanya untuk menginstal ulang versi game saat ini, atau mulai dari langkah ke-4 jika kamu sudah tidak memiliki paket instalasi.
 
 ### UmaPatcher
 
@@ -68,7 +68,7 @@ Memperbarui UmaPatcher hanya diperlukan dalam kasus tertentu, seperti saat kamu 
 
 1. Jika kamu belum pernah melakukannya, Pengaturan -> Ekspor *signing key*.
 1. Uninstall UmaPatcher.
-1. Ikuti [panduan instalasi](/id/docs/hachimi/getting-started.md#android-jp) mulai dari langkah ke-3, sesuai kebutuhan di kasus yang kamu alami.
+1. Ikuti [panduan instalasi](getting-started.md#android-jp) mulai dari langkah ke-3, sesuai kebutuhan di kasus yang kamu alami.
 
 ## Saya mematikan GUI/Overlay Hachimi, bagaimana cara menyalakannya kembali?
 

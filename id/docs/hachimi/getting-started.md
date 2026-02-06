@@ -54,7 +54,7 @@ Ikuti panduan sesuai dengan perangkatmu dibawah, kemudian lanjutkan dengan [Setu
 ### Windows (JP)
 
 Mulai 24/09/2025, kamu harus menggunakan Hachimi Edge v0.14.2 atau yang lebih baru karena adanya pembaruan besar pada game.
-Jika kamu mengalami masalah, silakan periksa bagian [pemecahan masalah](/id/docs/hachimi/troubleshooting.md).
+Jika kamu mengalami masalah, silakan periksa bagian [pemecahan masalah](troubleshooting).
 
 ::: warning PERINGATAN
 Proses instalasi DMM menggunakan pengalihan DotLocal DLL.
@@ -257,7 +257,7 @@ Jika kamu tidak melihatnya setelah melakukan pembaruan ke Edge untuk pertama kal
 :::
 
 ::: info
-Jika kamu tetap tidak melihatnya, berarti Hachimi tidak terpasang dengan benar. Harap baca panduan instalasi dengan seksama dan coba lagi, atau lihat di [Pemecahan masalah](/id/docs/hachimi/troubleshooting.md)
+Jika kamu tetap tidak melihatnya, berarti Hachimi tidak terpasang dengan benar. Harap baca panduan instalasi dengan seksama dan coba lagi, atau lihat di [Pemecahan masalah](troubleshooting)
 :::
 
 Cukup ikuti panduan yang ada, lalu ketuk Selesai untuk menyimpan konfigurasi kamu. Jika kamu memilih terjemahan, hal ini juga akan memulai pemeriksaan pembaruan dan meminta kamu untuk mengunduh terjemahan baru jika tersedia.

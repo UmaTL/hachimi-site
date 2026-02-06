@@ -27,7 +27,7 @@ File-file berikut diperlukan oleh ZokuZoku:
 
 ZokuZoku akan secara otomatis mendeteksi file ini jika dibuat dengan mengikuti prosedur di atas menggunakan versi game DMM, jadi pastikan untuk melakukannya setidaknya sekali sebelum menginstal. Kamu perlu melakukan *dump* lagi setiap kali klien game diperbarui jika ingin tetap memperbaruinya; jika tidak mengerjakan terjemahan UI, kamu bisa mengabaikannya.
 
-Dan tentu saja, kamu juga memerlukan repositori terjemahan yang sudah ada untuk digunakan. Lihat yang [tersedia saat ini](/id/credits.md) atau buat sendiri.
+Dan tentu saja, kamu juga memerlukan repositori terjemahan yang sudah ada untuk digunakan. Lihat yang [tersedia saat ini](/id/credits) atau buat sendiri.
 
 ### Pemasangan
 

@@ -40,6 +40,6 @@
 ❌ - サポートされていません。<br>
 </small>
 
-## [日本語版の場合のインストールガイド](getting-started-jp.md)
+## [日本語版の場合のインストールガイド](getting-started-jp)
 
-## [グローバル版、繁体字中国語版、簡体字中国語版の場合のインストールガイド](getting-started-other.md)
+## [グローバル版、繁体字中国語版、簡体字中国語版の場合のインストールガイド](getting-started-other)

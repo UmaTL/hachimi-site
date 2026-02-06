@@ -9,7 +9,7 @@ Hachimi Edge のドキュメントページへようこそ！
 
 ## プロジェクトの翻訳を手伝う
 
-[翻訳ガイド](/docs/translation-guide/welcome)をご覧の上、[いずれかのプロジェクト](/credits.md)にご連絡ください。
+[翻訳ガイド](/docs/translation-guide/welcome)をご覧の上、[いずれかのプロジェクト](/credits)にご連絡ください。
 
 ## 独自の翻訳ソースを作成する
 

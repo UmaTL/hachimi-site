@@ -1,7 +1,7 @@
 # Translating
 
 ::: tip
-If you were linked here directly, it is recommended to [read the guide from the start](welcome.md).
+If you were linked here directly, it is recommended to [read the guide from the start](welcome).
 :::
 
 Now that you better understand the basics of the game's assets and how Hachimi uses them, let's look at how to actually start translating.
@@ -36,7 +36,7 @@ These are part of the earliest game translation patch, and as such don't directl
 
 They can however still be used with the aid of a few extra scripts, and are particularly handy for stories, providing more features and a smoother experience.
 
-Check out the [UmaTL guide](using-umatl.md).
+Check out the [UmaTL guide](using-umatl).
 
 ### Hachimi Tools
 

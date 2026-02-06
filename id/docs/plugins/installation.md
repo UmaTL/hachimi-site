@@ -42,7 +42,7 @@ Di Android, Plugin harus ditambahkan melalui UmaPatcher Edge sebelum melakukan p
 1. **Kelola plugin** (opsional):
    - Kamu bisa mengaktifkan/menonaktifkan plugin menggunakan kotak centang (*checkbox*) di samping setiap plugin.
    - Klik "*Remove*" untuk menghapus plugin dari daftar.
-1. ***Patch* game-nya**: Ikuti [panduan instalasi UmaPatcher Edge](/id/docs/hachimi/getting-started.md#) untuk *patch* dan menginstal game.
+1. ***Patch* game-nya**: Ikuti [panduan instalasi UmaPatcher Edge](/id/docs/hachimi/getting-started) untuk *patch* dan menginstal game.
 1. **Verifikasi**: Jalankan gamenya. Jika plugin berhasil dimuat, kamu akan melihat efeknya dan menu baru pada antarmuka (GUI) bawaan Hachimi.
 
 ::: tip
@@ -84,4 +84,4 @@ Jika plugin menyebabkan *crash* atau tidak berfungsi dengan benar:
 
 ## Langkah selanjutnya
 
-- Pelajari tentang [cara membuat plugin](/id/docs/plugins/development.md).
+- Pelajari tentang [cara membuat plugin](development).
