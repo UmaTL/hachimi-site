@@ -1,3 +1,7 @@
+---
+outline: [2,3]
+---
+
 # Translating
 
 ::: tip
@@ -101,7 +105,29 @@ When text is not found anywhere else, it is likely "hidden" in one of these file
 
 ### Movies
 
-You are on your own currently. Good luck.
+::: info
+Experimented yourself or have more info? Please let us know!
+:::
+
+The game's movies are in USM format and encrypted. It's not the easiest thing to deal with and comes with many caveats. Many options have not yet been tested. Good technical skills and time to research and experiment are recommended.
+  
+You can use various tools to decrypt and re-encrypt them, using key `75923756697503`/`(0000)450D608C479F`.
+
+- [USMBreak](https://github.com/beer-psi/usmbreak)
+- [WannaCRI](https://github.com/donmai-me/WannaCRI)
+- [CRID USM Demux Tool](https://mega.nz/file/TJQniYwL#Dp_D-KvzVlVgTwqzVJc1n3vslBZsHdy8pdDqzhRtsOI)
+- [VGMToolbox](https://sourceforge.net/projects/vgmtoolbox/)
+
+In between, the video can be edited any usual way, though our main purpose is adding subtitles. Note that the original video already comes "hard-subbed" in Japanese.
+
+::: info
+In the future, Hachimi Edge might support soft-subtitles to obviate the need for messing with video files.
+:::
+
+Videos should likely remain in the same format and resolution. For simple cases you should be able to use the relevant encoder for its format (MPEG1/H264/VP9?). You can also try the [official SDK](https://archive.org/details/new-criware-sdk) which *should* help with more advanced cases too.  
+Be warned some files contain an alpha channel as second video stream. Most tools don't deal with this well.
+
+Audio should not be touched and ideally copied directly, without de-/encryption. This might require it to be processed separately. Check the docs for your tools.
 
 ## Other considerations
 
