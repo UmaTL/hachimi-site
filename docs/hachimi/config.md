@@ -61,4 +61,4 @@ Editing this file with a basic text editor can result in file corruption. Please
 - `block_minimize_in_full_screen`: Blocks minimization in full screen. Should only be used with `FullScreenWindow`.
 - `window_always_on_top`: Keep the game window always on top of other windows.
 - `disable_gui_once`: Disables the built-in GUI only for the next launch. Automatically resets to `false` after startup and forces `disable_gui: true` once. This allows you to make purchases from the Steam store.
-- `discord_rpc`: Enables Discord rich presence integration, which displays your current activity in Umamusume on your Discord profile.
+- `discord_rpc`: Enables Discord rich presence integration on platforms that don't natively support it (DMM), which displays your current activity in Umamusume on your Discord profile.
