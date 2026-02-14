@@ -26,16 +26,30 @@ To fix this, open the Hachimi menu, run the `First time setup` again to choose a
 
 This happens because there is a mismatch between the game's sprite textures and the translated ones. The most likely reason is the game simply updated and changed some sprites, usually affecting the `atlas` type.
 
-1. Try to update your translations from the menu. If an update was found, restart the game after it finishes.
-    - On Android/some devices, you *might* also need to delete the `atlas` folder to let it update correctly.
-1. If no update was found, your translation source is out of date. Just wait for an update, or check in with the source.
+1. Try to update your translations from the menu. If an update was found, **restart the game after it finishes**.
+    - On Android/some devices, you *might* also need to delete the affected folder (like `atlas`) to let it update correctly.
+1. If no update was found, your translation source is out of date. Just wait for an update, or check in with the source, letting them know if needed.
     - <small>If it's close to a game update, source maintainers will likely be working on it. Please check if they're already aware before bothering them.</small>
+
+::: details Less likely causes (legacy) <!-- markdownlint-disable-next-line MD032 -->
 1. Your translation source might be entirely inactive. This could indicate you're still using an old source from the original Hachimi.
 Make sure you're using Hachimi Edge, then open its menu and go through the `First time setup` again.
 1. The list of sources itself could be outdated, particularly if you upgraded straight from old Hachimi. In this case, you can use `Restore Defaults` to reset it to the latest bundled one.
-    - ⚠️ Warning: This will reset all settings.  
+    - ⚠️ Warning: This will reset all settings.
+:::
 
-If no active source for your language exists, you can check `Menu` -> `Config Editor` -> `Disable translations` if needed.
+<small>
+
+If none of your language's sources are active, or you want to temporarily clean your UI from the mess, you have these options:
+
+1. Open `hachimi/localized_data/assets` in the [install folder](faqs#how-do-i-find-the-game-install-folder) and delete the offending folder, likely `atlas`.
+    - If you're so inclined, you can delete only the one that causes issues. `common` is likely.
+1. Check `Menu` -> `Config Editor` -> `Disable translations`.
+1. Fix it for yourself using the [toolset](/docs/translation-guide/translating#hachimi-tools).
+
+Don't update your translations until you know the source has updated. You can also enable [`Lazy translation updates`](config).
+
+</small>
 
 ### Something isn't translated
 
