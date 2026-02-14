@@ -45,6 +45,10 @@ Editing this file with a basic text editor can result in file corruption. Please
 - `auto_translate_stories`: Allows translating stories through the auto translator.
 - `auto_translate_localize`: Allows translating UI text through the auto translator. This is generally NOT recommended since most translators do not properly preserve line breaks or formatting tags.
 - `disabled_hooks`: Manually disable hooks. Don't fiddle with this option, as it serves as a debug tool for troubleshooting compatibility issues.
+- `enable_file_logging`: Enables logging to `hachimi.log` in the game directory. If disabled or the file cannot be created, logging falls back to debug output only. Default: `false`.
+- `lazy_translation_updates`: Skips re-downloading translation files that haven't changed in the repository, even if local files are outdated or corrupted. Speeds up updates but may leave damaged files. Default: `false`.
+- `shadow_resolution`: Controls the shadow resolution quality. Higher values improve shadow detail but may reduce performance.
+- `skill_info_dialog`: Enables an extended skill information dialog that displays additional details about skills when viewing them in-game.
 
 ## Windows only
 
@@ -57,3 +61,4 @@ Editing this file with a basic text editor can result in file corruption. Please
 - `block_minimize_in_full_screen`: Blocks minimization in full screen. Should only be used with `FullScreenWindow`.
 - `window_always_on_top`: Keep the game window always on top of other windows.
 - `disable_gui_once`: Disables the built-in GUI only for the next launch. Automatically resets to `false` after startup and forces `disable_gui: true` once. This allows you to make purchases from the Steam store.
+- `discord_rpc`: Enables Discord rich presence integration, which displays your current activity in Umamusume on your Discord profile.
