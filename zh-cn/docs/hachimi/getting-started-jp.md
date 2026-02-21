@@ -1,17 +1,17 @@
 # 安装指南（日服）
 
 请根据您的平台遵循下方的指南，然后继续进行 [初始化设置](#初始化设置)。
+如果遇到问题，请查阅[故障排除](troubleshooting)。
 
 ## Windows
 
 由于游戏的某次大版本更新，自 2025/09/24 起，您需要使用 Hachimi v0.14.2 或更新版本。
-如果遇到问题，请查阅[故障排除](troubleshooting)。
 
 1. 下载最新的[安装程序](https://github.com/kairusds/Hachimi-Edge/releases/latest/download/hachimi_installer.exe)并运行它。
-1. 如果您之前使用过 Hachimi v0.14.2 及更早版本的 Hachimi，请先点击“卸载”。
-1. 检查安装目录是否正确，如果需要请进行更改。
-1. 选择您的游戏版本，然后点击“安装” 。
-1. 安装完成后，请右键游戏的exe文件，选择属性，转到兼容性选项卡，并勾选“禁用全屏优化”。（不勾选会导致游戏无法启动）
+2. 如果您之前使用过 Hachimi v0.14.2 及更早版本的 Hachimi，请先点击“卸载”。
+3. 检查安装目录是否正确，如果需要请进行更改。
+4. 选择您的游戏版本，然后点击“安装” 。
+5. 安装完成后，请右键游戏的exe文件，选择属性，转到兼容性选项卡，并勾选“禁用全屏优化”。（不勾选会导致游戏无法启动）
 
 首次安装时，安装程序可能会请求您启用 DotLocal DLL 重定向。点击“确定” ，它会自动为您启用。**启用后，您必须重启（不是关机再开机）您的电脑。**
 
@@ -22,6 +22,8 @@
 DotLocal 目前仅用于 DMM 版本。在 Steam 平台上玩请在安装程序中选择带 Steam 一项的安装方法。
 :::
 
+如果您在 Steam 端上使用 Hachimi，您可能需要在游戏更新后重新使用安装程序安装 Hachimi。
+
 <details>
 <summary class="collapsible-header-sub">手动安装</summary>
 
@@ -29,9 +31,14 @@ DotLocal 目前仅用于 DMM 版本。在 Steam 平台上玩请在安装程序�
 仅当您在原始文件名中看到文件扩展名（`.exe`, `.dll`）时，才在重命名时添加它们。如果您看不到，这意味着 Windows 设置为隐藏扩展名，您的重命名将以 `.exe.exe` 结尾，导致游戏无法运行。此条不适用于文件夹。
 :::
 
-::: tip
-本指南基于 DMM 版本。如果您使用的是 Steam 版本，请在以下步骤中将 `umamusume.exe` 替换为 `UmamusumePrettyDerby.exe`。
-:::
+### Steam
+
+1. 从 [Releases 页面](https://github.com/kairusds/Hachimi-Edge/releases)下载最新版本的 `hachimi.dll`。
+2. 将该文件重命名为 `cri_mana_vpx.dll`，并将其放入[游戏安装目录](faqs#如何找到游戏的安装目录)中。
+3. 下载 Ferns 开发的 [`FunnyHoney.exe`](https://codeberg.org/LeadRDRK/FunnyHoney(https://codeberg.org/LeadRDRK/FunnyHoney))。
+4. 将其重命名为 `UmamusumePrettyDerby_Jpn.exe` 并放入游戏安装目录中，**覆盖**原始同名文件。
+
+### DMM
 
 1. 参阅[这篇文章](https://learn.microsoft.com/zh-cn/windows/win32/dlls/dynamic-link-library-redirection#optional-configure-the-registry)中的“配置注册表”部分来启用 DLL 重定向。完成后重启您的电脑。
 1. 从 [Releases 页面](https://github.com/kairusds/Hachimi-Edge/releases)下载最新的 `hachimi.dll`。
@@ -51,64 +58,83 @@ DotLocal 目前仅用于 DMM 版本。在 Steam 平台上玩请在安装程序�
 
 ## Android
 
-::: warning
-在安卓上补丁游戏将导致游戏无法使用 Google Play 商店，包括通过 Google Play 进行内购。您可以尝试使用游戏开发商自己的商店。
+::: warning 安装前须知
+补丁版无法使用 Google Play 商店及内购。请改用官方商店渠道。
+安装前必须绑定 Cygames ID 或设置引承码。补丁版无法通过 Google 账号登录。
+
+新安装 Hachimi 需要卸载原版游戏。
+请从 [Qoopy](https://qoopy.leadrdrk.com/) 获取游戏APK，使用 ID 6172。
+
+若常规安装失败，请使用 Shizuku 模式安装。
+MIUI/HyperOS 用户在安装前请先于 `开发者设置` 中关闭 `系统优化` 。
 :::
 
-::: danger
-如果您已有游戏存档，请确保在安装补丁后版本前已设置好数据引承或 Cygames ID 以登录您的账号。在补丁后的游戏中无法通过 Google Play 帐户登录。
+### 1.准备工作
+在开始之前，请根据您的具体情况执行以下操作：
+
+* **旧版Umapathcer用户：** 如果您曾使用过旧版 UmaPatcher，请在旧版 UmaPatcher 的 `设置` 页面 **导出签名密钥**，并保存到安全的位置。
+* **首次安装：** 如果您从未给游戏打过补丁，请先 **卸载原版游戏**。
+* **软件下载：** 下载并安装最新版的 [UmaPatcher Edge](https://github.com/kairusds/UmaPatcher-Edge/releases/latest/download/app-release.apk)。
+
+---
+
+### 2.准备游戏安装包
+您需要准备好以下任意一种格式的游戏安装包：
+
+
+**Split APKs (分割包)**： 一个基础 APK + 一个对应您架构的配置包（通常为 `config.arm64_v8a`）。
+**XAPK 文件**： 本质是包含分割包的压缩包，确保后缀名为 `.xapk`。
+
+---
+
+### 3.开始补丁安装
+1.  打开 UmaPatcher Edge，如果导出了旧版 UmaPatcher 的签名密钥，请先在设置中导入之前备份的密钥。
+2.  选择 **普通安装**。
+3.  选择您准备好的 拆分APK 或 XAPK 文件。
+4.  点击 **开始补丁**，等待补丁完成并自动触发安装。
+
+---
+
+::: tips
+⚠️ 当游戏发布新版本时，您只需从第 2 步开始重复流程即可。
+更新过程中无需卸载现有的已补丁游戏。
 :::
-
-::: danger
-如果您已经安装了原版游戏，则必须先将其卸载。补丁后的游戏之后可以在不卸载的情况下进行更新。
-:::
-
-::: warning
-不要从 APKPure 获取您的 APK，这会导致问题。
-推荐的来源是 [Qoopy](https://qoopy.leadrdrk.com/)，使用 ID 6172。
-:::
-
-::: tip
-在搭载 MIUI 或 HyperOS 的设备上，请尝试在安装前禁用 MIUI优化 / 系统优化。
-这在游戏更新时确实很烦人，但您可以通过 Shizuku 安装来避免该问题。
-:::
-
-::: tip
-部分安卓系统使用了手机厂商修改过的安装管理器，这些安装管理器可能并不支持安装 XAPK 应用，如您一直遇到安装失败的问题，不妨尝试使用 Shizuku 安装。
-:::
-
-1. 如果您之前使用过 Umapatcher，请打开其设置页面并**将签名密钥导出到一个安全且可以轻易找到的地方**。
-1. 如果您之前没有补丁过游戏，请先卸载原版游戏。
-1. 下载并安装最新版本的 [UmaPatcher Edge](https://github.com/kairusds/UmaPatcher-Edge/releases/latest/download/app-release.apk)。
-1. 为游戏准备一个安装包，可以是：
-    - **分割 APK 文件 (Split APKs)：** 一个基础 APK 文件和一个分割配置 APK 文件（config.arm64_v8a, config.armeabi-v7a 等），
-    请只选择一个适合您设备的分割配置。
-    - **XAPK 文件：** 一个包含分割 APK 文件的 ZIP 文件（扩展名被重命名为 XAPK）。
-1. 打开 UmaPatcher，如果需要，导入您导出的签名密钥，然后选择 **普通安装**。选择您准备好的文件。
-1. 点击 **开始补丁** 来开始补丁和安装过程。
-
-⚠️ 每当应用更新时，您都需要从第 4 步开始重复此过程。您**不需要**卸载游戏来更新。
 
 <details>
 <summary class="collapsible-header-sub">通过 Shizuku 安装</summary>
+### 1.准备工作
+在开始之前，请根据您的具体情况执行以下操作：
 
-请先下载并安装最新版本的 [Shizuku](https://github.com/RikkaApps/Shizuku/releases/)。
-
-随后，通过 [此教程](https://shizuku.rikka.app/zh-hans/guide/setup/) 配置好 Shizuku。
+- **旧版Umapathcer用户：** 如果您曾使用过旧版 UmaPatcher，请在旧版 UmaPatcher 的 `设置` 页面 **导出签名密钥**，并保存到安全的位置。
+- **首次安装：** 如果您从未给游戏打过补丁，请先 **卸载原版游戏**。
+- **软件下载：** 下载并安装最新版的 [UmaPatcher Edge](https://github.com/kairusds/UmaPatcher-Edge/releases/latest/download/app-release.apk) 和 [Shizuku](https://github.com/RikkaApps/Shizuku/releases/)。
+- 通过 [此教程](https://shizuku.rikka.app/zh-hans/guide/setup/) 配置好 Shizuku。
 
 当成功配置 Shizuku 后，在 Umapatcher 中，“通过 Shizuku 安装”的右侧应当会显示为“可用”。
 
-1. 如果您之前使用过 Umapatcher，请打开其设置页面并**将签名密钥导出到一个安全且可以轻易找到的地方**。
-1. 如果您之前没有补丁过游戏，请先卸载原版游戏。
-1. 下载并安装最新版本的 [UmaPatcher Edge](https://github.com/kairusds/UmaPatcher-Edge/releases/latest/download/app-release.apk)。
-1. 为游戏准备一个安装包，可以是：
-    - **分割 APK 文件 (Split APKs)：** 一个基础 APK 文件和一个分割配置 APK 文件（config.arm64_v8a, config.armeabi-v7a 等），
-    请只选择一个适合您设备的分割配置。
-    - **XAPK 文件：** 一个包含分割 APK 文件的 ZIP 文件（扩展名被重命名为 XAPK）。
-1. 打开 UmaPatcher，如果需要，导入您导出的签名密钥，然后选择 **通过 Shizuku 安装**。选择您准备好的文件。
-1. 点击 **开始补丁** 来开始补丁和安装过程。
+---
 
-⚠️ 每当应用更新时，您都需要从第 4 步开始重复此过程。您**不需要**卸载游戏来更新。
+### 2.准备游戏安装包
+您需要准备好以下任意一种格式的游戏安装包：
+
+
+**Split APKs (分割包)**： 一个基础 APK + 一个对应您架构的配置包（通常为 `config.arm64_v8a`）。
+**XAPK 文件**： 本质是包含分割包的压缩包，确保后缀名为 `.xapk`。
+
+---
+
+### 3.开始补丁安装
+1.  打开 UmaPatcher Edge，如果导出了旧版 UmaPatcher 的签名密钥，请先在设置中导入之前备份的密钥。
+2.  选择 **通过 Shizuku 安装**。
+3.  选择您准备好的 拆分APK 或 XAPK 文件。
+4.  点击 **开始补丁**，等待补丁完成并自动触发安装。
+
+---
+
+::: tips
+⚠️ 当游戏发布新版本时，您只需从第 2 步开始重复流程即可。
+更新过程中无需卸载现有的已补丁游戏。
+:::
 </details>
 
 <details>
@@ -116,7 +142,7 @@ DotLocal 目前仅用于 DMM 版本。在 Steam 平台上玩请在安装程序�
 
 UmaPatcher 提供了一个 root 安装选项，它不需要您卸载游戏或处理 APK，让您可以从任何应用商店正常更新。
 
-在已安装游戏的情况下，点击补丁器主屏幕顶部的卡片，选择您想补丁的应用（如果需要）。然后选择“直接安装 (Direct install)”作为安装方式，并点击“补丁” (Patch)。此方式不需要任何输入文件。
+在已安装游戏的情况下，点击补丁器主屏幕顶部的卡片，选择您想补丁的应用（如果需要）。然后选择“直接安装”作为安装方式，并点击“补丁”。此方式不需要任何输入文件。
 
 每当游戏更新时，您都需要再次使用 UmaPatcher 来补丁游戏。
 </details>
@@ -135,10 +161,10 @@ UmaPatcher 提供了一个 root 安装选项，它不需要您卸载游戏或处
 <summary class="collapsible-header-sub">手动安装（不推荐）</summary>
 
 1. 从 [Releases 页面](https://github.com/kairusds/Hachimi-Edge/releases)构建或下载预构建的库文件。
-1. 解压游戏的 APK 文件。您可能需要使用 [apktool](https://apktool.org/)。
-1. 将 `lib` 目录下的每个文件夹中的 `libmain.so` 文件重命名为 `libmain_orig.so`。
-1. 将代理库文件复制到它们对应的文件夹中（例如 `libmain-arm64-v8a.so` 放入 `lib/arm64-v8a`）。将它们重命名为 `libmain.so`。
-1. 构建 APK 文件并安装它。
+2. 解压游戏的 APK 文件。您可能需要使用 [apktool](https://apktool.org/)。
+3. 将 `lib` 目录下的每个文件夹中的 `libmain.so` 文件重命名为 `libmain_orig.so`。
+4. 将代理库文件复制到它们对应的文件夹中（例如 `libmain-arm64-v8a.so` 放入 `lib/arm64-v8a`）。将它们重命名为 `libmain.so`。
+5. 构建 APK 文件并安装它。
 
 </details>
 

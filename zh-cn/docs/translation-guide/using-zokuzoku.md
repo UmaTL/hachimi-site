@@ -23,7 +23,7 @@ ZokuZoku 运行时需以下文件：
 
 如果此文件是使用 DMM 版本的游戏创建的，ZokuZoku 也会自动检测该文件，并按照上述步骤操作，因此请确保在安装前至少执行一次。如果您想保持更新，则每次游戏客户端更新时都需要再次转储该文件；否则，如果您不处理 UI 翻译，则可以忽略它。
 
-当然，你还需要一个现有的翻译仓库。对于英语翻译仓库，可以从 [Hachimi-Hachimi/tl-en](https://github.com/Hachimi-Hachimi/tl-en) 克隆或下载。
+当然，你还需要一个现有的翻译仓库。对于英语翻译仓库，可以从 [Hachimi-Hachimi/tl-zh-cn](https://github.com/Hachimi-Hachimi/tl-zh-cn) 克隆或下载。
 
 ### 安装
 

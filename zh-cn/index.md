@@ -43,11 +43,26 @@ features:
 
 ## 关于
 
-Hachimi Edge 是已停止维护的 [Hachimi](https://hachimi.leadrdrk.com) 模组的一个分支。它最初是为了快速解决 2025 年 9 月 24 日游戏更新后的兼容性问题而创建的，此后又整合了社区玩家添加的额外功能和修复。如果您仍在使用原版 Hachimi，请卸载它并安装 Edge 以解决问题。如果 Hachimi 的开发者恢复更新，Edge 可能会被合并回原版并停止维护。
+Hachimi Edge 是该游戏的第三款完整翻译插件，继承了 UmaTL 和 Carotene 的衣钵，并且是首个全面支持 Android 端游戏修改的插件。
 
-## 翻译
+作为已停止维护的 Hachimi 插件的分叉版本，它的诞生初衷是为用户快速修复 2025/09/24 游戏更新后出现的问题。此后，它陆续整合了多位社区成员提供的额外功能与修复补丁。
+原版 Hachimi 插件已由其开发者于 2026/01/17 正式宣布停止维护。Hachimi Edge 将接替其地位。
 
-翻译项目都来自于社区玩家自行创建与维护，Hachimi 本身仅提供了一个框架，它自己不会进行任何翻译操作，您可以参阅[鸣谢](/zh-cn/credits.md)列表查看各个翻译仓库的维护者和贡献者，如果您想为 Hachimi 贡献翻译，请参阅[翻译指南](/zh-cn/docs/translation-guide/welcome.md)。
+Hachimi 无法运行？运行时错误？补丁安装失败？你可能仍在使用原版 Hachimi。请将其卸载并[安装](zh-cn/docs/hachimi/getting-started)全新的 Edge 版本以解决这些问题。
+
+## UmaPatcher
+
+UmaPatcher Edge 是一款助手应用，旨在帮助 Android 用户轻松地将 Hachimi Edge 注入游戏。作为 Hachimi 项目不可或缺的一部分，它同样是旧版且无人维护的 UmaPatcher 的分叉版本。
+在打补丁时，程序会自动下载最新版本的 Hachimi Edge，因此 Android 用户无需担心其他琐碎的操作。
+
+## 翻译内容
+
+翻译资源索引自各类外部社区项目。Hachimi 仅提供修改游戏的框架，其本身并不创作或管理任何翻译内容，与这些翻译源也并无直接隶属关系。
+
+找不到新内容的翻译？想寻找其他语言？相比原版，Hachimi Edge 索引了更多且更新更及时的仓库。
+
+请前往[贡献致谢页](credits.md)查看各翻译源的详细信息，包括项目概况、进度、帮助文档以及联系方式。
+请多多支持那些为此付出的贡献者们！
 
 ## 截图 {#screenshots}
 
