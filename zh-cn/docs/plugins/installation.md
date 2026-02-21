@@ -47,7 +47,7 @@
 * 点击“移除”从列表中删除插件。
 
 
-1. **补丁游戏**：按照常规的 [UmaPatcher Edge 安装指南](/docs/hachimi/getting-started-jp%23android) 进行游戏的补丁和安装。
+1. **补丁游戏**：按照常规的 [UmaPatcher Edge 安装指南](zh-cn/docs/hachimi/getting-started-jp#android) 进行游戏的补丁和安装。
 2. **验证**：启动游戏。如果插件加载成功，你应该能在 Hachimi 的内置 GUI 中看到其效果或菜单项。
 
 ::: tip 提示

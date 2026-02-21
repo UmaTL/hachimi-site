@@ -48,7 +48,7 @@ Hachimi Edge 是该游戏的第三款完整翻译插件，继承了 UmaTL 和 Ca
 作为已停止维护的 Hachimi 插件的分叉版本，它的诞生初衷是为用户快速修复 2025/09/24 游戏更新后出现的问题。此后，它陆续整合了多位社区成员提供的额外功能与修复补丁。
 原版 Hachimi 插件已由其开发者于 2026/01/17 正式宣布停止维护。Hachimi Edge 将接替其地位。
 
-Hachimi 无法运行？运行时错误？补丁安装失败？你可能仍在使用原版 Hachimi。请将其卸载并[安装](zh-cn/docs/hachimi/getting-started)全新的 Edge 版本以解决这些问题。
+Hachimi 无法运行？运行时错误？补丁安装失败？你可能仍在使用原版 Hachimi。请将其卸载并[安装](/zh-cn/docs/hachimi/getting-started)全新的 Edge 版本以解决这些问题。
 
 ## UmaPatcher
 
