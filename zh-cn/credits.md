@@ -50,3 +50,10 @@
 <a href="https://github.com/Xmatography/umachimi-id/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Xmatography/umachimi-id" />
 </a>
+
+## [法语翻译（国际服）](https://umamusumefr.github.io)
+- 维护者：UmamusumeFR
+- 贡献者：
+<a href="https://github.com/UmamusumeFR/hachimi-tl-fr/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=UmamusumeFR/hachimi-tl-fr" />
+</a>

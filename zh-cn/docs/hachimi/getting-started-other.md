@@ -5,7 +5,7 @@
 ## Windows
 
 1. 从 [Releases 页面](https://github.com/Hachimi-Hachimi/Hachimi-Unity2020/releases)下载最新的 `hachimi_installer.exe`。
-1. 运行它并点击“安装” (Install)。如果您不明白这些选项的含义，无需进行任何修改。
+2. 运行它并点击“安装”。如果您不明白这些选项的含义，无需进行任何修改。
 
 <details>
 <summary class="collapsible-header-sub">手动安装</summary>

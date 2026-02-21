@@ -50,7 +50,7 @@ MDB 指的是 `master.mdb`，这是游戏使用的数据库文件，其中包含
 
 所有纹理都可以使用 `.diff.png` 文件替换，而无需使用其原始格式。这是一种基于 PNG 的特殊格式，仅包含原始图像和替换图像之间的差异数据，从而避免了版权问题。
 
-可以在 [Hachimi-Hachimi/tools](https://github.com/Hachimi-Hachimi/tools) 仓库中找到处理这些纹理的完整工具集，包括 PNG 差异。
+可以在 [[noccu/hachimi-tools](https://github.com/noccu/hachimi-tools)] 仓库中找到处理这些纹理的完整工具集，包括 PNG 差异。
 
 ## 影片（视频/FMV 过场动画）
 
