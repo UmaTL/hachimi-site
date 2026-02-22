@@ -44,7 +44,7 @@
 
 1. 打开[安装目录](faqs#如何找到游戏的安装目录)中的 `hachimi/localized_data/assets`，删除出现问题的文件夹（通常是 `atlas`）。
    - 如果您愿意手动操作，可以仅删除导致问题的特定子文件夹，例如 `common`。
-2. 前往 `Menu`（菜单） -> `CoDnfig Editor`（配置编辑器） -> 勾选 `Disable translations`（禁用翻译）。
+2. 打开菜单 -> `配置编辑器` -> 勾选 `禁用翻译`。
 3. 使用[工具集](/docs/translation-guide/translating#hachimi-tools)自行修复。
 
 在确认翻译源已更新之前，请勿更新翻译。您也可以开启 [`Lazy translation updates`](config)（翻译懒更新）功能。
