@@ -17,7 +17,7 @@
 <details>
 <summary class="collapsible-header-sub">手动安装</summary>
 
-:::tip
+::: tip
 仅当您在原始文件名中看到**文件**扩展名（`.exe`, `.dll`）时，才在重命名时添加它们。如果您看不到，这意味着 Windows 设置为隐藏扩展名，您的重命名将以 `.exe.exe` 结尾，导致游戏无法运行。此条不适用于文件夹。
 :::
 
@@ -33,7 +33,7 @@
 :::
 
 1. 从 [旧版发布页面](https://github.com/Hachimi-Hachimi/Hachimi-Unity2020/releases) 下载最新的 `hachimi_installer.exe`。
-2. 运行它并点击安装 (Install)。如果你不清楚各项选项的含义，无需进行任何修改。
+2. 运行它并点击安装。如果你不清楚各项选项的含义，无需进行任何修改。
 
 <details>
 <summary class="collapsible-header-sub">旧版手动安装</summary>
