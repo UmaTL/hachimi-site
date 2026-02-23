@@ -15,7 +15,7 @@
 :::
 
 1. 从 [Releases 页面](https://github.com/Hachimi-Hachimi/Hachimi-Unity2020/releases)下载最新的 `hachimi.dll` 并将其放入游戏安装目录中。
-1. 将其重命名为 `winhttp.dll`、`version.dll` 或 `opengl32.dll`。
+2. 将其重命名为 `winhttp.dll`、`version.dll` 或 `opengl32.dll`。
 
 </details>
 

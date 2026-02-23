@@ -41,10 +41,10 @@ DotLocal 目前仅用于 DMM 版本。在 Steam 平台上玩请在安装程序�
 ### DMM
 
 1. 参阅[这篇文章](https://learn.microsoft.com/zh-cn/windows/win32/dlls/dynamic-link-library-redirection#optional-configure-the-registry)中的“配置注册表”部分来启用 DLL 重定向。完成后重启您的电脑。
-1. 从 [Releases 页面](https://github.com/kairusds/Hachimi-Edge/releases)下载最新的 `hachimi.dll`。
-1. 在游戏安装文件夹中，创建一个名为 `umamusume.exe.local` 的新文件夹，并将下载的 DLL 文件移动到其中。将其重命名为 `UnityPlayer.dll`。
-1. 从 [Cellar Releases 页面](https://github.com/Hachimi-Hachimi/Cellar/releases)下载最新的 `cellar.dll`。
-1. 将其移动到 `umamusume.exe.local` 文件夹中并重命名为 `apphelp.dll`。
+2 从 [Releases 页面](https://github.com/kairusds/Hachimi-Edge/releases)下载最新的 `hachimi.dll`。
+3. 在游戏安装文件夹中，创建一个名为 `umamusume.exe.local` 的新文件夹，并将下载的 DLL 文件移动到其中。将其重命名为 `UnityPlayer.dll`。
+4. 从 [Cellar Releases 页面](https://github.com/Hachimi-Hachimi/Cellar/releases)下载最新的 `cellar.dll`。
+5. 将其移动到 `umamusume.exe.local` 文件夹中并重命名为 `apphelp.dll`。
 
 </details>
 
