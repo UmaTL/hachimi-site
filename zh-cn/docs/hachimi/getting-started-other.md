@@ -17,8 +17,8 @@
 <details>
 <summary class="collapsible-header-sub">手动安装</summary>
 
-::: tip
-仅当您在原始文件名中看到**文件**扩展名（`.exe`, `.dll`）时，才在重命名时添加它们。如果您看不到，这意味着 Windows 设置为隐藏扩展名，您的重命名将以 `.exe.exe` 结尾，导致游戏无法运行。此条不适用于文件夹。
+:::tip 提示
+只有在原始文件名中能看到 `.dll` 后缀时，才在重命名时添加它。如果你看不到后缀，说明 Windows 设置了隐藏扩展名，此时手动添加会导致文件名变为 `.dll.dll`，从而导致游戏无法运行。
 :::
 
 1. 从 [Release 页面](https://github.com/kairusds/Hachimi-Edge/releases) 下载最新的 `hachimi.dll`。
@@ -39,7 +39,7 @@
 <summary class="collapsible-header-sub">旧版手动安装</summary>
 
 :::tip 提示
-仅在原始文件名显示了 `.dll` 后缀时，才在重命名时添加该后缀。如果没有显示，说明 Windows 设置了隐藏扩展名，你的重命名会导致文件名变成 `.dll.dll`，从而导致游戏无法运行。
+只有在原始文件名中能看到 `.dll` 后缀时，才在重命名时添加它。如果你看不到后缀，说明 Windows 设置了隐藏扩展名，此时手动添加会导致文件名变为 `.dll.dll`，从而导致游戏无法运行。
 :::
 
 1. 从 [旧版发布页面](https://github.com/Hachimi-Hachimi/Hachimi-Unity2020/releases) 下载最新的 `hachimi.dll`。
