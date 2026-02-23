@@ -31,7 +31,7 @@ Editing this file with a basic text editor can result in file corruption. Please
 - `disable_skill_name_translation`: Disables translation of the skill names while keeping other translations enabled.
 - `meta_index_url`: The meta index URL used to fetch the available repositories.
 - `ui_scale`: The UI scale factor. Default: `1.0` (no scaling).
-- `hide_ingame_ui_hotkey`: Enables an internal hotkey that can hide the game's UI.
+- `hide_ingame_ui_hotkey`: Enables an internal hotkey that can hide the game's UI. When this is enabled on Android, you can also `triple tap top right` for the same effect.
 - `graphics_quality`: Possible values: `Default`, `Toon1280`, `Toon1280x2`, `Toon1280x4`, `ToonFull`, `Max`.
 - `story_choice_auto_select_delay`: The choice select delay in seconds when using story auto mode. Default: `0.75` (seconds)
 - `story_tcps_multiplier`: The story text speed ("typewriting count per second") multiplier. Default: `1.0`

@@ -9,8 +9,8 @@
 您可能需要 VPN 才能连接到游戏。请参阅[此页面](https://gametora.com/umamusume/playing-on-dmm)以获取更多信息。如果您同时安装了国际 Steam 版和日语 DMM 版游戏，则需要在游戏数据下载目录中启用大小写区分。`C:\Users\您的用户名\AppData\LocalLow\Cygames`:
 
 1. 将 C:\Users\您的用户名\AppData\LocalLow\Cygames 路径下的所有内容暂时移出，此文件夹必须为空！如果您同时安装了两个版本的游戏，请暂时将其中一个版本的文件夹重命名，否则 Windows 会在您移动文件时尝试覆盖它们（请尝试在文件夹末尾添加 1 或类似的数字等）。
-1. 打开 Powershell 窗口并输入以下内容：`fsutil.exe file setCaseSensitiveInfo {path to your \LocalLow\Cygames} enable`。
-1. 将文件移回 Cygames 文件夹，开启大小写区分后，国际版将使用 "Umamusume" 文件夹，日语版将使用 "umamusume" 文件夹。
+2. 打开 Powershell 窗口并输入以下内容：`fsutil.exe file setCaseSensitiveInfo {path to your \LocalLow\Cygames} enable`。
+3. 将文件移回 Cygames 文件夹，开启大小写区分后，国际版将使用 "Umamusume" 文件夹，日语版将使用 "umamusume" 文件夹。
 
 ### 以 60+ FPS 运行时，物理效果（头发、衣服等）会变得僵硬
 
@@ -44,7 +44,7 @@
 
 1. 打开[安装目录](faqs#如何找到游戏的安装目录)中的 `hachimi/localized_data/assets`，删除出现问题的文件夹（通常是 `atlas`）。
    - 如果您愿意手动操作，可以仅删除导致问题的特定子文件夹，例如 `common`。
-2. 前往 `Menu`（菜单） -> `CoDnfig Editor`（配置编辑器） -> 勾选 `Disable translations`（禁用翻译）。
+2. 打开菜单 -> `配置编辑器` -> 勾选 `禁用翻译`。
 3. 使用[工具集](/docs/translation-guide/translating#hachimi-tools)自行修复。
 
 在确认翻译源已更新之前，请勿更新翻译。您也可以开启 [`Lazy translation updates`](config)（翻译懒更新）功能。
@@ -165,15 +165,15 @@ Steam 覆盖层有时会与 Hachimi 的 GUI 冲突。请禁用其中一个（推
 :::
 
 1. 关闭游戏。
-1. 打开`开始菜单`，搜索`PowerShell`，选择“以管理员身份运行”。
-1. 运行以下命令：`fsutil.exe file setCaseSensitiveInfo $env:USERPROFILE\AppData\LocalLow\Cygames enable`。
+2. 打开`开始菜单`，搜索`PowerShell`，选择“以管理员身份运行”。
+3. 运行以下命令：`fsutil.exe file setCaseSensitiveInfo $env:USERPROFILE\AppData\LocalLow\Cygames enable`。
     - 如果您收到 `错误：不支持的操作` 或类似信息，请先运行以下命令：`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`，然后重试。
     - 如果您收到 `错误：目录不是空的`，请暂时将 `Cygames` 文件夹中的所有内容移出，然后重试：
     ```powershell
     New-Item -ItemType Directory "$env:USERPROFILE\AppData\LocalLow\CygamesTEMP"
     Move-Item "$env:USERPROFILE\AppData\LocalLow\Cygames\*" "$env:USERPROFILE\AppData\LocalLow\CygamesTEMP"
     ```
-1. 如果您清空了 Cygames 文件夹，请将所有内容移回：
+4. 如果您清空了 Cygames 文件夹，请将所有内容移回：
     ```powershell
     Move-Item "$env:USERPROFILE\AppData\LocalLow\CygamesTEMP\*" "$env:USERPROFILE\AppData\LocalLow\Cygames"
     Remove-Item "$env:USERPROFILE\AppData\LocalLow\CygamesTEMP"
@@ -205,16 +205,16 @@ Steam 覆盖层有时会与 Hachimi 的 GUI 冲突。请禁用其中一个（推
 
 1. 在您设备的开发者选项中**启用 USB 调试**。
    如果您不知道如何操作，请查看此 [bilibili 视频指南](https://www.bilibili.com/video/BV1Ht4y1X75e/)
-1. 在您的计算机上**下载并解压** [Android 平台工具 (ADB)](https://developer.android.com/tools/releases/platform-tools#downloads) 的 ZIP 文件。
-1. 在解压后的 ADB 文件夹内（`adb.exe` 所在的位置）右键单击空白区域，然后选择 **“在此处打开终端”** （或类似选项）来**打开一个终端**。
+2. 在您的计算机上**下载并解压** [Android 平台工具 (ADB)](https://developer.android.com/tools/releases/platform-tools#downloads) 的 ZIP 文件。
+3. 在解压后的 ADB 文件夹内（`adb.exe` 所在的位置）右键单击空白区域，然后选择 **“在此处打开终端”** （或类似选项）来**打开一个终端**。
    - 在 Windows 10 中按住 **Shift** 并右键单击应该会显示**“在此处打开 PowerShell 窗口”**选项。
-1. 通过 USB（USB-C 或任何兼容的数据线）**将您的设备连接**到计算机。
-1. 在终端窗口中，键入 `adb.exe` 并按**回车**以确保它被识别。
-1. 然后键入 `adb devices` 并按**回车**。
+4. 通过 USB（USB-C 或任何兼容的数据线）**将您的设备连接**到计算机。
+5. 在终端窗口中，键入 `adb.exe` 并按**回车**以确保它被识别。
+6. 然后键入 `adb devices` 并按**回车**。
    查看您的设备，在出现提示时**授予 USB 调试权限**，然后再次运行该命令以验证连接。
    它应该在终端中显示类似 `"ABCD1234EFGH" device` 的内容。
    如果没有，请看下文。
-1. 最后，键入 `adb uninstall jp.co.cygames.umamusume` 并按**回车**以卸载游戏。
+7. 最后，键入 `adb uninstall jp.co.cygames.umamusume` 并按**回车**以卸载游戏。
 
 ### 无法通过 Google Play 帐户登录
 
@@ -261,5 +261,5 @@ Steam 覆盖层有时会与 Hachimi 的 GUI 冲突。请禁用其中一个（推
 :::
 
 1. 确保您的翻译是最新版本。如果可以，让 Hachimi 更新，并在完成前不要触摸任何东西。
-1. 打开 Hachimi 菜单 -> 配置编辑器并选择禁用GUI。
+2. 打开 Hachimi 菜单 -> 配置编辑器并选择禁用GUI。
     - 要重新启用它，请在文本或 JSON 编辑器中打开 Hachimi 的 `config.json` 文件，将 `disable_gui` 的值从 `true` 改回 `false`，然后重启游戏。此文件位于 `android/media/jp.co.cygames.umamusume/hachimi`（可能因手机品牌而异）。

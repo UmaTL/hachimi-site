@@ -41,10 +41,10 @@ DotLocal 目前仅用于 DMM 版本。在 Steam 平台上玩请在安装程序�
 ### DMM
 
 1. 参阅[这篇文章](https://learn.microsoft.com/zh-cn/windows/win32/dlls/dynamic-link-library-redirection#optional-configure-the-registry)中的“配置注册表”部分来启用 DLL 重定向。完成后重启您的电脑。
-1. 从 [Releases 页面](https://github.com/kairusds/Hachimi-Edge/releases)下载最新的 `hachimi.dll`。
-1. 在游戏安装文件夹中，创建一个名为 `umamusume.exe.local` 的新文件夹，并将下载的 DLL 文件移动到其中。将其重命名为 `UnityPlayer.dll`。
-1. 从 [Cellar Releases 页面](https://github.com/Hachimi-Hachimi/Cellar/releases)下载最新的 `cellar.dll`。
-1. 将其移动到 `umamusume.exe.local` 文件夹中并重命名为 `apphelp.dll`。
+2 从 [Releases 页面](https://github.com/kairusds/Hachimi-Edge/releases)下载最新的 `hachimi.dll`。
+3. 在游戏安装文件夹中，创建一个名为 `umamusume.exe.local` 的新文件夹，并将下载的 DLL 文件移动到其中。将其重命名为 `UnityPlayer.dll`。
+4. 从 [Cellar Releases 页面](https://github.com/Hachimi-Hachimi/Cellar/releases)下载最新的 `cellar.dll`。
+5. 将其移动到 `umamusume.exe.local` 文件夹中并重命名为 `apphelp.dll`。
 
 </details>
 
@@ -59,10 +59,10 @@ DotLocal 目前仅用于 DMM 版本。在 Steam 平台上玩请在安装程序�
 ## Android
 
 ::: warning 安装前须知
-补丁版无法使用 Google Play 商店及内购。请改用官方网页充值渠道。
+安装 Hachimi 后无法使用 Google Play 商店内购。请改用官方网页充值渠道。
 安装前必须绑定 Cygames ID 或设置引承码。补丁版无法通过 Google 账号登录。
 
-全新安装 Hachimi 需要卸载原版游戏。
+全新安装 Hachimi 需要先卸载原版游戏。
 请从 [Qoopy](https://qoopy.leadrdrk.com/) 获取游戏APK，使用 ID 6172。
 
 若常规安装失败，请使用 Shizuku 模式安装。
@@ -108,7 +108,7 @@ MIUI/HyperOS 用户在安装前请先于 `开发者设置` 中关闭 `系统优�
 - **旧版Umapathcer用户：** 如果您曾使用过旧版 UmaPatcher，请在旧版 UmaPatcher 的 `设置` 页面 **导出签名密钥**，并保存到安全的位置。
 - **首次安装：** 如果您从未给游戏打过补丁，请先 **卸载原版游戏**。
 - **软件下载：** 下载并安装最新版的 [UmaPatcher Edge](https://github.com/kairusds/UmaPatcher-Edge/releases/latest/download/app-release.apk) 和 [Shizuku](https://github.com/RikkaApps/Shizuku/releases/)。
-- 通过 [此教程](https://shizuku.rikka.app/zh-hans/guide/setup/) 配置好 Shizuku。
+- 并通过 [此教程](https://shizuku.rikka.app/zh-hans/guide/setup/) 配置好 Shizuku。
 
 当成功配置 Shizuku 后，在 Umapatcher 中，“通过 Shizuku 安装”的右侧应当会显示为“可用”。
 
@@ -131,7 +131,7 @@ MIUI/HyperOS 用户在安装前请先于 `开发者设置` 中关闭 `系统优�
 
 ---
 
-::: tips
+::: tip
 ⚠️ 当游戏发布新版本时，您只需从第 2 步开始重复流程即可。
 更新过程中无需卸载现有的已补丁游戏。
 :::
