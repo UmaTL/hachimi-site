@@ -6,10 +6,10 @@ The built-in GUI can be used to activate some in-game functions and modify the c
 
 ## Opening the menu
 
-The menu can be opened by pressing a key or a button combination. This is different for each platform:
+The menu can be opened in a few ways, depending on platform:
 
-- **Android:** Volume Up + Volume Down
-- **Windows:** Right arrow key(\*)
+- **Android:** `Volume Up + Volume Down` or `Triple-tap top left`
+- **Windows:** `Right arrow key`(\*)
 
 **Note:** While the menu or a dialog from Hachimi is open, it will block all inputs from the system from reaching the game. You must close all of them in order to regain control to the game.
 
