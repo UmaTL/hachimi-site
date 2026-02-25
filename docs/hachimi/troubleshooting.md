@@ -319,15 +319,15 @@ Turning off the GUI disables translation updates. You'll have to occasionally to
 
 ### Patched successfully but no translations
 
-Make sure the translations are downloaded and up to date. Run the first time setup again.
+Run the first time setup again from Hachimi Edge's menu. Make sure the translations are downloaded and up to date.
+Check your translation source's info to make sure it translates what you're looking at.
 
-If during patching you see a message mentioning `libmain.so` you can try, in order until one works:
+If during patching you saw a message mentioning `libmain.so`, you can try the following in order until one works:
 
-1. Make sure you are on the latest Hachimi update.
-1. Force redownload Hachimi in the UmaPatcher Edge settings, then patch again.
-1. Clear UmaPatcher Edge's app cache and data.
-1. Reinstall UmaPatcher Edge.
-1. Restart your device into recovery mode and wipe the cache.
+1. Force redownload Hachimi Edge in the UmaPatcher Edge settings, then patch again.
+1. Clear UmaPatcher Edge's cache and data from Android's `App info → Storage`.
+1. Reinstall UmaPatcher Edge, then patch again.
+1. (Advanced!) Restart your device into recovery mode, wipe the cache, then patch again.
 <!-- Todo: How safe is the last one...? -->
 
 ### Cannot log in via a Google Play account
