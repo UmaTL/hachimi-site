@@ -108,11 +108,10 @@ Some kernel-level anti-cheats (eg. Vanguard) can prevent the game from launching
 Make sure these are actively running on your computer, then try again.
 :::
 
-- Make sure you installed the correct version of Hachimi for your game version (Japanese or Other). You can find the right one on the [getting started](getting-started) page.
-- Restart your computer after the installer enables DotLocal redirection.  
-  **Click "Restart" in the shutdown menu, don't just shut down and turn it back on.**
-- If you're using DMM, try restarting the DMM Launcher or force it to always run as administrator.
-- If you're using Steam, game updates can replace some modified files. Re-install Hachimi using the installer.
+- Make sure you are using [Hachimi Edge](getting-started).
+- Steam: Game updates can replace some modified files. Re-install Hachimi using the installer.
+- DMM: Restart (**not** shutdown + start!) your computer after the installer enables DotLocal redirection.  
+- DMM: Try restarting the DMM Launcher or force it to always run as administrator.
 - Navigate to the game's installation folder, right-click the game's exe file, open **Properties**, and try **one or more** of the following in order:
   - Enable `Disable fullscreen optimizations` under the Compatibility tab.
   - Open `Change high DPI settings`, enable `High DPI scaling override`, and set it to `Application`.
@@ -124,8 +123,8 @@ Make sure these are actively running on your computer, then try again.
 
 ### The game stopped launching
 
-If Hachimi worked fine before, this likely means the game updated and replaced some modified files.
-Simply reinstall Hachimi.
+If Hachimi Edge worked fine before, this likely means the game updated and replaced some modified files.
+Simply reinstall Hachimi Edge.
 
 ### Installer: "Code execution cannot proceed / VCRUNTIME" error
 
