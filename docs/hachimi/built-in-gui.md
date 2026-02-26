@@ -17,8 +17,8 @@ The menu can be opened in a few ways, depending on platform:
 
 ## Config
 
-- **Open config editor:** This is where you can edit the config file in-game. Please see the Config page to see details about each option.
-- **Reload config:** Reload the config file from disk. This is done automatically by the config editor.
+- **Open config editor:** This is where you can edit the config file in-game. Please see the [Config page](config) for details about each option.
+- **Reload config:** Reload the config file from disk. Used when the file was modified outside of the editor.
 - **Open first time setup:** Launches the first time setup wizard. You can change your translation repo there.
 
 ## Graphics
@@ -30,7 +30,8 @@ Note that these options are not persistent and will be reset on the next start. 
 ## Translation
 
 - **Reload localized data:** Intended for translators. This will reload the translation files from disk.
-- **Check for updates**: Run an update check.
+- **Check for updates**: Run a quick update check. This is efficient (using cache), and usually enough.
+- **Check for updates (pedantic)**: Run a full update check. This checks every file in depth for possible issues.
 
 ## Danger Zone
 
@@ -40,4 +41,4 @@ Enough fearmongering, if you're still interested, here's what they do and what y
 
 - **Soft restart:** Triggers an error in the game and forces the user to confirm a restart, which simply resets itself to the title screen. This is a quick way to apply some graphics settings that otherwise wouldn't apply until you actually closed the game and opened it back up again. **Obviously, don't use it while you're playing, you can't cancel it.**
 - **Open in-game browser:** (Android only) This is actually relatively safe to use, it just opens up the in-game browser, which can be used to browse the web (~~or play DOOM~~) without leaving the game. Opens up Google by default, can be configured. It's listed here because it may interfere with the game's dialog system. Just don't open it up while the game is trying to prompt you for something else.
-- **Toggle game UI:** Enable/disable all of the currently active game UI objects. Any objects created after the toggle was activated will not be affected. Might restore the UI active states incorrectly (e.g. enabling objects that weren't supposed to be on) but shouldn't cause any harm in most cases.
+- **Toggle game UI:** Enable/disable all of the currently active game UI objects. Any objects created after the toggle was activated will not be affected. Might restore the UI active states incorrectly (e.g. enabling objects that weren't supposed to be on) but shouldn't cause any harm in most cases. On Android, this can also be achieved by `triple-tapping top right`.
