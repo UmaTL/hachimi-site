@@ -42,7 +42,7 @@ On Android, plugins must be added through UmaPatcher Edge before patching the ga
 1. **Manage plugins** (optional):
    - You can enable/disable plugins using the checkbox next to each plugin.
    - Tap "Remove" to delete a plugin from the list.
-1. **Patch the game**: Follow the normal [UmaPatcher Edge installation guide](/docs/hachimi/getting-started-jp#android) to patch and install the game.
+1. **Patch the game**: Follow the normal [UmaPatcher Edge installation guide](/docs/hachimi/installing-android.md) to patch and install the game.
 1. **Verify**: Launch the game. If the plugin loaded successfully, you should see its effects or menu items in Hachimi's built-in GUI.
 
 ::: tip

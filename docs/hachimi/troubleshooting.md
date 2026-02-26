@@ -236,7 +236,7 @@ If you don't have a signing key saved yet, export it from UmaPatcher's settings 
 - Close UmaPatcher Edge and clear its app cache & data from Android's `App info → Storage`.
 - Redownload and reinstall UmaPatcher Edge, and **import your signing key** again.
 - If you see `kotlinx` mentioned in the installer log, use UmaPatcher's `Save patched file` method and install the resulting file using [SAI](https://github.com/aefyr/sai/releases).
-- If you're on a **Xiaomi/POCO** device running **MIUI** (not **HyperOS**), try the [Shizuku install method](getting-started-jp#shizuku) or disabling *MIUI Optimizations* from Developer Options, it can sometimes interfere with the installation.
+- If you're on a **Xiaomi/POCO** device running **MIUI** (not **HyperOS**), try the [Shizuku install method](installing-android#using-umapatcher-edge-recommended) or disabling *MIUI Optimizations* from Developer Options, it can sometimes interfere with the installation.
     ::: warning
     Disabling **MIUI Optimizations** will reset **all app permissions** and may cause apps to lose granted access (storage, notifications, etc.).
     :::

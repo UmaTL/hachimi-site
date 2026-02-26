@@ -46,14 +46,27 @@ features:
 Hachimi Edge is the third full translation mod for the game, following in the footsteps of UmaTL and Carotene, and the first to fully support game modding on Android.
 
 A fork of the unmaintained Hachimi mod, it began as a way to quickly serve fixes for issues after the game update on 2025/09/24 to users, and has since incorporated additional features and fixes by various community members.
-The original Hachimi mod has been officially discontinued by its developer on 2026/01/17. Hachimi Edge will take its place.
+The original Hachimi mod has been officially discontinued by its developer on 2026/01/17.
 
-Hachimi not working? Runtime errors? Patching failed? You are likely still using the original Hachimi. Uninstall it and [install](/docs/hachimi/getting-started) the new Edge version to resolve issues.
+## Game components modified
+
+Modifications are applied dynamically, no asset patching needed!
+
+- UI text & buttons
+- Dynamic game text (skills, names, descriptions, effects, …)
+- Game dialogue (main story, home interactions, character stories, …)
+- Lyrics
+- Textures & sprites
+- Videos
+
+## Plugins
+
+Hachimi Edge supports a [plugin system](/docs/plugins/about) that allows extending its functionality.
 
 ## UmaPatcher
 
 UmaPatcher Edge is a helper app to easily patch Hachimi Edge into the game on android. As integral part of the Hachimi project, it too is a fork of the old and unmaintained UmaPatcher.
-The latest Hachimi Edge version is automatically downloaded when patching, so you don't have to worry about anything else on Android.
+The latest Hachimi Edge version is automatically downloaded when patching, so you don't have to worry about anything else.
 
 ## Translations
 

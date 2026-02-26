@@ -1,24 +1,24 @@
-# Getting started
-
-<small>
-
-View this page in other languages:  
-[Tiếng Việt](/vi/docs/hachimi/getting-started.html) | [Deustch](/de/docs/hachimi/getting-started.html) | [简体中文](/zh-cn/docs/hachimi/getting-started.html) | [繁體中文](/zh-tw/docs/hachimi/getting-started.html) | [Bahasa Indonesia](/id/docs/hachimi/getting-started.html) | [日本語](/ja/docs/hachimi/getting-started.html)
-
-</small>
+# Getting Started
 
 ::: warning
 This project is inherently against the game's TOS.  
 Use at your own risk, and please share names and links in a responsible manner, so as to minimize attention from the developers.
-:::
 
-::: warning
 Existing Hachimi user? You will need to change to Hachimi Edge due to a big game update on 2025/09/24 (JP) and 2025/11/11 (Global).
 :::
 
+::: tip Language 🗣🌍
+You can change language at the top right.
+:::
+
+Please follow the whole process even if you've used Hachimi before, as Hachimi Edge has some changes.  
+If you run into issues, check out [Troubleshooting](troubleshooting).
+
 ## Compatibility
 
-⚠️ Please check before installing.
+Hachimi Edge supports Steam, DMM, and Android versions of the Japanese server, and the Steam version for the Global server.
+
+::: details
 
 ### Windows
 
@@ -41,15 +41,49 @@ Existing Hachimi user? You will need to change to Hachimi Edge due to a big game
 | CN | ⚠️ | ⚠️ | ✅ |
 | Global | ❌️ | ❌️ | ❌ |
 
-<!-- markdownlint-disable MD033 -->
 <small>
-✅ - Fully supported.<br>
-⚠️ - Technically works, but causes the game to fail due to external factors.<br>
-❔ - Untested. Might work, but don't count on it.<br>
-❌ - Not supported.<br>
+
+✅ - Fully supported.  
+⚠️ - Technically works, but causes the game to fail due to external factors.  
+❔ - Untested. Might work, but don't count on it.  
+❌ - Not supported.  
+
 </small>
-<!-- markdownlint-enable MD033 -->
 
-## [Installation guide for JP](getting-started-jp)
+:::
 
-## [Installation guide for Global / TW / CN](getting-started-other)
+## Install Guides
+
+Hachmi Edge has an installer for both Windows and Android. They are quite different!  
+Please see the specific guides and continue with the rest of this page after installing.
+
+[For Windows](installing-windows)  
+[For Android](installing-android)
+
+## First Time Setup
+
+Upon launching the game for the first time after installing Hachimi Edge, you should be greeted with this dialog:
+
+![First Time Setup](/assets/first-time-setup.jpg)
+
+::: details I don't see it!
+If you are upgrading to Edge for the first time, open it from the Hachimi Edge menu.
+Not doing so will result in outdated translations and corrupted texture issues.
+
+Otherwise, Hachimi Edge was not installed correctly. Please read the install guide carefully and try again, or look at [Troubleshooting](troubleshooting).
+:::
+
+Tap on Next and choose your preferred translation source, then tap on Done to save your configuration and start the update check.
+
+If selected, Hachimi Edge will now prompt you to download a new translation update, click on Yes to start downloading the files.
+
+You can return to this dialog later to change your translation source through the Hachimi menu.
+
+::: tip
+If you have any issues with translations, you can disable them in Config Editor > Gameplay, then restart the game.
+:::
+
+## Using
+
+Configuration is done using an [in-game menu](built-in-gui) or through the [raw config file](config).  
+Hachimi Edge also supports [Plugins](/docs/plugins/about).

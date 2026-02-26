@@ -41,7 +41,7 @@ This is what the message should look like when you are banned:
 
 ## Can I play JP and Global simultaneously?
 
-Yes, but you will need to use a workaround if using the DMM version. Check out [these steps](troubleshooting.md#error-501).
+Yes, but you will need to use a workaround if using the DMM version. Check out [these steps](troubleshooting#error-501).
 
 ## What is the difference between the Physics Update Modes?
 
@@ -61,13 +61,13 @@ Uninstalling the game is only required for first-time install, not any form of u
 
 An in-game notification to update from the Play Store means you need to update the game itself by downloading the newest install package. You must then install it through UmaPatcher, which will apply the newest available Hachimi Edge release.
 
-Follow the [install guide](getting-started-jp#android) from step 4.
+Follow the [install guide](installing-android#using-umapatcher-edge-recommended) from step 4.
 
 ### Hachimi
 
 When a new version of Hachimi Edge is released, you can choose to install it for new features or fixes. You don't **have** to do this immediately. Doing so requires repatching.
 
-Follow the [install guide](getting-started-jp#android) from step 5 to simply reinstall the current game version, or from step 4 if you no longer have an install package.
+Follow the [install guide](installing-android#using-umapatcher-edge-recommended) from step 5 to simply reinstall the current game version, or from step 4 if you no longer have an install package.
 
 ### UmaPatcher
 
@@ -75,7 +75,7 @@ Updating UmaPatcher is only needed in certain cases, like when you face install 
 
 1. If you haven't done it before, Settings -> Export signing key.
 1. Uninstall UmaPatcher.
-1. Follow the [install guide](getting-started-jp#android) from step 3, as required for your case.
+1. Follow the [install guide](installing-android#using-umapatcher-edge-recommended) from step 3, as required for your case.
 
 ## I turned off Hachimi GUI/Overlay, how do I turn it back on?
 
