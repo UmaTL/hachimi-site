@@ -7,6 +7,10 @@
 - Windows：`[游戏安装文件夹]\hachimi\config.json`
 - Android：`/sdcard/Android/media/jp.co.cygames.umamusume/hachimi/config.json`
 
+::: warning
+使用自带的文本编辑器修改此文件可能会导致文件损坏。请务必使用专业的文本编辑器，例如 Android 端的 MT 管理器，或 Windows 端的 VSCode([网页版](http://vscode.dev/))。
+:::
+
 **注意：** 其中一些选项在配置编辑器中不可用，必须手动添加。
 
 - `debug_mode`: 是否启用调试模式。目前，此选项仅启用/禁用调试日志记录。
@@ -31,10 +35,16 @@
 - `sugoi_url`: 用于自动翻译的 Sugoi Offline Translator或兼容翻译服务器的 URL。如果您使用的是典型的 Sugoi 配置，则无需设置此选项。默认值：`http://127.0.0.1:14366`
 - `auto_translate_stories`: 允许通过自动翻译器翻译剧情。
 - `auto_translate_localize`: 允许通过自动翻译器翻译 UI 文本。通常不建议这样做，因为大多数翻译器无法正确保留换行符或格式标签。
-- `disable_skill_name_translation"`: 禁用技能名称的翻译。
+- `disable_skill_name_translation`: 禁用技能名称的翻译。
 - `ui_animation_scale`: UI 动画速度倍率，这会调整游戏内的 UI 动画速度，建议不要调整至`10.0` 以上，可能会导致游戏卡死等问题。默认值：`1.0`。
-- `physics_update_mode"`: 更改游戏的物理引擎，可用的值：`Default`, `ModeNormal`, `Mofe60FPS`, `SkipFrame`, `SkipFramePostAlways`。
-如果您设置了游戏的帧率在 60 以上时，推荐设置为`Mofe60FPS`，其他情况不推荐修改。
+- `physics_update_mode`: 更改游戏的物理引擎，可用的值：`Default`, `ModeNormal`, `Mofe60FPS`, `SkipFrame`, `SkipFramePostAlways`。
+如果您设置了游戏的帧率在 60 及以上时，推荐设置为`Mofe60FPS`，其他情况不推荐修改。
+- `disabled_hooks`：手动禁用钩子（Hooks）。**请勿随意改动此选项**，它仅作为排查兼容性问题时的调试工具使用。
+- `enable_file_logging`：开启后将在游戏目录下生成日志文件 `hachimi.log`。如果禁用或无法创建该文件，日志将回退至仅调试输出模式。默认值：`false`。
+- `lazy_translation_updates`：开启后将跳过重新下载仓库中未变动的翻译文件，即使本地文件已损坏或版本过旧。这能加快更新速度，但可能会残留受损文件。默认值：`false`。
+- `shadow_resolution`：控制阴影分辨率质量。较高的数值可以提升阴影细节，但可能会降低游戏性能。
+- `skill_info_dialog`：开启扩展技能信息对话框。在游戏内查看技能时，会显示更详细的技能数据信息。
+- `hide_ingame_ui_hotkey`: 启用隐藏游戏 UI 界面的快捷键。在安卓设备上启用此项时，轻点三次右上角即可隐藏游戏 UI 界面。
 
 ### 仅限 Windows
 
@@ -46,3 +56,5 @@
 - `resolution_scaling`: 分辨率缩放模式，可用的值：`Default`, `ScaleToScreenSize`, `ScaleToWindowSize`。若在分辨率高于 1080p 的屏幕上并打开了 `auto_full_screen` ，请使用 `ScaleToScreenSize`（推荐）或 `ScaleToWindowSize` ，否则游戏画面将无法正确缩放。
 - `block_minimize_in_full_screen`: 全屏模式下阻止最小化。仅适用于 `FullScreenWindow`。
 - `window_always_on_top`: 使游戏窗口始终位于其他窗口的上方。
+- `disable_gui_once`：仅在**下一次启动**时禁用内置 GUI。启动后该项会自动重置为 `false`，并强制执行一次 `disable_gui: true`。这可以让你顺利在 Steam 商店内进行内购。
+- `discord_rpc`：在原生不支持该功能的平台（如 DMM）上启用 **Discord Rich Presence** 状态显示。开启后，你的 Discord 个人资料中将显示你当前正在游玩《赛马娘》的状态。
