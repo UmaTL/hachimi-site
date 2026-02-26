@@ -82,6 +82,7 @@ pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResul
     InitResult::Ok
 }
 ```
+
 ### 虚函数表 (vtable)
 
 vtable 是一个包含 Hachimi API 函数指针的结构体。你在 `hachimi_init` 中接收它，并应将其存储以便在整个插件中使用。
@@ -810,8 +811,8 @@ pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResul
 ## 最佳实践
 
 1. **版本检查**: 务必在 `hachimi_init` 中检查 API 版本。
-2. **错误处理**: 如果初始化失败，请返回 `InitResult::Error`。
-3. **日志记录**: 使用日志 API 进行调试并向用户提供反馈。
+1. **错误处理**: 如果初始化失败，请返回 `InitResult::Error`。
+1. **日志记录**: 使用日志 API 进行调试并向用户提供反馈。
 
 ## Hook 和 IL2CPP 示例
 

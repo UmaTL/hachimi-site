@@ -70,8 +70,8 @@ Hachimi 及类似工具实际上确实违反了服务条款 (TOS)。您需要承
 仅在特定情况下（如遇到安装问题）才需要更新 UmaPatcher。更新它不会带来任何游戏内的性能提升。
 
 1. 如果你之前没更新过，请点击“设置”->“导出签名密钥”。
-2. 卸载 UmaPatcher。
-3. 根据你的具体情况，从[安装指南](getting-started-jp#android)的**第 3 步**开始操作。
+1. 卸载 UmaPatcher。
+1. 根据你的具体情况，从[安装指南](getting-started-jp#android)的**第 3 步**开始操作。
 
 ## 我关闭了 Hachimi 的 GUI/菜单，该如何重新打开？
 

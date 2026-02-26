@@ -8,10 +8,10 @@
 由于游戏的某次大版本更新，自 2025/09/24 起，您需要使用 Hachimi v0.14.2 或更新版本。
 
 1. 下载最新的[安装程序](https://github.com/kairusds/Hachimi-Edge/releases/latest/download/hachimi_installer.exe)并运行它。
-2. 如果您之前使用过 Hachimi v0.14.2 及更早版本的 Hachimi，请先点击“卸载”。
-3. 检查安装目录是否正确，如果需要请进行更改。
-4. 选择您的游戏版本，然后点击“安装” 。
-5. 安装完成后，请右键游戏的exe文件，选择属性，转到兼容性选项卡，并勾选“禁用全屏优化”。（不勾选会导致游戏无法启动）
+1. 如果您之前使用过 Hachimi v0.14.2 及更早版本的 Hachimi，请先点击“卸载”。
+1. 检查安装目录是否正确，如果需要请进行更改。
+1. 选择您的游戏版本，然后点击“安装” 。
+1. 安装完成后，请右键游戏的exe文件，选择属性，转到兼容性选项卡，并勾选“禁用全屏优化”。（不勾选会导致游戏无法启动）
 
 首次安装时，安装程序可能会请求您启用 DotLocal DLL 重定向。点击“确定” ，它会自动为您启用。**启用后，您必须重启（不是关机再开机）您的电脑。**
 
@@ -34,17 +34,17 @@ DotLocal 目前仅用于 DMM 版本。在 Steam 平台上玩请在安装程序�
 ### Steam
 
 1. 从 [Releases 页面](https://github.com/kairusds/Hachimi-Edge/releases)下载最新版本的 `hachimi.dll`。
-2. 将该文件重命名为 `cri_mana_vpx.dll`，并将其放入[游戏安装目录](faqs#如何找到游戏的安装目录)中。
-3. 下载 Ferns 开发的 [`FunnyHoney.exe`](https://codeberg.org/LeadRDRK/FunnyHoney(https://codeberg.org/LeadRDRK/FunnyHoney))。
-4. 将其重命名为 `UmamusumePrettyDerby_Jpn.exe` 并放入游戏安装目录中，**覆盖**原始同名文件。
+1. 将该文件重命名为 `cri_mana_vpx.dll`，并将其放入[游戏安装目录](faqs#如何找到游戏的安装目录)中。
+1. 下载 Ferns 开发的 [`FunnyHoney.exe`](https://codeberg.org/LeadRDRK/FunnyHoney(https://codeberg.org/LeadRDRK/FunnyHoney))。
+1. 将其重命名为 `UmamusumePrettyDerby_Jpn.exe` 并放入游戏安装目录中，**覆盖**原始同名文件。
 
 ### DMM
 
 1. 参阅[这篇文章](https://learn.microsoft.com/zh-cn/windows/win32/dlls/dynamic-link-library-redirection#optional-configure-the-registry)中的“配置注册表”部分来启用 DLL 重定向。完成后重启您的电脑。
 2 从 [Releases 页面](https://github.com/kairusds/Hachimi-Edge/releases)下载最新的 `hachimi.dll`。
-3. 在游戏安装文件夹中，创建一个名为 `umamusume.exe.local` 的新文件夹，并将下载的 DLL 文件移动到其中。将其重命名为 `UnityPlayer.dll`。
-4. 从 [Cellar Releases 页面](https://github.com/Hachimi-Hachimi/Cellar/releases)下载最新的 `cellar.dll`。
-5. 将其移动到 `umamusume.exe.local` 文件夹中并重命名为 `apphelp.dll`。
+1. 在游戏安装文件夹中，创建一个名为 `umamusume.exe.local` 的新文件夹，并将下载的 DLL 文件移动到其中。将其重命名为 `UnityPlayer.dll`。
+1. 从 [Cellar Releases 页面](https://github.com/Hachimi-Hachimi/Cellar/releases)下载最新的 `cellar.dll`。
+1. 将其移动到 `umamusume.exe.local` 文件夹中并重命名为 `apphelp.dll`。
 
 </details>
 
@@ -89,9 +89,9 @@ MIUI/HyperOS 用户在安装前请先于 `开发者设置` 中关闭 `系统优�
 
 ### 3.开始补丁安装
 1.  打开 UmaPatcher Edge，如果导出了旧版 UmaPatcher 的签名密钥，请先在设置中导入之前备份的密钥。
-2.  选择 **普通安装**。
-3.  选择您准备好的 拆分APK 或 XAPK 文件。
-4.  点击 **开始补丁**，等待补丁完成并自动触发安装。
+1.  选择 **普通安装**。
+1.  选择您准备好的 拆分APK 或 XAPK 文件。
+1.  点击 **开始补丁**，等待补丁完成并自动触发安装。
 
 ---
 
@@ -125,9 +125,9 @@ MIUI/HyperOS 用户在安装前请先于 `开发者设置` 中关闭 `系统优�
 
 ### 3.开始补丁安装
 1.  打开 UmaPatcher Edge，如果导出了旧版 UmaPatcher 的签名密钥，请先在设置中导入之前备份的密钥。
-2.  选择 **通过 Shizuku 安装**。
-3.  选择您准备好的 拆分APK 或 XAPK 文件。
-4.  点击 **开始补丁**，等待补丁完成并自动触发安装。
+1.  选择 **通过 Shizuku 安装**。
+1.  选择您准备好的 拆分APK 或 XAPK 文件。
+1.  点击 **开始补丁**，等待补丁完成并自动触发安装。
 
 ---
 
@@ -161,10 +161,10 @@ UmaPatcher 提供了一个 root 安装选项，它不需要您卸载游戏或处
 <summary class="collapsible-header-sub">手动安装（不推荐）</summary>
 
 1. 从 [Releases 页面](https://github.com/kairusds/Hachimi-Edge/releases)构建或下载预构建的库文件。
-2. 解压游戏的 APK 文件。您可能需要使用 [apktool](https://apktool.org/)。
-3. 将 `lib` 目录下的每个文件夹中的 `libmain.so` 文件重命名为 `libmain_orig.so`。
-4. 将代理库文件复制到它们对应的文件夹中（例如 `libmain-arm64-v8a.so` 放入 `lib/arm64-v8a`）。将它们重命名为 `libmain.so`。
-5. 构建 APK 文件并安装它。
+1. 解压游戏的 APK 文件。您可能需要使用 [apktool](https://apktool.org/)。
+1. 将 `lib` 目录下的每个文件夹中的 `libmain.so` 文件重命名为 `libmain_orig.so`。
+1. 将代理库文件复制到它们对应的文件夹中（例如 `libmain-arm64-v8a.so` 放入 `lib/arm64-v8a`）。将它们重命名为 `libmain.so`。
+1. 构建 APK 文件并安装它。
 
 </details>
 

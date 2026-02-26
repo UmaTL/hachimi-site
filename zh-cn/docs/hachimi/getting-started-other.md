@@ -8,7 +8,7 @@
 
 1. 如果你安装了特殊的旧版 `Hachimi 2020` 版本，请先将其卸载。
     - 你可以使用原始安装程序进行卸载。[点击此处重新下载](https://github.com/Hachimi-Hachimi/Hachimi-Unity2020/releases/download/v0.14.0-2deadd3/hachimi_installer.exe)。
-2. 按照 [日服指南](getting-started-jp.md#windows) 进行操作，并做出以下调整：
+1. 按照 [日服指南](getting-started-jp.md#windows) 进行操作，并做出以下调整：
     - 在下拉菜单中选择 **Steam版**。
     - 将安装位置指向国际服的游戏目录（默认路径：`C:\Program Files (x86)\Steam\steamapps\common\UmamusumePrettyDerby`）。
 
@@ -22,8 +22,8 @@
 :::
 
 1. 从 [Release 页面](https://github.com/kairusds/Hachimi-Edge/releases) 下载最新的 `hachimi.dll`。
-2. 将其放入游戏的安装目录中。
-3. 将该文件重命名为 `cri_mana_vpx.dll`。
+1. 将其放入游戏的安装目录中。
+1. 将该文件重命名为 `cri_mana_vpx.dll`。
 
 </details>
 
@@ -35,7 +35,7 @@
 :::
 
 1. 从 [旧版发布页面](https://github.com/Hachimi-Hachimi/Hachimi-Unity2020/releases) 下载最新的 `hachimi_installer.exe`。
-2. 运行它并点击安装。如果你不清楚各项选项的含义，无需进行任何修改。
+1. 运行它并点击安装。如果你不清楚各项选项的含义，无需进行任何修改。
 
 <details>
 <summary class="collapsible-header-sub">旧版手动安装</summary>

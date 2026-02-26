@@ -2,7 +2,8 @@
 title: 关于
 ---
 
-# 插件
+# 插件 <!-- markdownlint-disable-line MD025 -->
+
 Hachimi 支持插件系统，允许开发者通过动态库扩展其功能。插件可以 Hook 游戏、修改行为、添加 GUI 元素等。
 
 ## 什么是插件？
