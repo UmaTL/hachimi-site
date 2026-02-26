@@ -98,7 +98,7 @@ This issue has been fixed in Hachimi Edge v0.15.1. Update to the latest version.
 
 ### Something isn't translated
 
-Translations are provided by volunteers in the community offering up their time. Many things are not yet done. Check in with your chosen translation source and try to support its translators.
+Translations are provided by volunteers in the community offering up their time. Many things are not yet done. Check in with your chosen [translation source](/credits) for progress and try to support its translators.
 
 ### "Account restricted" message
 
