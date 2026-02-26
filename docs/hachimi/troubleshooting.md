@@ -70,15 +70,27 @@ Don't update your translations until you know the source has updated. You can al
 
 Change the "Physics update mode" setting to "Mode60FPS". This setting is available in the Config Editor in the "Gameplay" tab.
 
-### Game won't load beyond the splash screen
+### Game won't load beyond the splash/start screen
 
-If the game **gets stuck** on the splash screen, see [Error 501](#error-501).  
-If you can see the splash screen but the game crashes afterward, see [The game won't start after installing Hachimi](#the-game-wont-start-after-installing-hachimi).
+If you're on **Steam Global**, use `alt` + `enter` to toggle between fullscreen and windowed.
+This seems to be a bug in the game itself, which Hachimi causes to trigger much more easily. An official fix is presumably coming.
+
+If the game **gets stuck** on the splash screen, see [Error 501](#error-501).
+
+If you can see the splash screen but the game **crashes** afterward, see [The game won't start after installing Hachimi](#the-game-wont-start-after-installing-hachimi).
 
 ### The in-game background is shrunk / White border
 
 Open Hachimi Menu -> Config Editor and reset `virtual resolution multiplier` to 1.
 If that doesn't help, try adjusting it until it looks ok.
+
+### First time setup: Repo selection stuck loading or shows an error
+
+This probably means you're using a VPN to access the game itself. Temporarily turn it off until the setup is over and translations are downloaded.
+
+**OS Error 103 (Android)**: Try disabling battery optimization for the game or [reset your network settings](https://youtu.be/ah99wYYtUqU).
+
+See also [this related issue](#not-receiving-translation-updates).
 
 ### Lyrics switch between language randomly
 
@@ -144,7 +156,9 @@ If this is happening after resizing the window on DMM, this issue has been fixed
 ### Not receiving translation updates
 
 First of all, there might not be updates. This should be indicated by a "No updates found" message.
-If this message doesn't show, you're probably using a VPN to access the game. Turn it off during the update phase.
+If this message doesn't show and you use a VPN to access the game, turn it off during the update phase.
+
+If you used Hachimi before the Edge version, your list of translation sources might be outdated. Change the Meta URL in the first time setup to `https://gitlab.com/umatl/hachimi-meta/-/raw/main/meta.json` or reset your settings.
 
 ### Game stutters
 
@@ -157,21 +171,12 @@ The Steam overlay can sometimes interfere with Hachimi's overlay. Disable one of
 To disable Hachimi's: open the Hachimi menu and check the "Disable overlay (GUI)" checkbox in the "General" tab, press Save, and restart the game.
 When you want to re-enable Hachimi's overlay, open Hachimi's config file (config.json) in a text editor and change the `disable_gui` value from `true` back to `false`, then restart the game. This config file is located in the `hachimi` folder inside the game's installation folder.
 
-### Steam Global: Stuck at start screen
-
-This seems to be a bug in the game itself, which Hachimi causes to trigger much more easily. Use `alt` + `enter` to toggle between fullscreen and windowed. This should let you continue. An official fix is presumably coming.
-
 ### DMM: Can't play certain games after installing Hachimi
 
 The loading method Hachimi uses for the **DMM** version of the game is DotLocal DLL Redirection, which causes issues with some anti-cheats (eg. Vanguard).
 You need to disable DLL redirection whenever you want to play an affected game.
 [DotLocalToggle](https://github.com/LeadRDRK/DotLocalToggle/releases/) is a small program that lets you quickly toggle it.
 Alternatively, play the **JP Steam** version.
-
-### First time setup: Repo selection stuck loading or shows an error
-
-This probably means you're using a VPN to access the game itself. Temporarily turn it off until the setup is over and translations are downloaded.  
-See also the [related issue below](#not-receiving-translation-updates).
 
 ### Installer: "Code execution cannot proceed / VCRUNTIME" error
 
