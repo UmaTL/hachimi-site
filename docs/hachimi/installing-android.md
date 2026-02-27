@@ -17,7 +17,7 @@ If you have existing save data, set up a **Data Link** or **Cygames ID** before 
 
 If you have the *unpatched* game installed, **you must uninstall it first**. The patched game can later be updated without uninstalling.
 
-You can **not use the Google Play Store** after patching, including purchases. The Cygames store should work.
+You can **not use the Google Play Store** with the game after patching, including purchases. The Cygames store should work.
 
 ## Using UmaPatcher Edge (recommended)
 
