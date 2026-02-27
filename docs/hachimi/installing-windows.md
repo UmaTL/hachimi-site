@@ -23,7 +23,7 @@ After that, you can just uninstall Hachimi as normal.
     - The first time, you might be asked to enable DotLocal DLL redirection. Press OK and it will be enabled for you. **You must RESTART (not shutdown) your computer afterwards.**
 1. Continue with [First Time Setup](getting-started#first-time-setup).
 
-⚠️ You might need to repeat this after game updates (the game will stop launching) due to modified files being replaced.
+⚠️ You might need to repeat the install after game updates (the game will stop launching) due to modified files being replaced.
 
 ## Manual install
 
