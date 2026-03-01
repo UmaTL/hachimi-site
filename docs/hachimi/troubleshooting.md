@@ -11,7 +11,7 @@ Known issues and their solutions are listed here. Check the General section firs
 Most users do **not** need a VPN to connect to the game itself (only DMM, or making a Steam account), and it can cause issues instead. Check that your VPN is off, or use split tunneling if supported by your VPN client.
 **Some regions or ISPs *do* require a VPN to connect to the game**.
 
-For the JP game version, you can check by accessing the [official API website](https://api-umamusume.cygames.jp). If you get `404 Not Found`, you **don't** need a VPN. `Access Denied` means you do. Other results likely point to an issue with your network or ISP and we can't help you with that.
+For the JP game version, you can check by accessing the [official API website](https://api.games.umamusume.jp/). If you get `404 Not Found`, you **don't** need a VPN. `Access Denied` means you do. Other results likely point to an issue with your network or ISP and we can't help you with that.
 
 See [GameTora's guide](https://gametora.com/umamusume/playing-on-dmm) to get started with VPN, and the [OpenVPN Google Doc](https://docs.google.com/document/d/18m9wHT4_AIh5ePKSo_ZYH9nSgNh492YQx76bIxmgqyc/edit?tab=t.0#heading=h.7cq4imx1gkqf) for an alternative VPN solution.
 
