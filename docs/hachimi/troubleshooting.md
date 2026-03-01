@@ -66,6 +66,13 @@ Don't update your translations until you know the source has updated. You can al
 
 </small>
 
+### Not receiving translation updates
+
+First of all, there might not be updates. This should be indicated by a "No updates found" message.
+If this message doesn't show and you use a VPN to access the game, turn it off during the update phase.
+
+If you used Hachimi before the Edge version, your list of translation sources might be outdated. Change the Meta URL in the first time setup to `https://gitlab.com/umatl/hachimi-meta/-/raw/main/meta.json` or reset your settings.
+
 ### Physics (hair, clothing, etc.) are stiff when running at 60+ FPS
 
 Change the "Physics update mode" setting to "Mode60FPS". This setting is available in the Config Editor in the "Gameplay" tab.
@@ -152,13 +159,6 @@ If this is happening after resizing the window on DMM, this issue has been fixed
 - Ensure that the `Full screen mode` and `Resolution scaling` options are set correctly.  
 - If your screen resolution is higher than **1080p**, try selecting a different `Resolution scaling` value.  
 - If your monitor's aspect ratio is not **16:9**, set `Full screen mode` to **Exclusive** instead.
-
-### Not receiving translation updates
-
-First of all, there might not be updates. This should be indicated by a "No updates found" message.
-If this message doesn't show and you use a VPN to access the game, turn it off during the update phase.
-
-If you used Hachimi before the Edge version, your list of translation sources might be outdated. Change the Meta URL in the first time setup to `https://gitlab.com/umatl/hachimi-meta/-/raw/main/meta.json` or reset your settings.
 
 ### Game stutters
 
