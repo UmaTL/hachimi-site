@@ -55,6 +55,27 @@ img {
     margin-top: 4px;
 }
 
+#notice {
+    padding: 0.5em;
+    background-color: #fa7609;
+    color: var(--vp-button-brand-text);
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    z-index: calc(var(--vp-z-index-sidebar) + 1);
+}
+
+#notice a {
+    text-decoration: underline;
+}
+
+.VPHome #notice {
+    position: sticky;
+    top: var(--vp-nav-height);
+}
+
 @media (min-width: 640px) {
     :root {
         --vp-home-hero-image-filter: blur(56px);
