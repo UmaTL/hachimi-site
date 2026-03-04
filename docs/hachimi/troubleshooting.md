@@ -124,7 +124,7 @@ If you're already using Edge, try reinstalling the latest version.
 
 ::: warning
 Some kernel-level anti-cheats (eg. Vanguard) can prevent the game from launching with Hachimi Edge.
-Make sure these are actively running on your computer, then try again.
+Make sure these are not actively running on your computer, then try again.
 :::
 
 - Make sure you are using [Hachimi Edge](getting-started).
