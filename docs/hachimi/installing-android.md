@@ -39,13 +39,13 @@ UmaPatcher is an installer tool that automates the APK patching. It downloads th
     APKPure is known to cause problems. The recommended source is [Qoopy](https://qoopy.leadrdrk.com/), use ID 6172.
     :::
 1. Open UmaPatcher.
-1. (*Once only*) If migrating, import the signing key you exported in step 1.
+1. (*Once only*) If migrating or have uninstalled UmaPatcher, import the signing key you exported in step 1.
 1. Choose **Normal install**. Select the game APK file(s) that you have downloaded.
 1. Tap on Patch to start the patching and installation process.
 1. (*Once only*) After it successfully completes, if you don't have a saved key yet, export your signing key from UmaPatcher Edge's settings.
    Keep it safe! You will likely need it again later for troubleshooting.
 
-⚠️ You'll need to repeat this process from step 4 whenever the game updates. You do **not** need to uninstall the game to update.
+⚠️ You'll need to repeat this process from step 4 whenever the game updates. You do **not** need to uninstall the game to update. [More info on updating](faqs#how-do-i-update-on-android).
 
 ::: warning Do not share signing keys or use other's pre-patched APKs!
 These are unique per device and written into the APK. They **will** cause issues updating.

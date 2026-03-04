@@ -59,23 +59,23 @@ Uninstalling the game is only required for first-time install, not any form of u
 
 ### Game
 
-An in-game notification to update from the Play Store means you need to update the game itself by downloading the newest install package. You must then install it through UmaPatcher, which will apply the newest available Hachimi Edge release.
+An in-game notification to update from the Play Store means you need to update the game itself by downloading the newest game APKs. You must then install those new files through UmaPatcher, which will also apply the newest available Hachimi Edge release.
 
 Follow the [install guide](installing-android#using-umapatcher-edge-recommended) from step 4.
 
 ### Hachimi
 
-When a new version of Hachimi Edge is released, you can choose to install it for new features or fixes. You don't **have** to do this immediately. Doing so requires repatching.
+When a new version of Hachimi Edge is released, you can choose to install it for new features or fixes. You don't **have** to do this immediately. Doing so requires patching again.
 
-Follow the [install guide](installing-android#using-umapatcher-edge-recommended) from step 5 to simply reinstall the current game version, or from step 4 if you no longer have an install package.
+Follow the [install guide](installing-android#using-umapatcher-edge-recommended) from step 5 to simply reinstall the current game version, or from step 4 if you no longer have the latest game APK files.
 
 ### UmaPatcher
 
-Updating UmaPatcher is only needed in certain cases, like when you face install issues. There are no benefits to this in-game.
+As UmaPatcher is a helper to patch and install the modded game, updating it is only needed in certain cases, like when you face install issues. There are no benefits to this in-game. In fact, as long as you have no issues, we recommend using your current version.
 
 1. If you haven't done it before, Settings -> Export signing key.
-1. Uninstall UmaPatcher.
-1. Follow the [install guide](installing-android#using-umapatcher-edge-recommended) from step 3, as required for your case.
+1. Download and install [the latest UmaPatcher Edge](https://github.com/kairusds/UmaPatcher-Edge/releases/latest/download/app-release.apk), updating the app in-place.
+1. (*Optional*) Continue what you were attempting.
 
 ## I turned off Hachimi GUI/Overlay, how do I turn it back on?
 
