@@ -73,6 +73,10 @@ If this message doesn't show and you use a VPN to access the game, turn it off d
 
 If you used Hachimi before the Edge version, your list of translation sources might be outdated. Change the Meta URL in the first time setup to `https://gitlab.com/umatl/hachimi-meta/-/raw/main/meta.json` or reset your settings, then complete the setup with a new source.
 
+### Bonus stats in training are wrong or start with 0
+
+This is a game bug caused by setting your FPS too high, lower it.
+
 ### Physics (hair, clothing, etc.) are stiff when running at 60+ FPS
 
 Change the "Physics update mode" setting to "Mode60FPS". This setting is available in the Config Editor in the "Gameplay" tab.
