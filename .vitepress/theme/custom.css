@@ -56,6 +56,7 @@ img {
 }
 
 #notice {
+    position: relative; /* Required for z-index to apply on narrow screens. */
     padding: 0.5em;
     background-color: #fa7609;
     color: var(--vp-button-brand-text);
