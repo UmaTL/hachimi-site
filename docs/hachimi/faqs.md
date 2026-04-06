@@ -86,6 +86,8 @@ If you're uncomfortable with this or run into issues, it's safe to delete the co
 
 ## How do I find the game install folder?
 
-**Steam**: Right-click the game in Steam -> Manage -> Browse local files  
-**DMM**: Click the 3 dots next to the game name in DMM -> 🛈 icon -> 📁 icon  
-**Android**: Not accessible, but some data is stored at `Android/media/jp.co.cygames.umamusume` (might differ with phone brand)
+**Steam**: Right-click the game in Steam -> Manage -> Browse local files
+
+**DMM**: Click the 3 dots next to the game name in DMM -> 🛈 icon -> 📁 icon
+
+**Android**: Not accessible normally, but some data is stored at Android/media/jp.co.cygames.umamusume (might differ with phone brand). For the full access, you need to have the game patched with ReVanced's `"Export internal data documents provider"` patch and use a file explorer with a document provider selector to open it or be rooted and access `/data/data/jp.co.cygames.umamusume/files`. (The tutorials on how to do these are out of scope for the project, so use Google.)
