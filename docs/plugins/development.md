@@ -14,7 +14,7 @@ Plugins can be written in **any language** that can produce a C-compatible dynam
 - **Assembly** (If you are a masochist)
 
 This guide uses **Rust** for examples because Hachimi itself is written in Rust.
-However, the API is C-compatible, so you can use any language you prefer. Just ensure your `hachimi_init` function is exported with C calling convention.
+However, the API is C-compatible, so you can use any language you prefer. Just ensure your plugin's entry point is exported with C calling convention.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ Do not to make a malicious plugin that steals data or harms other players.
 
 ### Entry point
 
-Every plugin must export a `hachimi_init` function. Create a `Cargo.toml`:
+Every plugin must export a `hachimi_init_v3` function (or `hachimi_init` for the version 2 API). Create a `Cargo.toml`:
 
 ```toml
 [package]
@@ -51,7 +51,10 @@ Then in `src/lib.rs`:
 ```rust
 use std::ffi::{c_char, c_void};
 
+pub type HachimiGetApiFn = extern "C" fn(name: *const c_char) -> *mut c_void;
+
 #[repr(C)]
+#[derive(Clone, Copy)]
 pub struct Vtable {
     // Function pointers (see API Reference below)
 }
@@ -62,19 +65,17 @@ pub enum InitResult {
     Ok = 1,
 }
 
-static mut VTABLE: Option<&'static Vtable> = None;
+static mut VTABLE: Option<Vtable> = None;
 
 #[no_mangle]
-pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResult {
-    if vtable.is_null() {
-        return InitResult::Error;
-    }
-    if version < 2 {
+pub extern "C" fn hachimi_init_v3(get_api: HachimiGetApiFn, version: i32) -> InitResult {
+    if version < 3 {
         return InitResult::Error;
     }
 
     unsafe {
-        VTABLE = Some(&*vtable);
+        // Resolve functions you need and store them
+        // VTABLE = Some(Vtable { ... });
     }
 
     // Initialize your plugin here
@@ -83,28 +84,31 @@ pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResul
 }
 ```
 
-### The vtable
+### API Resolution (Version 3)
 
-The vtable is a structure containing function pointers to Hachimi's API. You receive it in `hachimi_init` and should store it for use throughout your plugin.
+With the version 3 API, plugins can export `hachimi_init_v3` and receive a `get_api` function pointer instead of a fixed vtable. You should call `get_api` to resolve the function pointers you need, and store them in a struct (like the vtable) for use throughout your plugin.
 
-**Current API Version: 2** <!-- markdownlint-disable-line MD036 -->
+*(Note: The version 2 API used a fixed vtable passed to `hachimi_init`. This is still supported but it is cleaner to utilize the version 3 API instead.)*
 
-Always check the version parameter to ensure compatibility:
+**Current API Version: 3** <!-- markdownlint-disable-line MD036 -->
+
+Always check the version parameter and safely resolve your functions:
 
 ```rust
 #[no_mangle]
-pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResult {
-    if vtable.is_null() {
-        return InitResult::Error;
-    }
-    if version < 2 {
+pub extern "C" fn hachimi_init_v3(get_api: HachimiGetApiFn, version: i32) -> InitResult {
+    if version < 3 {
         // API version too old
         return InitResult::Error;
     }
 
-    // Store vtable safely
+    // Example: Resolve functions safely
     unsafe {
-        VTABLE = Some(&*vtable);
+        VTABLE = Some(Vtable {
+            // Use c"func_name".as_ptr() for C string literals (Rust 1.77+)
+            // std::mem::transmute converts the raw pointer to your function type
+            // hachimi_instance: std::mem::transmute(get_api(c"hachimi_instance".as_ptr())),
+        });
     }
 
     InitResult::Ok
@@ -123,6 +127,26 @@ unsafe fn get_hachimi_and_interceptor() -> (*const c_void, *const c_void) {
     let hachimi = (vtable.hachimi_instance)();
     let interceptor = (vtable.hachimi_get_interceptor)(hachimi);
     (hachimi, interceptor)
+}
+```
+
+### Paths and directories (version 3 API and higher)
+
+Access the `hachimi` and game directories respectively:
+
+```rust
+use std::ffi::CStr;
+
+unsafe fn get_base_dir() -> String {
+    let vtable = VTABLE.unwrap();
+    let ptr = (vtable.hachimi_get_base_dir)();
+    CStr::from_ptr(ptr).to_string_lossy().into_owned()
+}
+
+unsafe fn get_data_path() -> String {
+    let vtable = VTABLE.unwrap();
+    let ptr = (vtable.hachimi_get_data_path)();
+    CStr::from_ptr(ptr).to_string_lossy().into_owned()
 }
 ```
 
@@ -481,6 +505,20 @@ unsafe fn ui_text_edit(ui: *mut c_void, buffer: &mut [u8]) -> bool {
 }
 ```
 
+#### Menu sizing (version 3 API and higher)
+
+```rust
+unsafe fn get_menu_width() -> f32 {
+    let vtable = VTABLE.unwrap();
+    (vtable.gui_get_menu_width)()
+}
+
+unsafe fn set_menu_width(width: f32) {
+    let vtable = VTABLE.unwrap();
+    (vtable.gui_set_menu_width)(width);
+}
+```
+
 #### Notifications
 
 ```rust
@@ -817,19 +855,38 @@ extern "C" fn on_menu_section(ui: *mut c_void, _userdata: *mut c_void) {
     }
 }
 
+pub type HachimiGetApiFn = extern "C" fn(name: *const c_char) -> *mut c_void;
+
 #[unsafe(no_mangle)]
-pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResult {
-    if vtable.is_null() || version < 2 {
+pub extern "C" fn hachimi_init_v3(get_api: HachimiGetApiFn, version: i32) -> InitResult {
+    if version < 3 {
         return InitResult::Error;
     }
 
     unsafe {
-        VTABLE_PTR = vtable;
         API_VERSION = version;
+
+        // For convenience in this example, we heap-allocate a Vtable and resolve only what we need.
+        let mut vtable = Box::new(std::mem::zeroed::<Vtable>());
+
+        macro_rules! resolve {
+            ($name:ident) => {
+                vtable.$name = std::mem::transmute(get_api(concat!(stringify!($name), "\0").as_ptr() as *const c_char));
+            };
+        }
+
+        resolve!(gui_show_notification);
+        resolve!(gui_ui_heading);
+        resolve!(gui_ui_separator);
+        resolve!(gui_ui_label);
+        resolve!(gui_register_menu_item);
+        resolve!(gui_register_menu_section);
+
+        VTABLE_PTR = Box::into_raw(vtable);
     }
 
     INIT.call_once(|| unsafe {
-        let vtable = &*vtable;
+        let vtable = &*VTABLE_PTR;
         let title = CString::new("Example Plugin").unwrap();
         (vtable.gui_register_menu_item)(title.as_ptr(), Some(on_menu_click), std::ptr::null_mut());
         (vtable.gui_register_menu_section)(Some(on_menu_section), std::ptr::null_mut());
@@ -841,7 +898,7 @@ pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResul
 
 ## Best practices
 
-1. **Version Checking**: Always check the API version in `hachimi_init`
+1. **Version Checking**: Always check the API version in your plugin's entry point.
 1. **Error Handling**: Return `InitResult::Error` if initialization fails
 1. **Logging**: Use the logging API for debugging and user feedback
 
@@ -877,7 +934,7 @@ unsafe extern "C" fn my_update_hook(this: *mut c_void) {
     }
 }
 
-// In hachimi_init (real example used in Hachimi):
+// In your plugin's entry point (real example used in Hachimi):
 // UnityEngine.Texture2D.ReadPixels (args = 3)
 unsafe {
     let vtable = VTABLE.unwrap();
