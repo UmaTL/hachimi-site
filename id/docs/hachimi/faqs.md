@@ -26,17 +26,23 @@ Tidak. Perangkat Apple sangat terkunci rapat, sehingga sangat sulit untuk membua
 
 ## Bagaimana cara menghapus Hachimi?
 
-Installer memiliki opsi uninstall. Jika kamu tidak lagi memilikinya, kamu bisa mengunduh versi terbaru dan menggunakannya.
+**Windows**: Installer memiliki opsi uninstall. Jika kamu tidak lagi memilikinya, kamu bisa mengunduh versi terbaru dan menggunakannya.
+**Android**: Kamu harus menghapus game yang di-*patch* dan instal yang orisinal seperti biasa.
 
 ## Apakah saya akan terkena ban karena menggunakan Hachimi? Apakah sudah pernah ada ban?
 
 Hachimi dan alat serupa melanggar ketentuan layanan/*terms of services* (TOS). Kamu yang menanggung risikonya. Namun hal itu tidak mungkin terjadi, dan tidak ada ban terkait Hachimi atau alat terjemahan lain yang dilaporkan sejak 2022.
 
+## Sepertinya akun saya di-ban, bagaimana cara memastikannya?
+
+Seperti inilah tampilan pesan jika akun kamu terkena ban:
+![First Time Setup](/assets/banned.jpg)
+
 ## Bisakah saya memainkan JP dan Global secara bersamaan?
 
 Ya, tetapi kamu perlu menggunakan solusi tambahan jika memakai versi DMM. Lihat [langkah-langkah ini](troubleshooting.md#error-501).
 
-## Apa perbedaan antara Mode *Update* Fisik?
+## Apa perbedaan antara Mode Pembaruan Fisik?
 
 Mode ini didefinisikan secara internal oleh game, dan tidak diimplementasikan oleh Hachimi. Sedikit yang diketahui tentangnya.
 
@@ -44,7 +50,7 @@ Mode ini didefinisikan secara internal oleh game, dan tidak diimplementasikan ol
 - `Mode60FPS` tampaknya memulihkan beberapa gerakan fisik saat *framerate* ditingkatkan, tetapi kadang masih agak bermasalah.
 - Kedua mode `SkipFrame` tidak diketahui namun tampaknya rusak
 
-## Bagaimana saya memperbarui di Android?
+## Bagaimana cara saya memperbarui di Android?
 
 ::: info
 Menghapus game hanya diperlukan untuk instalasi pertama kali, bukan untuk pembaruan jenis apapun.
@@ -54,13 +60,13 @@ Menghapus game hanya diperlukan untuk instalasi pertama kali, bukan untuk pembar
 
 Jika ada notifikasi di dalam game untuk memperbarui dari Play Store berarti kamu perlu memperbarui game itu sendiri dengan mengunduh paket instalasi terbaru. Kemudian kamu harus menginstalnya melalui UmaPatcher, yang secara otomatis akan menerapkan rilis Hachimi Edge terbaru yang tersedia.
 
-Ikuti [panduan instalasi](getting-started.md#android-jp) mulai dari langkah ke-4.
+Ikuti [panduan instalasi](installing-android#menggunakan-umapatcher-edge-disarankan) mulai dari langkah ke-4.
 
 ### Hachimi
 
 Ketika versi baru Hachimi Edge dirilis, kamu bisa memilih untuk menginstalnya agar mendapatkan fitur baru atau perbaikan. Kamu **tidak harus** melakukannya segera. Melakukan pembaruan ini memerlukan proses penambalan ulang (*re-patching*).
 
-Ikuti [panduan instalasi](getting-started.md#android-jp) mulai dari langkah ke-5 hanya untuk menginstal ulang versi game saat ini, atau mulai dari langkah ke-4 jika kamu sudah tidak memiliki paket instalasi.
+Ikuti [panduan instalasi](installing-android#menggunakan-umapatcher-edge-disarankan) mulai dari langkah ke-5 hanya untuk menginstal ulang versi game saat ini, atau mulai dari langkah ke-4 jika kamu sudah tidak memiliki paket instalasi.
 
 ### UmaPatcher
 
@@ -68,7 +74,7 @@ Memperbarui UmaPatcher hanya diperlukan dalam kasus tertentu, seperti saat kamu 
 
 1. Jika kamu belum pernah melakukannya, Pengaturan -> Ekspor *signing key*.
 1. Uninstall UmaPatcher.
-1. Ikuti [panduan instalasi](getting-started.md#android-jp) mulai dari langkah ke-3, sesuai kebutuhan di kasus yang kamu alami.
+1. Ikuti [panduan instalasi](installing-android#menggunakan-umapatcher-edge-disarankan) mulai dari langkah ke-3, sesuai kebutuhan di kasus yang kamu alami.
 
 ## Saya mematikan GUI/Overlay Hachimi, bagaimana cara menyalakannya kembali?
 
@@ -76,7 +82,7 @@ Pertama-tama, kemungkinan kamu melakukan ini sebagai solusi sementara di Android
 
 Buka file konfigurasi Hachimi (`config.json`) dengan editor teks dan ubah nilai `disable_gui` dari `true` menjadi `false`, lalu mulai ulang game. File konfigurasi ini berada di folder `hachimi` dalam [folder instalasi game](faqs#bagaimana-cara-menemukan-folder-instalasi-game)
 
-Jika kamu merasa tidak nyaman dengan cara ini atau mengalami masalah, aman untuk menghapus file konfigurasi tersebut. Hachimi akan membuat ulang file default.
+Jika kamu merasa bingung dengan cara ini atau mengalami masalah, aman untuk menghapus file konfigurasi tersebut. Hachimi akan membuat ulang file default.
 
 ## Bagaimana cara menemukan folder instalasi game?
 
@@ -84,4 +90,4 @@ Jika kamu merasa tidak nyaman dengan cara ini atau mengalami masalah, aman untuk
 
 **DMM**: Klik titik 3 di nama game di DMM -> 🛈 ikon -> 📁 ikon  
 
-**Android**: Tidak bisa diakses, tapi beberapa data terdapat di `Android/media/jp.co.cygames.umamusume` (mungkin berbeda di setiap merek hp)
+**Android**: Tidak bisa diakses, tapi beberapa data terdapat di `Android/media/jp.co.cygames.umamusume` (mungkin berbeda di setiap merek hp). Untuk akses penuh, kamu harus memasang game yang di-*patch* dengan ReVanced *patch* "Penyedia dokumen ekspor data internal" dan menggunakan penjelajah file (*file explorer*) yang memiliki fitur penyedia dokumen untuk membukanya, atau perangkat kamu harus di *root* untuk dapat mengakses `/data/data/jp.co.cygames.umamusume/files`. (Panduan cara melakukan hal-hal tersebut berada di luar cakupan proyek ini, jadi silakan cari di Google.)

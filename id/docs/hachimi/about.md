@@ -22,7 +22,7 @@ Mod terjemahan dan peningkatan game UM:PD.
   - Penggantian tekstur & sprite atlas
   - Penggantian video
   - Penyesuaian objek internal game
-  - Opsi teks Hashed (fallback)
+  - Opsi teks *Hashed* (*fallback*)
 
 Selain itu, Hachimi tidak hanya menyediakan fitur terjemahan untuk satu bahasa, ia dirancang agar sepenuhnya bisa dikonfigurasi untuk berbagai bahasa.
 

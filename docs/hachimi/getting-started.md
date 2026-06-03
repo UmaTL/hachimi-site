@@ -54,7 +54,7 @@ Hachimi Edge supports Steam, DMM, and Android versions for the Japanese server, 
 
 ## Install Guides
 
-Hachmi Edge has an installer for both Windows and Android. They are quite different!  
+Hachimi Edge has an installer for both Windows and Android. They are quite different!  
 Please see the specific guides and continue with the rest of this page after installing.
 
 [For Windows](installing-windows)  
