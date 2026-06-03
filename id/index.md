@@ -32,7 +32,7 @@ features:
     details: Dilengkapi dengan installer dan GUI yang praktis. Terjemahan diperbarui secara otomatis.
   - icon: 🌍
     title: Translasi multi-bahasa
-    details: Mengindeks terjemahan dari berbagai proyek komunitas, memungkinkan akses mudah dan pergantian sumber. Periksa bagian kredit untuk daftar.
+    details: Mengindeks terjemahan dari berbagai proyek komunitas, memungkinkan akses mudah dan pergantian sumber. Periksa bagian kredit untuk daftarnya.
   - icon: 📝
     title: Penyesuaian teks
     details: Menyediakan fitur teks khusus yang membantu terjemahan terasa lebih alami dan meningkatkan dukungan untuk berbagai bahasa.
@@ -46,9 +46,23 @@ features:
 Hachimi Edge adalah mod terjemahan pihak ketiga untuk game, mengikuti jejak UmaTL dan Carotene, sekaligus yang pertama mendukung modding game secara penuh di Android.
 
 Hachimi Edge merupakan *fork* aktif dari mod Hachimi yang sudah tidak lagi dipelihara.
-Mod ini dibuat untuk segera menangani masalah yang muncul setelah pembaruan game pada 24/09/2025 dengan menggabungkan fitur tambahan serta perbaikan dari berbagai anggota komunitas. Mod Hachimi asli telah resmi dihentikan oleh pengembangnya pada 17/01/2026. Hachimi Edge akan mengambil alih posisinya.
+Mod ini dibuat untuk segera menangani masalah yang muncul setelah pembaruan game pada 24/09/2025 dengan menggabungkan fitur tambahan serta perbaikan dari berbagai anggota komunitas.
+Mod Hachimi asli telah resmi dihentikan oleh pengembangnya pada 17/01/2026.
 
-Hachimi tidak berfungsi? Kesalahan *runtime*? *Patching* gagal? Kemungkinan besar kamu masih menggunakan Hachimi versi asli. Hapus instalasi Hachimi lama dan [pasang](/id/docs/hachimi/getting-started.md) versi Edge baru untuk menyelesaikan masalah.
+## Komponen game yang dimodifikasi
+
+Modifikasi diterapkan secara dinamis, tidak memerlukan *patching*/penambalan aset!
+
+- Teks UI & Tombol
+- Teks game dinamis (skill, nama, deskripsi, efek, dll…)
+- Dialog game (cerita utama, interaksi beranda, cerita karakter, dll…)
+- Lirik
+- Tekstur & *sprites*
+- Video
+
+## Plugin
+
+Hachimi Edge mendukung [sistem plugin](/id/docs/plugins/about) yang bisa menambah fungsionalitasnya.
 
 ## UmaPatcher
 
@@ -60,7 +74,8 @@ Sumber terjemahan diindeks dari berbagai proyek komunitas terpisah. Hachimi meny
 
 Tidak menemukan terjemahan untuk konten terbaru? Mencari bahasa lain? Hachimi Edge mengindeks lebih banyak repositori yang lebih baru dibandingkan versi asli.
 
-Lihat sumber-sumber secara lebih detail di [*laman kredit*](/id/credits.md) untuk informasi umum, progres, bantuan, dan cara menghubungi. Cobalah untuk mendukung para kontributor yang mengerjakannya!
+Lihat sumber-sumber secara lebih detail di [*laman kredit*](/id/credits.md) untuk informasi umum, progres, bantuan, dan cara menghubungi.
+Cobalah untuk mendukung para kontributor yang mengerjakannya!
 
 ## Tangkapan Layar {#screenshots}
 
