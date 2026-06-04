@@ -87,7 +87,7 @@ pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResul
 
 The vtable is a structure containing function pointers to Hachimi's API. You receive it in `hachimi_init` and should store it for use throughout your plugin.
 
-**Current API Version: 2** <!-- markdownlint-disable-line MD036 -->
+**Current API Version: 3** <!-- markdownlint-disable-line MD036 -->
 
 Always check the version parameter to ensure compatibility:
 
@@ -97,7 +97,7 @@ pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResul
     if vtable.is_null() {
         return InitResult::Error;
     }
-    if version < 2 {
+    if version < 3 {
         // API version too old
         return InitResult::Error;
     }
@@ -491,6 +491,116 @@ unsafe fn show_notification(message: &str) -> bool {
 }
 ```
 
+#### Windows (api v3+)
+
+Plugins can create and manage their own standalone GUI windows. Each window has a scrollable contents area and an optional fixed bottom area.
+
+```rust
+use std::sync::atomic::AtomicI32;
+
+static MY_WINDOW_ID: std::sync::Mutex<i32> = std::sync::Mutex::new(-1);
+static MY_COUNTER: AtomicI32 = AtomicI32::new(0);
+
+type WindowCallback = extern "C" fn(ui: *mut c_void, userdata: *mut c_void);
+
+// Get a unique window ID, call this once per window you want to create
+unsafe fn new_window_id() -> i32 {
+    let vtable = VTABLE.unwrap();
+    (vtable.gui_new_window_id)()
+}
+
+// Show a window with the given ID, title, and callbacks
+unsafe fn show_window(
+    id: i32,
+    title: &str,
+    contents_callback: Option<WindowCallback>,
+    bottom_callback: Option<WindowCallback>,
+    userdata: *mut c_void
+) -> bool {
+    let vtable = VTABLE.unwrap();
+    let title_cstr = CString::new(title).unwrap();
+    (vtable.gui_show_window)(
+        id,
+        title_cstr.as_ptr(),
+        contents_callback,
+        bottom_callback,
+        userdata
+    )
+}
+
+// Close a window by its ID
+unsafe fn close_window(id: i32) {
+    let vtable = VTABLE.unwrap();
+    (vtable.gui_close_window)(id)
+}
+
+// Example: open a window from a menu item callback
+extern "C" fn on_open_window_click(_userdata: *mut c_void) {
+    unsafe {
+        let mut id_guard = MY_WINDOW_ID.lock().unwrap();
+
+        // If window is already open, close it first
+        if *id_guard >= 0 {
+            close_window(*id_guard);
+        }
+
+        let id = new_window_id();
+        *id_guard = id;
+
+        show_window(
+            id,
+            "My Plugin Window",
+            Some(on_window_contents),
+            Some(on_window_bottom),
+            &MY_COUNTER as *const _ as *mut c_void,
+        );
+    }
+}
+
+// Contents callback, rendered inside a scrollable area
+extern "C" fn on_window_contents(ui: *mut c_void, userdata: *mut c_void) {
+    unsafe {
+        let vtable = VTABLE.unwrap();
+
+        let heading = CString::new("My Window").unwrap();
+        (vtable.gui_ui_heading)(ui, heading.as_ptr());
+        (vtable.gui_ui_separator)(ui);
+
+        // Read counter from userdata
+        let counter = {
+            let counter_ptr = userdata as *const AtomicI32;
+            (*counter_ptr).load(std::sync::atomic::Ordering::Relaxed)
+        };
+        let counter_text = CString::new(format!("Counter: {}", counter)).unwrap();
+        (vtable.gui_ui_label)(ui, counter_text.as_ptr());
+    }
+}
+
+// Bottom callback, rendered in a fixed area below the scrollable contents
+extern "C" fn on_window_bottom(ui: *mut c_void, userdata: *mut c_void) {
+    unsafe {
+        let vtable = VTABLE.unwrap();
+        (vtable.gui_ui_separator)(ui);
+
+        let btn_text = CString::new("Increment").unwrap();
+        if (vtable.gui_ui_button)(ui, btn_text.as_ptr()) {
+            let counter_ptr = userdata as *const AtomicI32;
+            (*counter_ptr).fetch_add(1, std::sync::atomic::Ordering::Relaxed);
+        }
+
+        let close_text = CString::new("Close").unwrap();
+        if (vtable.gui_ui_button)(ui, close_text.as_ptr()) {
+            let id_guard = MY_WINDOW_ID.lock().unwrap();
+            close_window(*id_guard);
+        }
+    }
+}
+```
+
+::: warning
+Window IDs must be unique across all plugins. Always use `gui_new_window_id()` to obtain a non-colliding ID instead of hardcoding your own.
+:::
+
 ### Android dex loading (api v2+)
 
 Load and execute Java/Kotlin code on Android:
@@ -773,6 +883,16 @@ pub struct Vtable {
         callback: Option<extern "C" fn(*mut c_void, *mut c_void)>,
         userdata: *mut c_void,
     ) -> bool,
+    // Window management (api v3+)
+    pub gui_new_window_id: unsafe extern "C" fn() -> i32,
+    pub gui_show_window: unsafe extern "C" fn(
+        id: i32,
+        title: *const c_char,
+        contents_callback: Option<extern "C" fn(*mut c_void, *mut c_void)>,
+        bottom_callback: Option<extern "C" fn(*mut c_void, *mut c_void)>,
+        userdata: *mut c_void,
+    ) -> bool,
+    pub gui_close_window: unsafe extern "C" fn(id: i32),
 
     pub android_dex_load: unsafe extern "C" fn(
         dex_ptr: *const u8,
@@ -819,7 +939,7 @@ extern "C" fn on_menu_section(ui: *mut c_void, _userdata: *mut c_void) {
 
 #[unsafe(no_mangle)]
 pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResult {
-    if vtable.is_null() || version < 2 {
+    if vtable.is_null() || version < 3 {
         return InitResult::Error;
     }
 
