@@ -9,7 +9,7 @@ Jika kamu juga ingin mengetahui bagaimana *dict* translasi diformat/diorganisasi
 
 ## *Localize dict / Hashed dict*
 
-Di root direktori `localized_data`, kamu akan menemukan dua file bernama `localize_dict.json` dan `hashed_dict.json`. Kedua file ini digunakan oleh dua sistem berbeda yang memiliki tujuan sama seperti menerjemahkan UI.
+Di direktori `localized_data`, kamu akan menemukan dua file bernama `localize_dict.json` dan `hashed_dict.json`. Kedua file ini digunakan oleh dua sistem berbeda yang memiliki tujuan sama seperti menerjemahkan UI.
 
 **Localize dict** adalah cara baru dan lebih disarankan untuk menerjemahkan UI, diperkenalkan oleh Hachimi. Sistem ini langsung memodifikasi sistem lokalisasi internal game, sehingga terjemahan akan ditempatkan tepat di lokasi yang diperlukan, lengkap dengan konteksnya. Setiap entri terjemahan dipetakan ke ID internal dalam game, yang secara bebas menentukan konteks penggunaannya (meski ada kasus di mana ID yang sama digunakan secara tidak tepat di beberapa konteks, salahkan dev Cy).
 

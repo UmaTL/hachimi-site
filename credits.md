@@ -11,7 +11,7 @@
 
 ## [Website](https://github.com/UmaTL/hachimi-site)
 
-- Orignal Author: LeadRDRK
+- Original Author: LeadRDRK
 - Edge Maintainer: noccu
 - Contributors:
   [![Graph](https://contrib.rocks/image?repo=UmaTL/hachimi-site)](https://github.com/UmaTL/hachimi-site/graphs/contributors)
@@ -42,9 +42,14 @@ Alternate versions:
 
 ## [Indonesian translations](https://github.com/Xmatography/umachimi-id)
 
-- Maintainer: Xmatography
+- Maintainer: Xmatography & Ikazuu ([Global](https://github.com/1kazuu/umachimi-id-glb))
 - Contributors:
   [![Graph](https://contrib.rocks/image?repo=Xmatography/umachimi-id)](https://github.com/Xmatography/umachimi-id/graphs/contributors)
+- [Full credits & Progress](https://github.com/Xmatography/umachimi-id/wiki/Status-Translasi)
+
+Alternate versions:
+
+- [Global Server](https://github.com/1kazuu/umachimi-id-glb)
 
 ## [French translations (Global)](https://umamusumefr.github.io)
 

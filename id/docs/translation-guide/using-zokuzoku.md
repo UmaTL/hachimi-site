@@ -31,7 +31,7 @@ Dan tentu saja, kamu juga memerlukan repositori terjemahan yang sudah ada untuk 
 
 ### Pemasangan
 
-Instal dari [*Marketplace* VS Code](https://marketplace.visualstudio.com/items?itemName=LeadRDRK.zokuzoku) atau unduh file .vsix versi terbaru di [laman rilis](https://github.com/Hachimi-Hachimi/ZokuZoku/releases), Buka panel *Extensions* di VSCode, klik tombol 3 titik di kanan atas, pilih "*Install from VSIX*..." dan pilih file yang baru saja kamu unduh
+Instal dari [*Marketplace* VS Code](https://marketplace.visualstudio.com/items?itemName=LeadRDRK.zokuzoku) atau unduh file .vsix versi terbaru di [laman rilis](https://github.com/Hachimi-Hachimi/ZokuZoku/releases), Buka panel *Extensions* di VSCode, klik tombol titik 3 di kanan atas, pilih "*Install from VSIX*..." dan pilih file yang baru saja kamu unduh.
 
 ![Translation section in menu](/assets/translation-guide/using-zokuzoku/3.webp)
 

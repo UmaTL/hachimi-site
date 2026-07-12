@@ -15,7 +15,7 @@ hero:
       link: /ja/docs/hachimi/getting-started
     - theme: alt
       text: Discord
-      link: https://discord.gg/hachimimod
+      link: https://discord.gg/YjBgmuqqYr
     - theme: alt
       text: よくある質問
       link: /ja/docs/hachimi/faqs

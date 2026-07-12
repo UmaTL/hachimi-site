@@ -1,6 +1,6 @@
 # Hachimi  
 
-[![Discord server](https://dcbadge.limes.pink/api/server/https://discord.gg/hachimimod)](https://discord.gg/hachimimod)
+[![Discord server](https://dcbadge.limes.pink/api/server/https://discord.gg/YjBgmuqqYr)](https://discord.gg/YjBgmuqqYr)
 
 UM:PD 的遊戲強化與翻譯模組。
 

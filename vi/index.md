@@ -18,7 +18,7 @@ hero:
       link: https://github.com/Hachimi-Hachimi/Hachimi
     - theme: alt
       text: Discord
-      link: https://discord.gg/hachimimod
+      link: https://discord.gg/YjBgmuqqYr
 
 features:
   - icon: 🚀

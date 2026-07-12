@@ -21,7 +21,7 @@ hero:
       link: /docs/hachimi/troubleshooting
     - theme: alt
       text: Discord
-      link: https://discord.gg/hachimimod
+      link: https://discord.gg/YjBgmuqqYr
     - theme: alt
       text: Credits
       link: /credits

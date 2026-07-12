@@ -355,4 +355,4 @@ Neither the game nor Hachimi support emulators. You can get them to work, but yo
 
 Uninstall Hachimi using the installer. Try to use the one you installed your current version with, but the latest one should work just fine.
 If you have multiple game versions installed, make sure you uninstall from the right path. Then reinstall latest Hachimi Edge.
-If that doesn't work, you can ask in the `help/support` channel on the [Hachimi Project Discord](https://discord.gg/hachimimod). Please state your game server, device platform and model, and clearly explain your issue and what you have tried.
+If that doesn't work, you can ask in the `help/support` channel on the [Hachimi Project Discord](https://discord.gg/YjBgmuqqYr). Please state your game server, device platform and model, and clearly explain your issue and what you have tried.

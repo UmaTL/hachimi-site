@@ -2,7 +2,7 @@
 
 [Unggah sumber translasimu sendiri](https://github.com/UmaTL/hachimi-meta)
 
-## [Mod](https://github.com/kairusds/Hachimi-Edge)
+## [Hachimi Edge](https://github.com/kairusds/Hachimi-Edge)
 
 - Pembuat Asli: LeadRDRK ([Hachimi](https://github.com/Hachimi-Hachimi/Hachimi))
 - Pengelola Edge: harveyhans
@@ -18,17 +18,21 @@
 
 ## [Bahasa Indonesia](https://github.com/Xmatography/umachimi-id)
 
-- Pengelola: Xmatography
+- Pengelola: Xmatography & Ikazuu ([Global](https://github.com/1kazuu/umachimi-id-glb))
 - Kontributor:
   [![Graph](https://contrib.rocks/image?repo=Xmatography/umachimi-id)](https://github.com/Xmatography/umachimi-id/graphs/contributors)
-- [Semua kredit dan progress translasi](https://github.com/Xmatography/umachimi-id/wiki/Status-Translasi)
+- [Semua kredit dan kemajuan translasi](https://github.com/Xmatography/umachimi-id/wiki/Status-Translasi)
+
+Versi Alternatif:
+
+- [Server Global](https://github.com/1kazuu/umachimi-id-glb)
 
 ## [Bahasa Inggris](https://github.com/UmaTL/hachimi-tl-en)
 
 - Pengelola: noccu
 - Kontributor:
  [![Graph](https://contrib.rocks/image?repo=UmaTL/hachimi-tl-en)](https://github.com/UmaTL/hachimi-tl-en/graphs/contributors)
-- [Semua kredit dan progress translasi](https://github.com/UmaTL/hachimi-tl-en/wiki/Translation-Progress)
+- [Semua kredit dan kemajuan translasi](https://github.com/UmaTL/hachimi-tl-en/wiki/Translation-Progress)
 
 Versi Alternatif:
 
@@ -52,3 +56,9 @@ Versi Alternatif:
 - Pengelola : UmamusumeFR (?)
 - Kontributor:
   [![Graph](https://contrib.rocks/image?repo=UmamusumeFR/hachimi-tl-fr)](https://github.com/UmamusumeFR/hachimi-tl-fr/graphs/contributors)
+
+## [Bahasa Portugis (Global)](https://github.com/Ahtheerr/hachimi-tl-br)
+
+- Pengelola: Ahtheerr
+- Kontributor:
+  [![Graph](https://contrib.rocks/image?repo=Ahtheerr/hachimi-tl-br)](https://github.com/Ahtheerr/hachimi-tl-br/graphs/contributors)

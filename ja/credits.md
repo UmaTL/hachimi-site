@@ -45,8 +45,13 @@
 </a>
 
 ## [インドネシア語訳](https://github.com/Xmatography/umachimi-id)
-- メンテナー：Xmatography
+- メンテナー：Xmatography & Ikazuu ([グローバル](https://github.com/1kazuu/umachimi-id-glb))
 - 貢献者:
 <a href="https://github.com/Xmatography/umachimi-id/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Xmatography/umachimi-id" />
 </a>
+- [すべてのクレジットと進捗](https://github.com/Xmatography/umachimi-id/wiki/Status-Translasi)
+
+代替バージョン:
+
+- [グローバルバージョン](https://github.com/1kazuu/umachimi-id-glb)

@@ -4,7 +4,7 @@ title: Tentang
 
 # Hachimi <!-- markdownlint-disable-line MD025 -->
 
-[![Server Discord](https://dcbadge.limes.pink/api/server/https://discord.gg/hachimimod)](https://discord.gg/hachimimod)
+[![Server Discord](https://dcbadge.limes.pink/api/server/https://discord.gg/YjBgmuqqYr)](https://discord.gg/YjBgmuqqYr)
 
 Mod terjemahan dan peningkatan game UM:PD.
 
@@ -22,7 +22,7 @@ Mod terjemahan dan peningkatan game UM:PD.
   - Penggantian tekstur & sprite atlas
   - Penggantian video
   - Penyesuaian objek internal game
-  - Opsi teks Hashed (fallback)
+  - Opsi teks *Hashed* (*fallback*)
 
 Selain itu, Hachimi tidak hanya menyediakan fitur terjemahan untuk satu bahasa, ia dirancang agar sepenuhnya bisa dikonfigurasi untuk berbagai bahasa.
 

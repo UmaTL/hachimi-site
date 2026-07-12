@@ -38,13 +38,17 @@ Mengedit file ini dengan editor teks biasa bisa menyebabkan kerusakan file. Hara
 - `enable_ipc`: Mengaktifkan server komunikasi antar-proses HTTP yang memungkinkan program lain mengontrol game. Ditujukan untuk digunakan dengan alat terjemahan.
 - `ipc_listen_all`: Menerima perintah IPC dari perangkat lain di jaringan. **Jangan aktifkan opsi ini jika kamu tidak membutuhkannya.**
 - `force_allow_dynamic_camera`: Memaksa game untuk mengizinkan pemilihan kamera dinamis (POV) di semua jenis balapan.
-- `live_theater_allow_same_chara`: Memaksa game untuk mengizinkan memilih karakter yang sama berkali-kali untuk formasi konser live. Juga menonaktifkan penyimpanan formasi otomatis. **Jangan mencoba menyimpan formasi yang diduplikasi secara manual.**
+- `live_theater_allow_same_chara`: Memaksa game untuk mengizinkan memilih karakter yang sama berkali-kali untuk formasi konser live. Juga menonaktifkan penyimpanan formasi otomatis. **Jangan mencoba menyimpan formasi yang kamu duplikatl.**
 - `physics_update_mode`: Mengubah pembaruan fisik karakter game. Nilai yang mungkin: `ModeNormal`, `Mode60FPS`, `SkipFrame` dan `SkipFramePostAlways`.
 - `ui_animation_scale`: Mengubah kecepatan animasi UI. Default: `1.0`.
 - `sugoi_url`: URL ke Sugoi Offline Translator atau server terjemahan kompatibel untuk terjemahan otomatis. Tidak perlu diatur jika kamu menggunakan setup Sugoi standar. Default: `http://127.0.0.1:14366`
 - `auto_translate_stories`: Memungkinkan penerjemahan cerita melalui penerjemah otomatis.
 - `auto_translate_localize`: Memungkinkan penerjemahan teks UI melalui penerjemah otomatis. Umumnya TIDAK disarankan karena kebanyakan penerjemah tidak menjaga line break atau tag format dengan benar.
 - `disabled_hooks`: Menonatifkan hook manual. Jangan mengubah opsi ini, karena fungsinya hanya sebagai alat bantu debug untuk memecahkan masalah kompatibilitas.
+- `enable_file_logging`: Menyalakan logging ke `hachimi.log` ke direktori game. Jika mati atau tidak bisa membuat file, pencatatan log beralih ke output debug saja. Default: `false`
+- `lazy_translation_updates`: Melewati unduhan ulang file translasi yang tidak berubah di repositori, meskipun file lokal kedaluwarsa atau rusak. Mempercepat proses pembaruan, tetapi berisiko meninggalkan file yang rusak. Default: `false`.
+- `shadow_resolution`: Mengatur kualitas resolusi bayangan. Nilai yang lebih tinggi meningkatkan detail bayangan tetapi dapat menurunkan performa.
+- `skill_info_dialog`: Mengaktifkan dialog informasi skill yang diperluas untuk menampilkan detail tambahan tentang skill saat dilihat di dalam game.
 
 ## Hanya untuk Windows
 
@@ -57,3 +61,4 @@ Mengedit file ini dengan editor teks biasa bisa menyebabkan kerusakan file. Hara
 - `block_minimize_in_full_screen`: Memblokir minimisasi saat layar penuh. Hanya boleh digunakan dengan `FullScreenWindow`.
 - `window_always_on_top`: Menjaga jendela game tetap di atas jendela lain.
 - `disable_gui_once`: Menonaktifkan GUI bawaan hanya untuk peluncuran berikutnya. Secara otomatis akan diatur ulang kembali ke `false` setelah startup dan memaksa pengaturan `disable_gui: true` satu kali. Hal ini memungkinkan kamu untuk melakukan pembelian dari Steam *Store*.
+- `discord_rpc`: Mengaktifkan integrasi *Rich Presence* Discord pada platform yang tidak mendukungnya secara bawaan (DMM) untuk menampilkan aktivitas kamu di Umamusume pada profil Discord.

@@ -14,7 +14,7 @@ Hachimi Edge supports a [plugin system](plugins/about) that allows extending its
 ## Contributing
 
 Please read through the relevant docs and check out the various git repos. You can open an Issue there or send a PR directly, although discussing things with the team first is recommended in most cases.
-If you need more help or want to contact us directly, join the [Discord server](https://discord.gg/hachimimod) and mention the `Developer` role in `#feedback`.
+If you need more help or want to contact us directly, join the [Discord server](https://discord.gg/YjBgmuqqYr) and mention the `Developer` role in `#feedback`.
 
 ### As a Hachimi Edge developer
 

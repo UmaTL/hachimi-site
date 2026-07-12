@@ -1,3 +1,7 @@
+---
+outline: [2,3]
+---
+
 # Menerjemahkan
 
 ::: tip
@@ -24,7 +28,7 @@ Ini adalah *fork* aktif komunitas dari ekstensi ZokuZoku asli. Tujuannya adalah 
 
 Meskipun fork ini berfungsi, beberapa fitur mungkin tidak stabil.
 
-Tautan: [Kode sumber](https://github.com/Mario0051/ZokuZoku), [*Extension Builder* dan Repositori rilis)](https://github.com/THShafi170/ZokuZoku-Edge)
+Tautan: [Kode sumber](https://github.com/Mario0051/ZokuZoku), [Pengembang Ekstensi dan Repositori Rilis)](https://github.com/THShafi170/ZokuZoku-Edge)
 
 ### *Tools* lama UmaTL (*legacy*)
 
@@ -84,7 +88,7 @@ Kamu akan memerlukan editor gambar untuk mengedit gambar. Perhatikan batas ukura
 
 Dokumentasi dasar disertakan bersama alat.
 
-### Animasi UI
+### Animasi UI / UIAnimation
 
 Gunakan [*Tools spesial*](#hachimi-tools) untuk mengekstrak dan memperbarui.
 Dokumentasi dasar disertakan bersama alat.
@@ -98,7 +102,30 @@ Kamu akan sangat terbantu jika memiliki cara untuk memeriksa file `meta` (yang m
 
 ### Cuplikan video (*Movies*)
 
-Aja sendiri, semoga beruntung.
+::: info
+Punya pengalaman mencobanya sendiri atau punya informasi lebih lanjut? Silakan beri tahu kami!
+:::
+
+Video (*movies*) di dalam game menggunakan format USM dan terenkripsi. Format ini tidak mudah ditangani dan memiliki banyak batasan (*caveats*). Banyak opsi yang belum diuji coba. Keterampilan teknis yang baik serta waktu untuk riset dan bereksperimen sangat direkomendasikan.
+
+Kamu bisa menggunakan berbagai alat/*tools* untuk mendekripsi dan mengenkripsinya kembali, menggunakan kunci `75923756697503`/`(0000)450D608C479F`.
+
+- [USMBreak](https://github.com/beer-psi/usmbreak)
+- [WannaCRI](https://github.com/donmai-me/WannaCRI)
+- [CRID USM Demux Tool](https://mega.nz/file/TJQniYwL#Dp_D-KvzVlVgTwqzVJc1n3vslBZsHdy8pdDqzhRtsOI)
+- [VGMToolbox](https://sourceforge.net/projects/vgmtoolbox/)
+
+Di antara proses tersebut, video bisa di edit dengan cara apa pun, meskipun tujuan utama kami adalah menambahkan teks terjemahan (*subtitle*). Perlu dicatat bahwa video aslinya sudah dilengkapi dengan teks terjemahan bawaan (h*ard-subbed*) dalam bahasa Jepang.
+
+::: info
+Di masa mendatang, Hachimi Edge mungkin akan mendukung teks terjemahan dinamis (*soft-subtitles*) agar tidak perlu repot untuk memodifikasi berkas video.
+:::
+
+Video kemungkinan besar harus tetap menggunakan format dan resolusi yang sama. Untuk kasus-kasus sederhana, kamu seharusnya bisa menggunakan encoder yang relevan dengan format tersebut (MPEG1/H264/VP9?).
+Kamu juga bisa mencoba [SDK Resmi](https://archive.org/details/new-criware-sdk) yang seharusnya bisa membantu untuk kasus-kasus yang lebih lanjut juga.
+Di peringatkan bahwa beberapa berkas mengandung *alpha channel* sebagai aliran video (*stream*) kedua. Sebagian besar alat/*tools* tidak bisa menangani hal ini dengan baik.
+
+Audio sebaiknya tidak disentuh dan idealnya disalin secara langsung, tanpa proses dekripsi/enkripsi. Hal ini mungkin mengharuskan audio diproses secara terpisah. Periksa dokumentasi untuk alat-alat yang kamu gunakan.
 
 ## Pertimbangan lain
 

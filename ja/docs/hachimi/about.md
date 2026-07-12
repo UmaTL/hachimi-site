@@ -4,7 +4,7 @@ title: 概要
 
 # Hachimi <!-- markdownlint-disable-line MD025 -->
 
-[![Discord サーバー](https://dcbadge.limes.pink/api/server/https://discord.gg/hachimimod)](https://discord.gg/hachimimod)
+[![Discord サーバー](https://dcbadge.limes.pink/api/server/https://discord.gg/YjBgmuqqYr)](https://discord.gg/YjBgmuqqYr)
 
 UM:PD 用の翻訳＆機能追加MOD
 

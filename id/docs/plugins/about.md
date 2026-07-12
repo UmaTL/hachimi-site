@@ -4,7 +4,7 @@ title: Tentang
 
 # Plugin <!-- markdownlint-disable-line MD025 -->
 
-Hachimi mendukung sistem plugin yang memungkinkan para pengembang untuk memperluas fungsionalitasnya melalui pustaka dinamis (*dynamic libraries*). Plugin bisa melakukan hook ke dalam game, memodifikasi perilaku sistem, menambah elemen GUI, dan masih banyak lagi.
+Hachimi mendukung sistem plugin yang memungkinkan para pengembang untuk memperluas fungsionalitasnya melalui pustaka dinamis (*dynamic libraries*). Plugin bisa melakukan *hook* ke dalam game, memodifikasi perilaku sistem, menambah elemen GUI, dan masih banyak lagi.
 
 ## Apa itu plugin?
 

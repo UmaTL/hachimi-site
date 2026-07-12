@@ -42,9 +42,14 @@
 
 ## [印度尼西亚语翻译](https://github.com/Xmatography/umachimi-id)
 
-- 维护者：Xmatography
+- 维护者：Xmatography & Ikazuu ([国际服](https://github.com/1kazuu/umachimi-id-glb))
 - 贡献者：
   [![Graph](https://contrib.rocks/image?repo=Xmatography/umachimi-id)](https://github.com/Xmatography/umachimi-id/graphs/contributors)
+- [完整致谢名单与进度](https://github.com/Xmatography/umachimi-id/wiki/Status-Translasi)
+
+其他版本:
+
+- [国际服](https://github.com/1kazuu/umachimi-id-glb)
 
 ## [法语翻译 (国际服)](https://umamusumefr.github.io)
 

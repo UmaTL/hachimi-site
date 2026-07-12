@@ -128,9 +128,9 @@ unsafe fn get_hachimi_and_interceptor() -> (*const c_void, *const c_void) {
 }
 ```
 
-### Interceptor (Berfungsi untuk hook function)
+### Interceptor (Berfungsi untuk fungsi *hook*)
 
-Sebuah interceptor mengizinkan kamu untuk hook dan memodifikasi fungsi game:
+Sebuah interceptor mengizinkan kamu untuk melakukan *hook* dan memodifikasi fungsi game:
 
 ```rust
 use std::ffi::c_void;
@@ -211,6 +211,21 @@ unsafe fn get_method(
     (vtable.il2cpp_get_method)(klass, method_cstr.as_ptr(), arg_count)
 }
 
+unsafe fn get_methods(klass: *mut c_void) -> impl Iterator<Item = *const c_void> {
+    let mut iter: *mut c_void = std::ptr::null_mut();
+
+    std::iter::from_fn(move || {
+        let vtable = VTABLE.unwrap();
+        let method = (vtable.il2cpp_class_get_methods)(klass, &mut iter);
+
+        if method.is_null() {
+            None
+        } else {
+            Some(method)
+        }
+    })
+}
+
 unsafe fn get_method_addr(
     klass: *mut c_void,
     method_name: &str,
@@ -219,6 +234,11 @@ unsafe fn get_method_addr(
     let vtable = VTABLE.unwrap();
     let method_cstr = CString::new(method_name).unwrap();
     (vtable.il2cpp_get_method_addr)(klass, method_cstr.as_ptr(), arg_count)
+}
+
+unsafe fn object_new(klass: *const c_void) -> *mut c_void {
+    let vtable = VTABLE.unwrap();
+    (vtable.il2cpp_object_new)(klass)
 }
 
 unsafe fn get_field(klass: *mut c_void, field_name: &str) -> *mut c_void {
@@ -520,7 +540,6 @@ unsafe fn unload_dex(handle: u64) -> bool {
 #### Contoh Java (DEX side)
 
 *Class* Java/Kotlin kamu harus mengekspos metode **statis** yang cocok dengan tanda tangan (*signature*) fungsi yang kamu panggil dari Rust.
-
 Ini adalah contoh Java minimal yang bisa kamu *compile* menjadi DEX dan dimuat menggunakan fungsi bantuan (*helpers*) di atas:
 
 ```java
@@ -878,11 +897,11 @@ unsafe {
 unsafe fn example_il2cpp_usage() {
     if let Some(vtable) = VTABLE {
         // Ambil class
-    let image_name = CString::new("UnityEngine.CoreModule").unwrap();
+        let image_name = CString::new("UnityEngine.CoreModule").unwrap();
         let image = (vtable.il2cpp_get_assembly_image)(image_name.as_ptr());
 
-    let namespace = CString::new("UnityEngine").unwrap();
-    let class_name = CString::new("Object").unwrap();
+        let namespace = CString::new("UnityEngine").unwrap();
+        let class_name = CString::new("Object").unwrap();
         let klass = (vtable.il2cpp_get_class)(image, namespace.as_ptr(), class_name.as_ptr());
 
         if klass.is_null() {
@@ -895,11 +914,21 @@ unsafe fn example_il2cpp_usage() {
             return;
         }
 
+        // Contoh: mewujudkan objek baru
+        let new_obj = object_new(klass);
+
         // Contoh: lengkapi alamat method
-    let method_name = CString::new("get_name").unwrap();
-    let method_addr = (vtable.il2cpp_get_method_addr)(klass, method_name.as_ptr(), 0);
+        let method_name = CString::new("get_name").unwrap();
+        let method_addr = (vtable.il2cpp_get_method_addr)(klass, method_name.as_ptr(), 0);
         if method_addr.is_null() {
             return;
+        }
+
+        // Contoh: mencari method overload spesifik overload berdasarkan index
+        // Hal ini berguna ketika terdapat beberapa metode yang memiliki nama yang sama
+        if let Some(method_info) = get_methods(klass).nth(2) {
+            // Bidang (field) pertama dari MethodInfo adalah penunjuk fungsi yang sebenarnya.
+            let specific_addr = *(method_info as *const *mut c_void);
         }
 
         // Panggil (cast) method_addr kedalam pointer function jika kamu ingin memanggilnya

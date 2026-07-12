@@ -217,11 +217,11 @@ unsafe fn get_method(
 
 unsafe fn get_methods(klass: *mut c_void) -> impl Iterator<Item = *const c_void> {
     let mut iter: *mut c_void = std::ptr::null_mut();
-    
+
     std::iter::from_fn(move || {
         let vtable = VTABLE.unwrap();
         let method = (vtable.il2cpp_class_get_methods)(klass, &mut iter);
-        
+
         if method.is_null() {
             None
         } else {

@@ -4,15 +4,16 @@ UmaTL sebenarnya adalah patch terjemahan pertama untuk game tersebut. Patch ini 
 
 ## Instalasi
 
-1. Instal [python 3.13 (64bit)](https://www.python.org/downloads/)
+1. Instal [python 3.13 (64bit)](https://www.python.org/downloads/) melalui [manajer install](https://www.python.org/downloads/) atau [tautan langsung](https://www.python.org/ftp/python/3.13.12/python-3.13.12-amd64.exe).
 1. Instal [git](https://git-scm.com/)
-1. Buat folder di mana kamu ingin menempatkan UmaTL (`D:\uma-tools\umatl` atau apapun)
-1. Ekstrak konten [wheels.zip dari rilis](https://github.com/UmaTL/hachimi-tl-en/releases/tag/support) ke folder umatl\wheels.
-1. Buka cmdline di folder dasar umatl tersebut lalu jalankan:
+1. Buat folder di mana kamu ingin menempatkan UmaTL (`D:\uma-tools\umatl` atau apapun). Ini adalah `Folder UmaTL`.
+1. Ekstrak konten [wheels.zip dari rilis](https://github.com/UmaTL/hachimi-tl-en/releases/tag/support) ke folder `umatl\wheels`.
+1. Buka cmdline (kamu bisa mengetik `cmd` di bilah pencarian) di `folder dasar umatl` tersebut lalu jalankan:
    ``` bat
    git clone https://github.com/noccu/umamusu-translate.git .
-   py -m venv .venv
+   py -3.13 -m venv .venv
    .venv\Scripts\activate.bat
+   rem (Pastikan kamu melihat tanda (.venv) muncul.)
    py -m pip install -r src\requirements.txt --find-links=wheels/ --prefer-binary
    py -m pip install -r src\devreq.txt --find-links=wheels/ --prefer-binary
    ```
@@ -26,7 +27,7 @@ UmaTL yang lama tidak dibuat dengan dukungan terjemahan multibahasa, sehingga be
 ## Penggunaan *tools*/alat
 
 ::: tip
-Selalu aktifkan venv (run `.venv\Scripts\activate.bat` di cmdline) sebelum menggunakan alat-alat UmaTL.  
+Selalu aktifkan venv (run `.venv\Scripts\activate.bat` di cmdline) dan pastikan kamu melihat penanda sebelum menggunakan alat-alat UmaTL.  
 :::
 
 1. Lihat [dokumen ini](https://github.com/noccu/umamusu-translate/blob/master/docs/id-structure.md) atau tanyakan sendiri untuk menemukan “target” yang ingin kamu terjemahkan.
@@ -64,14 +65,15 @@ Lihat [konversi](#konversi-ke-format-hachimi) tentang cara memperoleh file forma
 | Ctrl+Alt+c                 | Buka/tutup daftar teks berwarna                                              |
 | Ctrl+f                     | Buka pencarian (enter di kotak untuk mencari)                                |
 | Tab (in text box)          | Beralih antara kotak teks & nama                                             |
-| Ctrl+d                     | Nyalakan *raw*<->teks berformat                                              |
+| Ctrl+d                     | Nyalakan teks berformat <-> mentah                                           |
 | Ctrl+shift+up/down         | Pindah baris atas/bawah                                                      |
 | Ctrl+h                     | Dengar blok saat ini (game tidak diperlukan)                                 |
 | Ctrl+space                 | Nyalakan *autocomplete* (bisa klik / kunci + enter untuk arahkan dan pilih)  |
 
 ### Pemeriksaan ejaan & Penyelesaian otomatis
 
-Editor akan menampilkan garis merah bergelombang di bawah kata yang tidak dikenali. Klik kanan pada kata tersebut untuk mendapatkan saran. Nama karakter secara otomatis dimuat sebagai kata khusus melalui file `char-name.json`. Perbarui file tersebut jika diperlukan. *Dict* yang sama digunakan untuk keduanya, sehingga fitur `autocomplete` mendukung karakter.
+Editor akan menampilkan garis merah bergelombang di bawah kata yang tidak dikenali. Klik kanan pada kata tersebut untuk mendapatkan saran.
+Nama karakter secara otomatis dimuat sebagai kata khusus melalui file `char-name.json`. Perbarui file tersebut jika diperlukan. *Dict* yang sama digunakan untuk keduanya, sehingga fitur `autocomplete` mendukung karakter.
 
 ### Warna
 
@@ -84,10 +86,10 @@ Judul tidak selalu tersedia di dalam data aset, dan Editor mungkin tidak menampi
 ## Konversi ke format Hachimi
 
 ::: tip
-Saat bekerja di repositori terjemahan UmaTL, lebih disarankan untuk kontribusi Dialog ke repositori UmaTL yang lama, daripada menyumbangkan file yang sudah dikonversi ke format Hachimi.
+Saat bekerja di repositori terjemahan UmaTL, lebih disarankan untuk kontribusi dialog ke repositori UmaTL yang lama, daripada menyumbangkan file yang sudah dikonversi ke format Hachimi.
 :::
 
 Untuk berkontribusi pada repositori berbasis Hachimi atau menguji terjemahan di dalam game, kamu memerlukan file dalam format yang benar. Kamu juga bisa menggunakan skrip `import.py` jika mau, tetapi hal itu tidak disarankan karena skrip tersebut memodifikasi file game asli (meskipun bisa dibalik)
 
-Gunakan skrip `to_hachimi.py` dari [laman rilis ini](https://github.com/UmaTL/hachimi-tl-en/releases/tag/support) untuk mengkonversi ke format Hachimi dan test didalam game.  
-Ingat untuk memuat ulang data lokalisasi di menu Hachimi jika kamu sedang masuk ke game.
+Gunakan skrip `to_hachimi.py` dari [laman rilis ini](https://github.com/UmaTL/hachimi-tl-en/releases/tag/support) untuk mengkonversi ke format Hachimi dan tes di dalam game.  
+Ingat untuk memuat ulang data lokalisasi di menu Hachimi jika kamu sedang membuka game.

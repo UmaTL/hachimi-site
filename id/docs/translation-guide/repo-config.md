@@ -63,14 +63,17 @@ Jalur internal di dalam `extra_asset_bundle` untuk menemukan font kustom, jika d
 
 Dua yang pertama adalah ekspresi kustom yang akan dievaluasi untuk mendeteksi bentuk *plural*/jamak (*tidak digunakan di bahasa Indonesia*) dan *ordinal*/angka berurutan, digunakan bersama ekspresi *template* `$ordinal(n)` dan `$plural(n, t0, t1)`.
 
-Dalam ekspresi ini, `n` biasanya berupa variabel teks game seperti `{0}`. Ekspresi tersebut menentukan argumen `tx` mana yang digunakan untuk jamak, dan angka mana yang digunakan untuk ordinal, berdasarkan nilai `n`. Keduanya bersifat opsional. Contoh yang diberikan adalah default untuk bahasa Inggris. Detailnya ada di [Kode sumber](https://github.com/kairusds/Hachimi-Edge/blob/main/src/core/plurals.rs).
+Dalam ekspresi ini, `n` biasanya berupa variabel teks game seperti `{0}`. Ekspresi tersebut menentukan argumen `tx` mana yang digunakan untuk jamak, dan angka mana yang digunakan untuk ordinal, berdasarkan nilai `n`. Keduanya bersifat opsional. Contoh yang diberikan adalah default untuk bahasa Inggris.
+Detailnya ada di [Kode sumber](https://github.com/kairusds/Hachimi-Edge/blob/main/src/core/plurals.rs).
 
 ``` json
 "months": ["month 1", "month 2", "etc"],
 "month_text_format": "$(half) $(month)"
 ```
 
-Bagaimana cara memformat bulan? Yang pertama adalah sebuah *array* di mana setiap entri mewakili satu bulan. Yang kedua adalah *string* yang digunakan di beberapa bagian game untuk menampilkan setengah bulan, seperti “*turns*/giliran” pada karir. Tidak yakin apakah ini benar-benar digunakan.
+Bagaimana cara memformat bulan?
+Yang pertama adalah sebuah *array* di mana setiap entri mewakili satu bulan.
+Yang kedua adalah *string* yang digunakan di beberapa bagian game untuk menampilkan setengah bulan, seperti “*turns*/putaran” pada karir. Tidak yakin apakah ini benar-benar digunakan.
 
 ### Pemformatan baris/*Text wrapping*
 
@@ -90,7 +93,8 @@ Sebuah nilai boolean yang menentukan *text wrapping* dilakukan secara kustom ata
 }
 ```
 
-Sebuah *dict* opsional yang menunjukkan penalti yang digunakan dalam algoritma *wrapping optimal-fit*. Jika digunakan, semua penalti harus dikonfigurasi. Lihat [contoh sederhana](https://docs.rs/textwrap/latest/textwrap/wrap_algorithms/fn.wrap_optimal_fit.html#optimal-fit-algorithm) untuk ide dasar bagaimana cara kerjanya, dan [Penalti](https://docs.rs/textwrap/latest/textwrap/wrap_algorithms/struct.Penalties.html#fields) untuk pengaturan dan detail lebih lanjut.
+Sebuah *dict* opsional yang menunjukkan penalti yang digunakan dalam algoritma *wrapping optimal-fit*. Jika digunakan, semua penalti harus dikonfigurasi.
+Lihat [contoh sederhana](https://docs.rs/textwrap/latest/textwrap/wrap_algorithms/fn.wrap_optimal_fit.html#optimal-fit-algorithm) untuk ide dasar bagaimana cara kerjanya, dan [Penalti](https://docs.rs/textwrap/latest/textwrap/wrap_algorithms/struct.Penalties.html#fields) untuk pengaturan dan detail lebih lanjut.
 
 ``` json
 "line_width_multiplier": 2.0
@@ -112,9 +116,9 @@ Nilai pengali/*multiplier* yang diterapkan pada konfigurasi bingkai atau kotak t
 }
 ```
 
-Sebuah dict opsional yang menunjukkan jumlah maksimum baris per-jenis *systext*. Kuncinya adalah “type” yang terdapat pada kolom `cue_sheet` di tabel MDB: snd_vo_*TYPE*.
+Sebuah dict opsional yang menunjukkan jumlah maksimum baris per-jenis *systext*. Kuncinya adalah “tipe” yang terdapat pada tabel MDB `cue_sheet` di kolom: snd_vo_*TYPE*. Nilainya adalah jumlah maksimum baris untuk tipe tersebut.
 
-Nilainya adalah jumlah maksimum baris untuk tipe tersebut. Sebuah kunci "default" juga bisa ditentukan, yang biasanya akan digunakan jika tidak ada tipe lain yang cocok. Jika tidak ditentukan, nilai default adalah `4`.
+Sebuah kunci `"default"` juga bisa ditentukan, yang biasanya akan digunakan jika tidak ada tipe lain yang cocok. Jika tidak ditentukan, nilai default adalah `4`.
 
 ``` json
 "skill_formatting": {
@@ -127,9 +131,10 @@ Nilainya adalah jumlah maksimum baris untuk tipe tersebut. Sebuah kunci "default
 }
 ```
 
-Panjang baris kustom khusus untuk skill. Digunakan di mana pun skill ditampilkan. Nilai diberikan dalam format internal game (sudah dikalikan/*pre-multiplied*). Setiap nilai bersifat opsional, begitu juga *dict* itu sendiri.
+Panjang baris kustom khusus untuk skill. Digunakan di mana pun skill ditampilkan.
+Nilai diberikan dalam format internal game (sudah dikalikan/*pre-multiplied*). Setiap nilai bersifat opsional, begitu juga *dict* itu sendiri.
 
-- `Short` Merujuk pada skill yang ditampilkan dalam daftar ganda tanpa deskripsi, seperti pada layar informasi gadis kuda.
+- `Short` Merujuk pada skill yang ditampilkan dalam daftar ganda tanpa deskripsi, seperti pada layar informasi karakter.
 - `SP` Merujuk pada saat poin skill ditampilkan di sebelah nama, seperti pada peningkatan.
 
 ### Fungsi extra
