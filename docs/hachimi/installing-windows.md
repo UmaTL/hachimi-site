@@ -37,7 +37,7 @@ Only add the file extensions if you see them on the originals. Windows can hide 
 1. Download the latest `hachimi.dll` from the [Releases page](https://github.com/kairusds/Hachimi-Edge/releases).
 1. Rename it to `cri_mana_vpx.dll` and put it in the [game install folder](faqs#how-do-i-find-the-game-install-folder).
 1. If installing on JP (skip on Global):
-    1. Download [Ferns' `FunnyHoney.exe`](https://codeberg.org/LeadRDRK/FunnyHoney).
+    1. Download [Ferns' `FunnyHoney.exe`](https://gitlab.com/LeadRDRK/FunnyHoney).
     1. Rename it to `UmamusumePrettyDerby_Jpn.exe` and put it in the game install folder, overwriting the original.
     1. ⚠️ Keep this file around, you might need to repeat the overwrite after game updates (the game will stop launching) due to the original .exe being restored.
 
