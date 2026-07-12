@@ -111,6 +111,51 @@ pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResul
 }
 ```
 
+### Initialization (api v3+)
+
+In addition to the vtable-based `hachimi_init` entry point described above,
+API version 3 introduces an alternative initialization mode: the
+`hachimi_init_v3` export. In this mode the host does **not** hand you a `Vtable`
+pointer. Instead it hands you a `hachimi_get_api` function that resolves
+individual API entry points by name at runtime.
+
+```rust
+use std::ffi::{c_char, c_void, CString};
+
+pub type HachimiGetApiFn = extern "C" fn(name: *const c_char) -> *mut c_void;
+
+#[no_mangle]
+pub extern "C" fn hachimi_init_v3(get_api: HachimiGetApiFn, version: i32) -> InitResult {
+    if version < 3 {
+        return InitResult::Error;
+    }
+
+    unsafe {
+        // Resolve only the symbols you actually need. Unknown names return null.
+        let log_name = CString::new("log").unwrap();
+        let log_ptr = get_api(log_name.as_ptr());
+        if log_ptr.is_null() {
+            return InitResult::Error;
+        }
+        // Store log_ptr somewhere accessible, typically a static.
+    }
+
+    InitResult::Ok
+}
+```
+
+The accepted symbol names match the field names of the `Vtable` struct used by
+the v2 init path (e.g. `"hachimi_instance"`, `"interceptor_hook"`,
+`"gui_ui_combo_menu"`, `"hachimi_get_data_path"`). Requesting an unknown name
+returns a null pointer, which lets you probe for optional features without
+aborting initialization.
+
+::: tip
+Use the v2 `hachimi_init` export if you want a single typed struct. Use
+`hachimi_init_v3` if you want to opt into new symbols lazily and stay forward
+compatible with future API additions without re-declaring the entire `Vtable`.
+:::
+
 ## API reference
 
 ### Hachimi instance
@@ -288,6 +333,104 @@ unsafe fn get_singleton_instance(klass: *mut c_void) -> *mut c_void {
     let vtable = VTABLE.unwrap();
     (vtable.il2cpp_get_singleton_like_instance)(klass)
 }
+
+unsafe fn get_method_overload(
+    klass: *mut c_void,
+    method_name: &str,
+    param_types: &[i32] // Il2CppTypeEnum values
+) -> *const c_void {
+    let vtable = VTABLE.unwrap();
+    let method_cstr = CString::new(method_name).unwrap();
+    (vtable.il2cpp_get_method_overload)(
+        klass,
+        method_cstr.as_ptr(),
+        param_types.as_ptr() as *const c_void,
+        param_types.len()
+    )
+}
+
+unsafe fn get_method_overload_addr(
+    klass: *mut c_void,
+    method_name: &str,
+    param_types: &[i32]
+) -> *mut c_void {
+    let vtable = VTABLE.unwrap();
+    let method_cstr = CString::new(method_name).unwrap();
+    (vtable.il2cpp_get_method_overload_addr)(
+        klass,
+        method_cstr.as_ptr(),
+        param_types.as_ptr() as *const c_void,
+        param_types.len()
+    )
+}
+
+unsafe fn get_method_cached(
+    klass: *mut c_void,
+    method_name: &str,
+    arg_count: i32
+) -> *const c_void {
+    let vtable = VTABLE.unwrap();
+    let method_cstr = CString::new(method_name).unwrap();
+    (vtable.il2cpp_get_method_cached)(klass, method_cstr.as_ptr(), arg_count)
+}
+
+unsafe fn get_method_addr_cached(
+    klass: *mut c_void,
+    method_name: &str,
+    arg_count: i32
+) -> *mut c_void {
+    let vtable = VTABLE.unwrap();
+    let method_cstr = CString::new(method_name).unwrap();
+    (vtable.il2cpp_get_method_addr_cached)(klass, method_cstr.as_ptr(), arg_count)
+}
+
+unsafe fn find_nested_class(parent: *mut c_void, name: &str) -> *mut c_void {
+    let vtable = VTABLE.unwrap();
+    let name_cstr = CString::new(name).unwrap();
+    (vtable.il2cpp_find_nested_class)(parent, name_cstr.as_ptr())
+}
+
+unsafe fn get_static_field_value<T>(field: *mut c_void, out_value: *mut T) {
+    let vtable = VTABLE.unwrap();
+    (vtable.il2cpp_get_static_field_value)(field, out_value as *mut c_void);
+}
+
+unsafe fn set_static_field_value<T>(field: *mut c_void, value: *const T) {
+    let vtable = VTABLE.unwrap();
+    (vtable.il2cpp_set_static_field_value)(field, value as *const c_void);
+}
+
+unsafe fn runtime_object_init(object: *mut c_void) {
+    let vtable = VTABLE.unwrap();
+    (vtable.il2cpp_runtime_object_init)(object);
+}
+
+unsafe fn string_new(text: &str) -> *mut c_void {
+    let vtable = VTABLE.unwrap();
+    let text_cstr = CString::new(text).unwrap();
+    (vtable.il2cpp_string_new)(text_cstr.as_ptr())
+}
+
+unsafe fn string_chars(s: *mut c_void) -> *mut u16 {
+    let vtable = VTABLE.unwrap();
+    (vtable.il2cpp_string_chars)(s)
+}
+
+unsafe fn string_length(s: *mut c_void) -> i32 {
+    let vtable = VTABLE.unwrap();
+    (vtable.il2cpp_string_length)(s)
+}
+
+unsafe fn get_attached_threads(out_size: &mut usize) -> *mut *mut c_void {
+    let vtable = VTABLE.unwrap();
+    (vtable.il2cpp_get_attached_threads)(out_size as *mut usize)
+}
+
+unsafe fn schedule_on_thread(thread: *mut c_void, callback: unsafe extern "C" fn()) {
+    let vtable = VTABLE.unwrap();
+    (vtable.il2cpp_schedule_on_thread)(thread, callback);
+}
+
 ```
 
 ### Logging
@@ -479,6 +622,73 @@ unsafe fn ui_text_edit(ui: *mut c_void, buffer: &mut [u8]) -> bool {
         buffer.len()
     )
 }
+
+unsafe fn ui_horizontal(
+    ui: *mut c_void,
+    callback: Option<extern "C" fn(*mut c_void, *mut c_void)>,
+    userdata: *mut c_void
+) -> bool {
+    let vtable = VTABLE.unwrap();
+    (vtable.gui_ui_horizontal)(ui, callback, userdata)
+}
+
+unsafe fn ui_grid(
+    ui: *mut c_void,
+    id: &str,
+    columns: usize,
+    spacing_x: f32,
+    spacing_y: f32,
+    callback: Option<extern "C" fn(*mut c_void, *mut c_void)>,
+    userdata: *mut c_void
+) -> bool {
+    let vtable = VTABLE.unwrap();
+    let id_cstr = CString::new(id).unwrap();
+    (vtable.gui_ui_grid)(
+        ui,
+        id_cstr.as_ptr(),
+        columns,
+        spacing_x,
+        spacing_y,
+        callback,
+        userdata
+    )
+}
+
+unsafe fn ui_end_row(ui: *mut c_void) -> bool {
+    let vtable = VTABLE.unwrap();
+    (vtable.gui_ui_end_row)(ui)
+}
+
+unsafe fn ui_combo_menu(
+    ui: *mut c_void,
+    id: &str,
+    selected_index: &mut i32,
+    items: &[&str],
+    search_term: Option<&mut [u8]>
+) -> bool {
+    let vtable = VTABLE.unwrap();
+    let id_cstr = CString::new(id).unwrap();
+
+    // Convert &[&str] into a *const *const c_char array.
+    let cstrs: Vec<CString> = items.iter().map(|s| CString::new(*s).unwrap()).collect();
+    let ptrs: Vec<*const c_char> = cstrs.iter().map(|c| c.as_ptr()).collect();
+
+    let (search_ptr, search_len) = match search_term {
+        Some(buf) => (buf.as_mut_ptr() as *mut c_char, buf.len()),
+        None => (std::ptr::null_mut(), 0),
+    };
+
+    (vtable.gui_ui_combo_menu)(
+        ui,
+        id_cstr.as_ptr(),
+        selected_index as *mut i32,
+        ptrs.as_ptr(),
+        ptrs.len(),
+        search_ptr,
+        search_len
+    )
+}
+
 ```
 
 #### Notifications
@@ -490,6 +700,29 @@ unsafe fn show_notification(message: &str) -> bool {
     (vtable.gui_show_notification)(msg_cstr.as_ptr())
 }
 ```
+
+#### Menu dimensions
+
+Plugins can read and override the width of the main Hachimi menu. This is useful when your section renders wide widgets that would otherwise force the menu to expand beyond its intended width, for example, when content is not wrapped or given an explicit margin.
+
+```rust
+unsafe fn get_menu_width() -> f32 {
+    let vtable = VTABLE.unwrap();
+    (vtable.gui_get_menu_width)()
+}
+
+unsafe fn set_menu_width(width: f32) {
+    let vtable = VTABLE.unwrap();
+    (vtable.gui_set_menu_width)(width);
+}
+```
+
+::: warning
+`gui_set_menu_width` changes the menu width globally, every plugin's section,
+not just yours. The plugin API does not expose a wrapping layout helper, so if
+your content is too wide, prefer restructuring it with `gui_ui_grid` and
+`gui_ui_end_row` rather than expanding the menu.
+:::
 
 #### Windows (api v3+)
 
@@ -600,6 +833,94 @@ extern "C" fn on_window_bottom(ui: *mut c_void, userdata: *mut c_void) {
 ::: warning
 Window IDs must be unique across all plugins. Always use `gui_new_window_id()` to obtain a non-colliding ID instead of hardcoding your own.
 :::
+
+### Lifecycle callbacks (api v3+)
+
+Plugins can register callbacks that fire at specific points in the host's
+lifecycle. Both callbacks accept a `userdata` pointer that is forwarded
+verbatim when the host invokes them.
+
+#### Game initialized
+
+Fires once after the IL2CPP runtime and the game's managed assemblies are
+fully initialized. This is the safest place to resolve classes, hook methods,
+or interact with managed state.
+
+```rust
+type GameInitializedCallback = unsafe extern "C" fn(userdata: *mut c_void);
+
+unsafe extern "C" fn on_game_initialized(_userdata: *mut c_void) {
+    // Safe to call il2cpp_get_class / hook game functions here.
+    log_info("MyPlugin", "Game initialized");
+}
+
+unsafe fn register_on_game_initialized(callback: GameInitializedCallback) -> bool {
+    let vtable = VTABLE.unwrap();
+    (vtable.hachimi_register_on_game_initialized)(Some(callback), std::ptr::null_mut())
+}
+```
+
+#### Present callback (Windows only)
+
+Fires on every frame, right before the swapchain is presented. Use this to
+render overlays via your own graphics backend, drive animations, or sample
+per-frame state. On non-Windows hosts the call is a no-op and returns `false`.
+
+```rust
+type PresentCallback =
+    unsafe extern "C" fn(swapchain: *mut c_void, userdata: *mut c_void);
+
+unsafe extern "C" fn on_present(_swapchain: *mut c_void, _userdata: *mut c_void) {
+    // Called every frame on Windows. Keep this fast.
+}
+
+unsafe fn register_present_callback(callback: PresentCallback) -> bool {
+    let vtable = VTABLE.unwrap();
+    (vtable.hachimi_register_present_callback)(Some(callback), std::ptr::null_mut())
+}
+```
+
+::: warning
+`hachimi_register_present_callback` is only available on Windows builds. On
+Android it always returns `false`. Guard any platform-specific rendering code
+behind a `#[cfg(target_os = "windows")]` block to avoid dead code on other
+targets.
+:::
+
+### Paths and directories (api v3+)
+
+Hachimi exposes two path helpers so plugins can locate game data and Hachimi's
+own data directory without hardcoding platform-specific paths.
+
+```rust
+use std::ffi::CStr;
+
+unsafe fn get_base_dir() -> &'static str {
+    let vtable = VTABLE.unwrap();
+    let ptr = (vtable.hachimi_get_base_dir)();
+    if ptr.is_null() {
+        return "";
+    }
+    CStr::from_ptr(ptr).to_str().unwrap_or("")
+}
+
+unsafe fn get_data_path() -> &'static str {
+    let vtable = VTABLE.unwrap();
+    let ptr = (vtable.hachimi_get_data_path)();
+    if ptr.is_null() {
+        return "";
+    }
+    CStr::from_ptr(ptr).to_str().unwrap_or("")
+}
+```
+
+- `hachimi_get_base_dir` returns the directory the game stores its data in.
+- `hachimi_get_data_path` returns the directory Hachimi uses for its own data
+  (config, mods, plugins, ...). Use this to locate shared assets or to persist
+  plugin state next to the rest of Hachimi's data.
+
+Both pointers are owned by the host and remain valid for the lifetime of the
+process, so they are safe to cache in a `static` after the first call.
 
 ### Android dex loading (api v2+)
 
@@ -908,6 +1229,35 @@ pub struct Vtable {
         sig: *const c_char,
         arg: *const c_char,
     ) -> bool,
+    pub il2cpp_runtime_object_init:
+        unsafe extern "C" fn(object: *mut c_void),
+    pub il2cpp_string_new:
+        unsafe extern "C" fn(text: *const c_char) -> *mut c_void,
+    pub il2cpp_string_chars:
+        unsafe extern "C" fn(s: *mut c_void) -> *mut u16,
+    pub il2cpp_string_length:
+        unsafe extern "C" fn(s: *mut c_void) -> i32,
+    pub gui_ui_combo_menu: unsafe extern "C" fn(
+        ui: *mut c_void,
+        id: *const c_char,
+        selected_index: *mut i32,
+        items: *const *const c_char,
+        item_count: usize,
+        search_term: *mut c_char,
+        search_term_len: usize,
+    ) -> bool,
+    pub hachimi_register_on_game_initialized: unsafe extern "C" fn(
+        callback: Option<unsafe extern "C" fn(*mut c_void)>,
+        userdata: *mut c_void,
+    ) -> bool,
+    pub hachimi_register_present_callback: unsafe extern "C" fn(
+        callback: Option<unsafe extern "C" fn(*mut c_void, *mut c_void)>,
+        userdata: *mut c_void,
+    ) -> bool,
+    pub gui_get_menu_width: unsafe extern "C" fn() -> f32,
+    pub gui_set_menu_width: unsafe extern "C" fn(width: f32),
+    pub hachimi_get_base_dir: unsafe extern "C" fn() -> *const c_char,
+    pub hachimi_get_data_path: unsafe extern "C" fn() -> *const c_char,
 }
 
 static INIT: Once = Once::new();
