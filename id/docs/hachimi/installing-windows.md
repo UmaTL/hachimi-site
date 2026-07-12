@@ -38,7 +38,7 @@ Hanya tambahkan ekstensi `.dll` saat mengganti nama file jika kamu melihatnya pa
 1. Unduh `hachimi.dll` terbaru di [Laman rilis](https://github.com/kairusds/Hachimi-Edge/releases).
 1. Ubah namanya menjadi `cri_mana_vpx.dll` kemudian pindahkan ke [folder instalasi game](faqs#bagaimana-cara-menemukan-folder-instalasi-game)
 1. Jika menginstal untuk JP (global tidak perlu):
-    1. Unduh [Ferns' `FunnyHoney.exe`](https://codeberg.org/LeadRDRK/FunnyHoney).
+    1. Unduh [Ferns' `FunnyHoney.exe`](https://gitlab.com/LeadRDRK/FunnyHoney).
     1. Ubah namanya ke `UmamusumePrettyDerby_Jpn.exe` kemudian pindahkan ke folder instalasi game, timpa file yang aslinya.
     1. ⚠️ Simpan file ini dan jangan dihapus, kamu mungkin perlu mengulang proses penimpaan setelah game diperbarui (game akan berhenti berjalan) karena file .exe asli akan dipulihkan.
 
