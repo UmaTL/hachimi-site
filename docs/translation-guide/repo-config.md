@@ -4,15 +4,62 @@ outline: [2,3]
 
 # Configuring a translation repository
 
-Repos come with their own configuration separate from Hachimi's user config to tweak their behaviour.
-This config is set by a repo's maintainers. If that's you, please read this page to understand the options.
+Repos come with their own info file and configuration separate from Hachimi's user config to tweak their behaviour.
+Both info and config are set by a repo's maintainers. If that's you, please read this page to understand the options.
 
-The configuration file for a repo is in JSON format and goes in the `localized_data` folder.
-All paths in the config are relative to that folder.
+Both these files are in JSON format and go directly in the `localized_data` folder.
+Their keys are described below.
 
-## Options
+## Info file
 
-This page is not exhaustive. The full internal reprsentation of all available options can be found in the [source code](https://github.com/kairusds/Hachimi-Edge/blob/main/src/core/hachimi.rs#L574).
+The info file contains details about the repo which will display to users in the `Change Translation Repo` and repo `Info` windows of Hachimi's GUI. The file must be called `info.json`.
+
+::: warning
+Relative paths are **not** supported for URLs.
+:::
+
+```json
+"name": "Translation Repo Name",
+"description": "Translation Repo Description",
+"language": "en"
+```
+
+Basic information, similar to the repo selector. You can add a more detailed description here, as there is more space and no other repo entries. The `language` key is only a label and can contain any text.
+
+```json
+"homepage": "https://github.com/TLRepoOwner/TLRepoName",
+"links": [
+    ["button_name", "https://url.com"]
+    ["button_name2", "https://url.com"]
+    // …
+]
+```
+
+Various URLs relevant to the repo. The links in the `links` array can be named anything you want. Each entry will display a clickable button with the name, which will open the corresponding link.
+
+```json
+"changelog_url": "https://example.com/CHANGELOG.txt"
+```
+
+A URL to a file which contains update information. The contents of this file will be displayed when the `Show Changelog` button is clicked in the translation update notification window. It is intended to list recent changes and be updated frequently.
+
+Supports both plaintext and markdown, though links are not supported in markdown.  
+The URL **must** end in `.txt` or `.md`/`.markdown`.
+
+```json
+"maintainer": "maintainer_name",
+"contributors": "https://example.com/contributors-list.html"
+```
+
+Names of contributors. The `contributors` key supports a `.html` web page URL, a newline-separated `.txt` URL, or an array.
+
+## Config file
+
+::: info
+This page is not exhaustive. The full internal representation of all available options can be found in the [source code](https://github.com/kairusds/Hachimi-Edge/blob/main/src/core/hachimi.rs#L574).
+:::
+
+All paths in this file are relative to the folder it is in, not the Hachimi root.
 
 ### Localization file paths
 
