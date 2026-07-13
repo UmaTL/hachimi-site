@@ -92,7 +92,7 @@ These are the relative paths to files for each part of the translation system.
 
 An optional dict which allows you to include a custom Unity AssetBundle which will be loaded into the game. Its keys are the supported platforms, and their values are paths to the bundle.  
 This bundle can include any files, but exact details on its workings are lacking at the moment. It is mainly used to include a custom font for use in localization, if required.  
-Creating this assetbundle requirs you to have a compatible version of the full Unity Editor installed, or find a third party tool.
+Creating this assetbundle requires you to have a compatible version of the full Unity Editor installed, or find a third party tool.
 
 ``` json
 "replacement_font_name": "path"
@@ -130,6 +130,12 @@ Boolean to enable custom text wrapping or let the game handle it.
 The other options in this section will not apply when it is set to `false`.
 
 ``` json
+"text_common_best_fit": false
+```
+
+Enable Unity's "best fit" wrapping globally on all TextCommon objects. This will automatically wrap and scale text to fit within the text area bounds. Note: bounds do not always match the expected size of an element.
+
+``` json
 "wrapper_penalties": {
     "nline_penalty": 0,
     "overflow_penalty": 0,
@@ -139,7 +145,7 @@ The other options in this section will not apply when it is set to `false`.
 }
 ```
 
-An optional dict indicating the pentalties used in the optimal-fit wrapping algorithm. When used, all penalties should be configured.  
+An optional dict indicating the penalties used in the optimal-fit wrapping algorithm. When used, all penalties should be configured.  
 See the [simple example](https://docs.rs/textwrap/latest/textwrap/wrap_algorithms/fn.wrap_optimal_fit.html#optimal-fit-algorithm) for a basic idea of how it works, and [Penalties](https://docs.rs/textwrap/latest/textwrap/wrap_algorithms/struct.Penalties.html#fields) for further details and settings.
 
 ``` json
@@ -167,30 +173,13 @@ An optional dict indicating maximum amount of lines per type of systext.
 Its keys are the "type" found in the MDB table's `cue_sheet` column: "snd_vo_*TYPE*_". Its values are the max lines for that type.
 A `"default"` key can also be specified, which will be used when no other type matches. If not specified, the default is `4`.
 
-``` json
-"skill_formatting": {
-    "name_length": 18,
-    "desc_length": 18,
-    "name_short_lines": 1,
-
-    "name_short_mult": 1.0,
-    "name_sp_mult": 1.0
-}
-```
-
-Custom line lengths for skills specifically. Used anywhere skills are displayed.  
-Values given as game-internal (pre-multiplied). Each value is optional, as is the dict itself.
-
-- `Short` refers to skills displayed in a double list without description, like a horsegirl's info screen.
-- `SP` refers to when skill points are rendered next to the name, as in upgrades.
-
 ### Extra functions
 
 ``` json
 "auto_adjust_story_clip_length": true
 ```
 
-Allow adjusting interal values to match localized text length. Affects dialogue delay/reading time in `auto` mode.
+Allow adjusting internal values to match localized text length. Affects dialogue delay/reading time in `auto` mode.
 
 ``` json
 "now_loading_comic_title_ellipsis": true,
