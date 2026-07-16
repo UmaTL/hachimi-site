@@ -16,14 +16,12 @@ On Windows, plugins must be explicitly configured in the config file.
 
 1. **Locate the plugin file**: You should have a `.dll` file (e.g. `hachimi_myplugin.dll`).
 1. **Place the plugin in the hachimi folder**: Put the plugin file in the [`hachimi` folder](/docs/hachimi/faqs.md#how-do-i-find-the-game-install-folder).
-1. **Edit the config**: Open `config.json` in the `hachimi` folder and add the plugin filename:
+1. **Edit the config**: Open `config.json` in the `hachimi` folder, locate `load_libraries`, and add the plugin filename:
    ```json
    {
-     "windows": {
-       "load_libraries": [
+      "load_libraries": [
          "hachimi\\hachimi_myplugin.dll"
-       ]
-     }
+      ]
    }
    ```
 1. **Save and restart**: Save the config file and restart the game
