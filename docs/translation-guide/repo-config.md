@@ -4,15 +4,62 @@ outline: [2,3]
 
 # Configuring a translation repository
 
-Repos come with their own configuration separate from Hachimi's user config to tweak their behaviour.
-This config is set by a repo's maintainers. If that's you, please read this page to understand the options.
+Repos come with their own info file and configuration separate from Hachimi's user config to tweak their behaviour.
+Both info and config are set by a repo's maintainers. If that's you, please read this page to understand the options.
 
-The configuration file for a repo is in JSON format and goes in the `localized_data` folder.
-All paths in the config are relative to that folder.
+Both these files are in JSON format and go directly in the `localized_data` folder.
+Their keys are described below.
 
-## Options
+## Info file
 
-This page is not exhaustive. The full internal reprsentation of all available options can be found in the [source code](https://github.com/kairusds/Hachimi-Edge/blob/main/src/core/hachimi.rs#L574).
+The info file contains details about the repo which will display to users in the `Change Translation Repo` and repo `Info` windows of Hachimi's GUI. The file must be called `info.json`.
+
+::: warning
+Relative paths are **not** supported for URLs.
+:::
+
+```json
+"name": "Translation Repo Name",
+"description": "Translation Repo Description",
+"language": "en"
+```
+
+Basic information, similar to the repo selector. You can add a more detailed description here, as there is more space and no other repo entries. The `language` key is only a label and can contain any text.
+
+```json
+"homepage": "https://github.com/TLRepoOwner/TLRepoName",
+"links": [
+    ["button_name", "https://url.com"]
+    ["button_name2", "https://url.com"]
+    // …
+]
+```
+
+Various URLs relevant to the repo. The links in the `links` array can be named anything you want. Each entry will display a clickable button with the name, which will open the corresponding link.
+
+```json
+"changelog_url": "https://example.com/CHANGELOG.txt"
+```
+
+A URL to a file which contains update information. The contents of this file will be displayed when the `Show Changelog` button is clicked in the translation update notification window. It is intended to list recent changes and be updated frequently.
+
+Supports both plaintext and markdown, though links are not supported in markdown.  
+The URL **must** end in `.txt` or `.md`/`.markdown`.
+
+```json
+"maintainer": "maintainer_name",
+"contributors": "https://example.com/contributors-list.html"
+```
+
+Names of contributors. The `contributors` key supports a `.html` web page URL, a newline-separated `.txt` URL, or an array.
+
+## Config file
+
+::: info
+This page is not exhaustive. The full internal representation of all available options can be found in the [source code](https://github.com/kairusds/Hachimi-Edge/blob/main/src/core/hachimi.rs#L574).
+:::
+
+All paths in this file are relative to the folder it is in, not the Hachimi root.
 
 ### Localization file paths
 
@@ -45,7 +92,7 @@ These are the relative paths to files for each part of the translation system.
 
 An optional dict which allows you to include a custom Unity AssetBundle which will be loaded into the game. Its keys are the supported platforms, and their values are paths to the bundle.  
 This bundle can include any files, but exact details on its workings are lacking at the moment. It is mainly used to include a custom font for use in localization, if required.  
-Creating this assetbundle requirs you to have a compatible version of the full Unity Editor installed, or find a third party tool.
+Creating this assetbundle requires you to have a compatible version of the full Unity Editor installed, or find a third party tool.
 
 ``` json
 "replacement_font_name": "path"
@@ -83,6 +130,12 @@ Boolean to enable custom text wrapping or let the game handle it.
 The other options in this section will not apply when it is set to `false`.
 
 ``` json
+"text_common_best_fit": false
+```
+
+Enable Unity's "best fit" wrapping globally on all TextCommon objects. This will automatically wrap and scale text to fit within the text area bounds. Note: bounds do not always match the expected size of an element.
+
+``` json
 "wrapper_penalties": {
     "nline_penalty": 0,
     "overflow_penalty": 0,
@@ -92,7 +145,7 @@ The other options in this section will not apply when it is set to `false`.
 }
 ```
 
-An optional dict indicating the pentalties used in the optimal-fit wrapping algorithm. When used, all penalties should be configured.  
+An optional dict indicating the penalties used in the optimal-fit wrapping algorithm. When used, all penalties should be configured.  
 See the [simple example](https://docs.rs/textwrap/latest/textwrap/wrap_algorithms/fn.wrap_optimal_fit.html#optimal-fit-algorithm) for a basic idea of how it works, and [Penalties](https://docs.rs/textwrap/latest/textwrap/wrap_algorithms/struct.Penalties.html#fields) for further details and settings.
 
 ``` json
@@ -120,30 +173,13 @@ An optional dict indicating maximum amount of lines per type of systext.
 Its keys are the "type" found in the MDB table's `cue_sheet` column: "snd_vo_*TYPE*_". Its values are the max lines for that type.
 A `"default"` key can also be specified, which will be used when no other type matches. If not specified, the default is `4`.
 
-``` json
-"skill_formatting": {
-    "name_length": 18,
-    "desc_length": 18,
-    "name_short_lines": 1,
-
-    "name_short_mult": 1.0,
-    "name_sp_mult": 1.0
-}
-```
-
-Custom line lengths for skills specifically. Used anywhere skills are displayed.  
-Values given as game-internal (pre-multiplied). Each value is optional, as is the dict itself.
-
-- `Short` refers to skills displayed in a double list without description, like a horsegirl's info screen.
-- `SP` refers to when skill points are rendered next to the name, as in upgrades.
-
 ### Extra functions
 
 ``` json
 "auto_adjust_story_clip_length": true
 ```
 
-Allow adjusting interal values to match localized text length. Affects dialogue delay/reading time in `auto` mode.
+Allow adjusting internal values to match localized text length. Affects dialogue delay/reading time in `auto` mode.
 
 ``` json
 "now_loading_comic_title_ellipsis": true,
