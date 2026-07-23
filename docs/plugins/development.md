@@ -14,7 +14,7 @@ Plugins can be written in **any language** that can produce a C-compatible dynam
 - **Assembly** (If you are a masochist)
 
 This guide uses **Rust** for examples because Hachimi itself is written in Rust.
-However, the API is C-compatible, so you can use any language you prefer. Just ensure your `hachimi_init` function is exported with C calling convention.
+However, the API is C-compatible, so you can use any language you prefer. Just ensure your `hachimi_init` or `hachimi_init_v3` function is exported with C calling convention.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ Do not to make a malicious plugin that steals data or harms other players.
 
 ### Entry point
 
-Every plugin must export a `hachimi_init` function. Create a `Cargo.toml`:
+Every plugin must export a `hachimi_init` or `hachimi_init_v3` function. Create a `Cargo.toml`:
 
 ```toml
 [package]
@@ -83,37 +83,11 @@ pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResul
 }
 ```
 
-### The vtable
-
-The vtable is a structure containing function pointers to Hachimi's API. You receive it in `hachimi_init` and should store it for use throughout your plugin.
-
 **Current API Version: 3** <!-- markdownlint-disable-line MD036 -->
-
-Always check the version parameter to ensure compatibility:
-
-```rust
-#[no_mangle]
-pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResult {
-    if vtable.is_null() {
-        return InitResult::Error;
-    }
-    if version < 3 {
-        // API version too old
-        return InitResult::Error;
-    }
-
-    // Store vtable safely
-    unsafe {
-        VTABLE = Some(&*vtable);
-    }
-
-    InitResult::Ok
-}
-```
 
 ### Initialization (api v3+)
 
-In addition to the vtable-based `hachimi_init` entry point described above,
+In addition to the vtable-based `hachimi_init` entry point examples,
 API version 3 introduces an alternative initialization mode: the
 `hachimi_init_v3` export. In this mode the host does **not** hand you a `Vtable`
 pointer. Instead it hands you a `hachimi_get_api` function that resolves
@@ -155,6 +129,32 @@ Use the v2 `hachimi_init` export if you want a single typed struct. Use
 `hachimi_init_v3` if you want to opt into new symbols lazily and stay forward
 compatible with future API additions without re-declaring the entire `Vtable`.
 :::
+
+### The vtable
+
+The vtable is a structure containing function pointers to Hachimi's API. You receive it in `hachimi_init` and should store it for use throughout your plugin.
+
+### Initialization (api v2)
+
+```rust
+#[no_mangle]
+pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResult {
+    if vtable.is_null() {
+        return InitResult::Error;
+    }
+    if version < 2 {
+        // API version too old
+        return InitResult::Error;
+    }
+
+    // Store vtable safely
+    unsafe {
+        VTABLE = Some(&*vtable);
+    }
+
+    InitResult::Ok
+}
+```
 
 ## API reference
 
@@ -914,10 +914,10 @@ unsafe fn get_data_path() -> &'static str {
 }
 ```
 
-- `hachimi_get_base_dir` returns the directory the game stores its data in.
-- `hachimi_get_data_path` returns the directory Hachimi uses for its own data
-  (config, mods, plugins, ...). Use this to locate shared assets or to persist
+- `hachimi_get_base_dir` returns the directory Hachimi uses for its own data
+  (config, translation repo data, ...). Use this to locate shared assets or to persist
   plugin state next to the rest of Hachimi's data.
+- `hachimi_get_data_path` returns the directory the game stores its data in.
 
 Both pointers are owned by the host and remain valid for the lifetime of the
 process, so they are safe to cache in a `static` after the first call.
@@ -1032,7 +1032,7 @@ dex_call_static_noargs(handle, "hello", "()V");
 dex_call_static_string(handle, "setVisibleString", "(Ljava/lang/String;)V", "true");
 ```
 
-## Complete example plugin
+## Complete example plugin (v2)
 
 Here's a complete working example:
 
@@ -1289,7 +1289,7 @@ extern "C" fn on_menu_section(ui: *mut c_void, _userdata: *mut c_void) {
 
 #[unsafe(no_mangle)]
 pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResult {
-    if vtable.is_null() || version < 3 {
+    if vtable.is_null() || version < 2 {
         return InitResult::Error;
     }
 
