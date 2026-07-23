@@ -97,7 +97,7 @@ pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResul
     if vtable.is_null() {
         return InitResult::Error;
     }
-    if version < 3 {
+    if version < 2 {
         // API version too old
         return InitResult::Error;
     }
@@ -914,10 +914,10 @@ unsafe fn get_data_path() -> &'static str {
 }
 ```
 
-- `hachimi_get_base_dir` returns the directory the game stores its data in.
-- `hachimi_get_data_path` returns the directory Hachimi uses for its own data
-  (config, mods, plugins, ...). Use this to locate shared assets or to persist
+- `hachimi_get_base_dir` returns the directory Hachimi uses for its own data
+  (config, translation repo data, ...). Use this to locate shared assets or to persist
   plugin state next to the rest of Hachimi's data.
+- `hachimi_get_data_path` returns the directory the game stores its data in.
 
 Both pointers are owned by the host and remain valid for the lifetime of the
 process, so they are safe to cache in a `static` after the first call.
@@ -1289,7 +1289,7 @@ extern "C" fn on_menu_section(ui: *mut c_void, _userdata: *mut c_void) {
 
 #[unsafe(no_mangle)]
 pub extern "C" fn hachimi_init(vtable: *const Vtable, version: i32) -> InitResult {
-    if vtable.is_null() || version < 3 {
+    if vtable.is_null() || version < 2 {
         return InitResult::Error;
     }
 
